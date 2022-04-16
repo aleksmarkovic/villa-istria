@@ -8,10 +8,9 @@ import ConstructionPage from "./construction-in-progress";
 const Index = (props) => {
   return (
     <React.Fragment>
-      <ConstructionPage />
-      {/* <Header /> */}
-      {/* <HomeMain />
-        <Footer /> */}
+      <Header />
+      <HomeMain />
+      <Footer />
     </React.Fragment>
   );
 };
