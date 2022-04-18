@@ -19,39 +19,10 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
   const openMobileMenu = (menu) => {
     if (menu == "home") {
       setHome(!home);
-      // setcourses(false);
-      // setBlog(false);
-      // setPages(false);
-      // setProject(false);
+    } else if (menu == "blog") {
+      setHome(false);
+      setBlog(!blog);
     }
-    // else if( menu == 'courses'){
-    //   setHome(false)
-    //   setcourses(!courses)
-    //   setBlog(false)
-    //   setPages(false)
-    //   setProject(false)
-    // }
-    // else if( menu == 'blog'){
-    //   setHome(false)
-    //   setcourses(false)
-    //   setBlog(!blog)
-    //   setPages(false)
-    //   setProject(false)
-    // }
-    // else if( menu == 'pages'){
-    //   setHome(false)
-    //   setcourses(false)
-    //   setBlog(false)
-    //   setProject(false)
-    //   setPages(!pages)
-    // }
-    // else if( menu == 'project'){
-    //   setHome(false)
-    //   setcourses(false)
-    //   setBlog(false)
-    //   setPages(false)
-    //   setProject(!project)
-    // }
   };
 
   return (
@@ -65,77 +36,25 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
         <div className="side-info-content">
           <div className="mm-menu">
             <ul>
-              <li className={home ? "has-droupdown active" : "has-droupdown"}>
-                <a
-                  onClick={() => {
-                    openMobileMenu("home");
-                  }}
-                >
-                  Home
-                </a>
-                <ul className={home ? "sub-menu active" : "sub-menu"}>
-                  <li>
-                    <Link href="/">
-                      <a>Home Style 1</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/home-2">
-                      <a>Home Style 2</a>
-                    </Link>
-                  </li>
-                </ul>
+              <li className="menu-item-has-children">
+                <Link href="/service">
+                  <a>Home</a>
+                </Link>
               </li>
               <li>
                 <Link href="/about">
                   <a>About</a>
                 </Link>
               </li>
-              <li
-                className={courses ? "has-droupdown active" : "has-droupdown"}
-              >
-                <a
-                  onClick={() => {
-                    openMobileMenu("courses");
-                  }}
-                >
-                  Services
-                </a>
-                <ul className={courses ? "sub-menu active" : "sub-menu"}>
-                  <li>
-                    <Link href="/service">
-                      <a>Services</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/service-details">
-                      <a>Services Details</a>
-                    </Link>
-                  </li>
-                </ul>
+              <li className="menu-item-has-children">
+                <Link href="/service">
+                  <a>Gallery</a>
+                </Link>
               </li>
-              <li
-                className={project ? "has-droupdown active" : "has-droupdown"}
-              >
-                <a
-                  onClick={() => {
-                    openMobileMenu("project");
-                  }}
-                >
-                  Projects
-                </a>
-                <ul className={project ? "sub-menu active" : "sub-menu"}>
-                  <li>
-                    <Link href="/project">
-                      <a>Projects</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/project-details">
-                      <a>Projects Details</a>
-                    </Link>
-                  </li>
-                </ul>
+              <li className="menu-item-has-children">
+                <Link href="/service">
+                  <a>Contact</a>
+                </Link>
               </li>
               <li className={blog ? "has-droupdown active" : "has-droupdown"}>
                 <a
@@ -143,46 +62,20 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                     openMobileMenu("blog");
                   }}
                 >
-                  Blog
+                  Extra Content
                 </a>
                 <ul className={blog ? "sub-menu active" : "sub-menu"}>
                   <li>
                     <Link href="/blog">
-                      <a>Blog</a>
+                      <a>Places to Visit</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/blog-details">
-                      <a>Blog Details</a>
+                      <a>Local Products</a>
                     </Link>
                   </li>
                 </ul>
-              </li>
-              <li className={pages ? "has-droupdown active" : "has-droupdown"}>
-                <a
-                  onClick={() => {
-                    openMobileMenu("pages");
-                  }}
-                >
-                  Pages
-                </a>
-                <ul className={pages ? "sub-menu active" : "sub-menu"}>
-                  <li>
-                    <Link href="/pricing">
-                      <a>Pricing</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/faq">
-                      <a>Faq</a>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/contact">
-                  <a>Contact</a>
-                </Link>
               </li>
             </ul>
           </div>
@@ -218,17 +111,7 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
               <div className="sidebar__menu--social">
                 <a href="#" target="_blank">
                   <i>
-                    <FontAwesomeIcon icon={["fab", "twitter"]} />
-                  </i>
-                </a>
-                <a href="#" target="_blank">
-                  <i>
                     <FontAwesomeIcon icon={["fab", "facebook"]} />
-                  </i>
-                </a>
-                <a href="#" target="_blank">
-                  <i>
-                    <FontAwesomeIcon icon={["fab", "pinterest-p"]} />
                   </i>
                 </a>
                 <a href="#" target="_blank">
