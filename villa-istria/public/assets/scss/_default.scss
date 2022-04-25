@@ -16,9 +16,9 @@ body {
   }
 }
 @font-face {
-  font-family: 'Reey';
-  src: url('../fonts/Reey-Regular.woff2') format('woff2'),
-      url('../fonts/Reey-Regular.woff') format('woff');
+  font-family: "Reey";
+  src: url("../fonts/Reey-Regular.woff2") format("woff2"),
+    url("../fonts/Reey-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -26,7 +26,7 @@ body {
 img {
   max-width: 100%;
   transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
-} 
+}
 
 a {
   text-decoration: none;
@@ -42,7 +42,7 @@ a {
 button,
 .btn {
   @include transition(0.3s);
-  &:active,                  
+  &:active,
   &:hover,
   &:focus {
     outline: 0;
@@ -75,7 +75,13 @@ textarea:focus,
 
 h1,
 h2,
-h3,
+h3 {
+  font-family: $icon-font;
+  color: $heading-color;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 h4,
 h5,
 h6 {
@@ -103,7 +109,8 @@ ol {
   list-style: decimal;
 }
 
-ol, ul {
+ol,
+ul {
   margin: 0px;
   padding: 0px;
 }
@@ -176,8 +183,8 @@ label {
   letter-spacing: 1.3px;
   position: relative;
   z-index: 1;
-  @include transition(.3s);
-  &::before{
+  @include transition(0.3s);
+  &::before {
     background: $white-color;
     content: "";
     position: absolute;
@@ -190,9 +197,9 @@ label {
     transition: all 0.3s ease-in-out;
     z-index: -1;
   }
-  &:hover{
+  &:hover {
     color: $theme-color;
-    &::before{
+    &::before {
       left: 0px;
       right: auto;
       width: 100%;
@@ -208,7 +215,7 @@ label {
     background: $heading-color;
   }
 }
-.border-btn{
+.border-btn {
   border: 1px solid $theme-color;
 }
 
@@ -235,7 +242,6 @@ label {
   background: $heading-color;
 }
 
-
 /* Text Color */
 
 .white-color {
@@ -247,7 +253,6 @@ label {
 }
 
 /* Others Common Css Here :) */
-
 
 .table-row {
   display: table;
@@ -298,36 +303,36 @@ label {
 //section title
 
 .section-subtitle {
-    font-size: 14px;
-    color: $theme-color;
-    position: relative;
-    z-index: 1;
-    text-transform: uppercase;
-    display: inline-block;
-    letter-spacing: 2px;
-    &:before {
-        position: absolute;
-        content: '';
-        height: 6px;
-        width: 100%;
-        left: 0px;
-        bottom: 1px;
-        background-color: rgb(233, 235, 237);
-        z-index: -1;
-    }
+  font-size: 14px;
+  color: $theme-color;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 2px;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 100%;
+    left: 0px;
+    bottom: 1px;
+    background-color: rgb(233, 235, 237);
+    z-index: -1;
+  }
 }
 .section-title {
-    font-size: 50px;
-    color: $heading-color;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 0.5px;
-    @include mq(lg){
-      br {
-        display: none;
-      }
+  font-size: 50px;
+  color: $heading-color;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  @include mq(lg) {
+    br {
+      display: none;
+    }
   }
-  @include mq(xs){
+  @include mq(xs) {
     font-size: 30px;
     line-height: 45px;
   }
@@ -335,47 +340,51 @@ label {
 
 //custom swipper dots
 
-div.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+div.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   width: inherit;
   position: absolute;
-    top: 51.5%;
-    right: 21.5%;
-    z-index: 9999;
-    left: auto;
-    bottom: auto;
-    width: 20px;
-    @include mq(lg){
-      right: 50px;
+  top: 51.5%;
+  right: 21.5%;
+  z-index: 9999;
+  left: auto;
+  bottom: auto;
+  width: 20px;
+  @include mq(lg) {
+    right: 50px;
   }
-  @include mq(md){
+  @include mq(md) {
     right: 40px;
   }
-  @include mq(xs){
+  @include mq(xs) {
     right: 30px;
   }
 }
-div.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+div.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   display: inline-block;
-    margin: 0px 5px;
-    padding: 0px;
-    height: 11px;
-    width: 11px;
-    border-radius: 50%;
-    border: 2px solid #7a7b7e;
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    background: #7a7b7e;
-    font-size: 0px;
-    opacity: 1;
-    &.swiper-pagination-bullet-active {
-        border-color: $white-color;
-    }
+  margin: 0px 5px;
+  padding: 0px;
+  height: 11px;
+  width: 11px;
+  border-radius: 50%;
+  border: 2px solid #7a7b7e;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  background: #7a7b7e;
+  font-size: 0px;
+  opacity: 1;
+  &.swiper-pagination-bullet-active {
+    border-color: $white-color;
+  }
 }
 div.swiper-fade .swiper-slide .swiper-slide {
-	pointer-events: auto;
+  pointer-events: auto;
 }
-
 
 //swiper common arrow style start
 // .swiper-button-prev::after, .swiper-rtl .swiper-button-next::after,
@@ -417,8 +426,8 @@ div.swiper-fade .swiper-slide .swiper-slide {
 .swiper-container-rtl .swiper-button-prev::after,
 .swiper-button-prev::after,
 .swiper-container-rtl .swiper-button-next::after {
-    content: 'next';
-    display: none;
+  content: "next";
+  display: none;
 }
 //swiper common arrow style end
 
@@ -432,19 +441,19 @@ div.swiper-fade .swiper-slide .swiper-slide {
   bottom: 0;
   border-top-left-radius: 100%;
   @include transition(1.5s);
-  @include mq(xs){
+  @include mq(xs) {
     height: 230px;
     width: 230px;
   }
-  @include mq(sm){
+  @include mq(sm) {
     height: 300px;
     width: 300px;
   }
-  @include mq(md){
+  @include mq(md) {
     height: 350px;
     width: 350px;
   }
-  @include mq(lg){
+  @include mq(lg) {
     height: 400px;
     width: 400px;
   }
@@ -457,10 +466,10 @@ div.swiper-fade .swiper-slide .swiper-slide {
     bottom: 0;
     border-top-left-radius: 100%;
     @include transition(1.5s);
-    @include mq(xs){
+    @include mq(xs) {
       height: 150px;
       width: 150px;
-  }
+    }
   }
 }
 .common-shape-wrapper2 {
@@ -478,7 +487,7 @@ div.swiper-fade .swiper-slide .swiper-slide {
   right: 0;
   bottom: 0;
 }
-.swiper-slide-active .common-shape-wrapper .common-shape-inner{
+.swiper-slide-active .common-shape-wrapper .common-shape-inner {
   right: 0;
   bottom: 0;
 }
@@ -511,7 +520,7 @@ div.swiper-fade .swiper-slide .swiper-slide {
   top: 0;
   left: 0;
   z-index: 1211;
-  background: rgba(0,0,0,.9);
+  background: rgba(0, 0, 0, 0.9);
 }
 .search-wrap.search-opened {
   display: block;
@@ -522,58 +531,58 @@ div.swiper-fade .swiper-slide .swiper-slide {
   height: 100%;
 }
 .search-wrap .search-cell {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
 .search-wrap .search-field-holder {
   width: 50%;
   margin: auto;
   position: relative;
-  animation: slideInUp .3s;
+  animation: slideInUp 0.3s;
   text-align: center;
-  @include mq(xs){
+  @include mq(xs) {
     width: 75%;
   }
 }
 .search-field-holder button {
-    height: 45px;
-    line-height: 45px;
-    background: $white-color;
-    color: #333;
-    font-size: 24px;
-    font-weight: 700;
-    padding: 0px 50px;
-    display: inline-block;
-    margin-top: 30px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 5px;
+  height: 45px;
+  line-height: 45px;
+  background: $white-color;
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0px 50px;
+  display: inline-block;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
 }
 .search-wrap .main-search-input {
-	width: 100%;
-	height: 70px;
-	border: 0;
-	padding: 0 50px;
-	background: transparent;
-	font-size: 25px;
-	color: $white-color;
-	border-bottom: 2px solid #898989;
-	text-align: center;
-	letter-spacing: 2px;
-  @include mq(xs){
+  width: 100%;
+  height: 70px;
+  border: 0;
+  padding: 0 50px;
+  background: transparent;
+  font-size: 25px;
+  color: $white-color;
+  border-bottom: 2px solid #898989;
+  text-align: center;
+  letter-spacing: 2px;
+  @include mq(xs) {
     height: 50px;
     font-size: 15px;
-   }
+  }
 }
 .search-wrap .main-search-input::-moz-placeholder {
-   text-transform: uppercase;
+  text-transform: uppercase;
 }
 .search-wrap .main-search-input::placeholder {
-   text-transform: uppercase;
+  text-transform: uppercase;
 }
 .search-wrap input.form-control,
 .search-wrap input.form-control:focus {
@@ -602,40 +611,40 @@ div.swiper-fade .swiper-slide .swiper-slide {
 input.main-search-input::-webkit-input-placeholder {
   color: $white-color;
   font-size: 25px;
-  @include mq(xs){
+  @include mq(xs) {
     font-size: 15px;
-   }
+  }
 }
 input.main-search-input:-moz-placeholder {
   color: rgb(197, 178, 178);
   opacity: 1;
   font-size: 25px;
-  @include mq(xs){
+  @include mq(xs) {
     font-size: 15px;
-   }
+  }
 }
 input.main-search-input::-moz-placeholder {
   color: $white-color;
   opacity: 1;
   font-size: 25px;
-  @include mq(xs){
+  @include mq(xs) {
     font-size: 15px;
-   }
+  }
 }
 input.main-search-input:-ms-input-placeholder {
   color: $white-color;
   font-size: 25px;
-  @include mq(xs){
+  @include mq(xs) {
     font-size: 15px;
-   }
+  }
 }
 .search-close {
-	position: absolute;
-	top: 50px;
-	right: 50px;
-	font-size: 30px;
-	color: $white-color;
-	cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 30px;
+  color: $white-color;
+  cursor: pointer;
 }
 .mobile-links li > a {
   padding: 15px 0 15px 15px;
