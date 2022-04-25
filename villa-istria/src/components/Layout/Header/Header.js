@@ -4,7 +4,6 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BurgerMenus from "./BurgerMenus";
-import HeaderSearch from "./HeaderSearch";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,6 +25,7 @@ const Header = () => {
   const sticky = (e) => {
     const header = document.querySelector(".transparent-header");
     const scrollTop = window.scrollY;
+
     scrollTop >= 1
       ? header.classList.add("sticky-header")
       : header.classList.remove("sticky-header");
@@ -49,7 +49,7 @@ const Header = () => {
                     <Link href="/">
                       <a>
                         <img
-                          src="assets/img/logo/logo.svg"
+                          src="assets/img/logo/horizontala1.svg"
                           className="img-fluid"
                           alt="logo-img"
                         />
