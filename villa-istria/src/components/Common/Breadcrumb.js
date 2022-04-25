@@ -9,7 +9,7 @@ const Breadcrumb = (props) => {
       style={{
         backgroundColor: "gray",
         height:
-          "1000px" /*backgroundImage:`url(${'assets/img/bg/breadcrumb-bg.jpg'})` */,
+          "50px" /*backgroundImage:`url(${'assets/img/bg/breadcrumb-bg.jpg'})` */,
       }}
     >
       <div className="container">
