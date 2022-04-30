@@ -5,42 +5,34 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer
-      style={{ backgroundImage: `url(${"assets/img/bg/footer-bg.jpg"})` }}
-      className="pt-95 position-relative"
-    >
+    <footer className="pt-95 position-relative">
       <div
         className="common-shape-wrapper wow slideInRight animated"
         data-wow-delay="0ms"
-        data-wow-duration="1500ms"
+        data-wow-duration="15000ms"
       >
         <div
           className="common-shape-inner wow slideInRight animated"
           data-wow-delay="0ms"
-          data-wow-duration="1500ms"
+          data-wow-duration="15000ms"
         ></div>
       </div>
       <div className="footer-area pb-60">
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-between mx-5">
             <div className="col-lg-4 col-sm-6">
               <div className="widget mb-30">
                 <div className="footer-logo mb-25">
                   <Link href="/">
                     <a>
                       <img
-                        src="assets/img/logo/horizontala3.svg"
+                        src="assets/img/logo/glavni1.svg"
                         className="img-fluid"
                         alt="footer-logo"
                       />
                     </a>
                   </Link>
                 </div>
-                <p className="mb-20 pr-35">
-                  There are many vari of pass of lorem ipsum availab but the
-                  majority have suffered in some form by injected humour or
-                  words.
-                </p>
                 <div className="footer-social">
                   <a href="#" target="_blank">
                     <i>
@@ -70,28 +62,28 @@ const Footer = () => {
                 <h4 className="widget-title mb-35">Links</h4>
                 <ul>
                   <li>
-                    <Link href="/service">
-                      <a>Our Services</a>
-                    </Link>
-                  </li>
-                  <li>
                     <Link href="/about">
-                      <a>Meet Our Team</a>
+                      <a>Information</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/project">
-                      <a>Our Portfolio</a>
+                    <Link href="/gallery">
+                      <a>Photo gallery</a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/pricing">
+                      <a>Prices</a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact">
-                      <a>Contact</a>
+                      <a>Contact Form</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact">
-                      <a>Help</a>
+                    <Link href="/extra-content">
+                      <a>Additional information</a>
                     </Link>
                   </li>
                 </ul>
@@ -102,8 +94,8 @@ const Footer = () => {
                 <h4 className="widget-title mb-35">Contact</h4>
                 <ul>
                   <li className="pb-10">
-                    86 Road Broklyn Street, 600 <br />
-                    New York, USA
+                    Ulica Velog Jože 15a <br />
+                    Vabriga (Tar-Vabriga, Poreč) 52465, Istria, Croatia
                   </li>
                   <li>
                     <img
@@ -112,38 +104,24 @@ const Footer = () => {
                       alt="icon-img"
                     />
                     <a href="mailto:needhelp@company.com">
-                      needhelp@company.com
+                      info@villa-istria.hr
                     </a>
                   </li>
-                  <li>
+                  {/* <li>
                     <img
                       src="assets/img/icon/footer-icon-2.png"
                       className="img-fluid"
                       alt="icon-img"
                     />
                     <a href="tel:926668880000">92 666 888 0000</a>
-                  </li>
+                  </li> */}
                 </ul>
-              </div>
-            </div>
-            <div className="col-lg-3 col-sm-6">
-              <div className="widget mb-30">
-                <h4 className="widget-title mb-30">Newsletter</h4>
-                <p className="mb-20">
-                  Subscribe to Our Newsletter for Daily News and Updates
-                </p>
-                <div className="widget-newsletter">
-                  <form action="#">
-                    <input type="email" placeholder="Email Address" />
-                    <button type="submit">Send</button>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <FooterBottom />
+      {/* <FooterBottom /> */}
     </footer>
   );
 };
