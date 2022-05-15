@@ -13,9 +13,9 @@ const defaultData = {
 };
 
 const emailSettings = {
-  service_id: "service_f409vha",
-  template_id: "template_0xao7ep",
-  user_id: "cmXaC7eHwGHFeFlLf",
+  service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+  template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  user_id: process.env.NEXT_PUBLIC_EMAILJS_USER_ID,
   template_params: defaultData,
 };
 
@@ -26,7 +26,7 @@ const Contact = () => {
     console.log("sending...");
     console.log(event.target.elements);
     axios.post(
-      "https://api.emailjs.com/api/v1.0/email/send",
+      process.env.NEXT_PUBLIC_EMAILJS_URL,
       {
         ...emailSettings,
         template_params: {
@@ -39,7 +39,7 @@ const Contact = () => {
       },
       {
         contentType: "application/json",
-        token: "qio8EhSA-cnGIPP76xasr",
+        token: process.env.NEXT_PUBLIC_EMAILJS_TOKEN,
       }
     );
   };
@@ -65,7 +65,9 @@ const Contact = () => {
                 <div className="contact-info-text mt-10">
                   <span>Call Us</span>
                   <h5>
-                    <a href="tel:+385919304368">+385919304368</a>
+                    <a href={`tel: ${process.env.NEXT_PUBLIC_INFO_TEL}`}>
+                      {process.env.NEXT_PUBLIC_INFO_TEL}
+                    </a>
                   </h5>
                 </div>
               </div>
@@ -78,10 +80,10 @@ const Contact = () => {
                   </a>
                 </div>
                 <div className="contact-info-text mt-10">
-                  <span>send email</span>
+                  <span>Send email</span>
                   <h5>
-                    <a href="mailto:info@villa-istria.hr">
-                      info@villa-istria.hr
+                    <a href={`mailto:${process.env.NEXT_PUBLIC_INFO_EMAIL}`}>
+                      {process.env.NEXT_PUBLIC_INFO_EMAIL}
                     </a>{" "}
                   </h5>
                 </div>
@@ -95,7 +97,7 @@ const Contact = () => {
                   </a>
                 </div>
                 <div className="contact-info-text mt-10">
-                  <span>visit office</span>
+                  <span>Check Location</span>
                   <h5>
                     <a href="#">86 Road Broklyn Street, New York</a>
                   </h5>
