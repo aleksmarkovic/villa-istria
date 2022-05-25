@@ -23,8 +23,6 @@ const Contact = () => {
   const onSend = (event) => {
     event.preventDefault();
 
-    console.log("sending...");
-    console.log(event.target.elements);
     axios.post(
       process.env.NEXT_PUBLIC_EMAILJS_URL,
       {
@@ -50,8 +48,8 @@ const Contact = () => {
         <div className="row">
           <div className="col-xxl-5 col-xl-6 col-lg-6">
             <div className="section-title-wrapper mb-15">
-              <h5 className="section-subtitle mb-20">contact with us</h5>
-              <h2 className="section-title">Speak with our consultant</h2>
+              {/* <h5 className="section-subtitle mb-20">contact with us</h5> */}
+              <h2 className="section-title">Contact info</h2>
             </div>
             <div className="contact-info mr-50 mr-xs-0  mr-md-0">
               <div className="single-contact-info d-flex align-items-center">
@@ -63,7 +61,7 @@ const Contact = () => {
                   </a>
                 </div>
                 <div className="contact-info-text mt-10">
-                  <span>Call Us</span>
+                  <span>Call or message us</span>
                   <h5>
                     <a href={`tel: ${process.env.NEXT_PUBLIC_INFO_TEL}`}>
                       {process.env.NEXT_PUBLIC_INFO_TEL}
@@ -84,7 +82,7 @@ const Contact = () => {
                   <h5>
                     <a href={`mailto:${process.env.NEXT_PUBLIC_INFO_EMAIL}`}>
                       {process.env.NEXT_PUBLIC_INFO_EMAIL}
-                    </a>{" "}
+                    </a>
                   </h5>
                 </div>
               </div>
@@ -99,7 +97,13 @@ const Contact = () => {
                 <div className="contact-info-text mt-10">
                   <span>Check Location</span>
                   <h5>
-                    <a href="#">86 Road Broklyn Street, New York</a>
+                    <a
+                      href="http://maps.google.com/?q=Velog Jože 15a, Vabriga"
+                      target="_blank"
+                    >
+                      {process.env.NEXT_PUBLIC_LOCATION} <br />
+                      Poreč, Istria - Croatia
+                    </a>
                   </h5>
                 </div>
               </div>
