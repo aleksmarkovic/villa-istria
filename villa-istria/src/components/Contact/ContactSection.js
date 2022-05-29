@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Alert } from "react-bootstrap";
 
 const defaultData = {
   name: "Your Name",
@@ -20,26 +20,31 @@ const emailSettings = {
 };
 
 const Contact = () => {
+  const [alert, setAlert] = useState();
+
   const onSend = (event) => {
     event.preventDefault();
 
-    axios.post(
-      process.env.NEXT_PUBLIC_EMAILJS_URL,
-      {
-        ...emailSettings,
-        template_params: {
-          name: event.target.elements.name.value || defaultData.name,
-          email: event.target.elements.email.value || defaultData.email,
-          phone: event.target.elements.phone.value || defaultData.phone,
-          subject: event.target.elements.subject.value || defaultData.subject,
-          message: event.target.elements.message.value || defaultData.message,
+    axios
+      .post(
+        process.env.NEXT_PUBLIC_EMAILJS_URL,
+        {
+          ...emailSettings,
+          template_params: {
+            name: event.target.elements.name.value || defaultData.name,
+            email: event.target.elements.email.value || defaultData.email,
+            phone: event.target.elements.phone.value || defaultData.phone,
+            subject: event.target.elements.subject.value || defaultData.subject,
+            message: event.target.elements.message.value || defaultData.message,
+          },
         },
-      },
-      {
-        contentType: "application/json",
-        token: process.env.NEXT_PUBLIC_EMAILJS_TOKEN,
-      }
-    );
+        {
+          contentType: "application/json",
+          token: process.env.NEXT_PUBLIC_EMAILJS_TOKEN,
+        }
+      )
+      .then(() => setAlert("success"))
+      .catch(() => setAlert("danger"));
   };
 
   return (
@@ -145,10 +150,21 @@ const Contact = () => {
                     ></Form.Control>
                   </div>
                   <div className="col-xxl-12 col-xl-12 mb-20">
-                    <Button type="submit" className="theme-btn border-btn">
+                    <Button
+                      active={false}
+                      type="submit"
+                      className="theme-btn border-btn"
+                    >
                       Send a message
                     </Button>
                   </div>
+                  {alert && (
+                    <Alert key={alert} variant={alert}>
+                      {alert === "success"
+                        ? "Message sent!"
+                        : "Something went wrong while sending the message!"}
+                    </Alert>
+                  )}
                 </div>
               </Form>
               <p className="ajax-response"></p>

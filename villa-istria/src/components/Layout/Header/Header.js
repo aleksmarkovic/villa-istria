@@ -10,8 +10,16 @@ const Header = () => {
 
   const router = useRouter();
   const [path, setPath] = useState("");
+  const [isRoot, setIsRoot] = useState(true);
+
   useEffect(() => {
     setPath(router.pathname);
+
+    if (router.pathname !== "/") {
+      setIsRoot(false);
+    } else {
+      setIsRoot(true);
+    }
   }, [router]);
 
   // Sticky Menu Area start
@@ -26,9 +34,11 @@ const Header = () => {
     const header = document.querySelector(".transparent-header");
     const scrollTop = window.scrollY;
 
-    scrollTop >= 1
-      ? header.classList.add("sticky-header")
-      : header.classList.remove("sticky-header");
+    if (isRoot) {
+      scrollTop >= 1
+        ? header.classList.add("sticky-header")
+        : header.classList.remove("sticky-header");
+    }
   };
   // Sticky Menu Area End
 
@@ -40,8 +50,12 @@ const Header = () => {
         <link rel="icon" href="assets/img/logo/znak1.svg" />
       </Head>
       <header>
-        <div className="transparent-header">
-          <div className="container-fluid">
+        <div
+          className={
+            isRoot ? "transparent-header" : "transparent-header sticky-header"
+          }
+        >
+          <div className="container-fluid px-0">
             <div className="header-space">
               <div className="row align-items-center">
                 <div className="col-xl-2 col-8">
@@ -77,27 +91,22 @@ const Header = () => {
                           </Link>
                         </li>
                         <li className="menu-item-has-children">
-                          <Link href="/service">
-                            <a>Pricing</a>
-                          </Link>
-                        </li>
-                        <li className="menu-item-has-children">
-                          <Link href="/project">
+                          <Link href="/contact">
                             <a>Contact</a>
                           </Link>
                         </li>
                         <li className="menu-item-has-children">
-                          <Link href="/blog">
+                          <Link href="/extra-content">
                             <a>Extra Content</a>
                           </Link>
                           <ul className="sub-menu">
                             <li>
-                              <Link href="/blog">
+                              <Link href="/places-to-visit">
                                 <a>Places to Visit</a>
                               </Link>
                             </li>
                             <li>
-                              <Link href="/blog-details">
+                              <Link href="/local-products">
                                 <a>Local Products</a>
                               </Link>
                             </li>

@@ -68,7 +68,7 @@
     border: 1px solid transparent;
     @include transition(0.3s);
     &:focus {
-      border-color: $theme-color;
+      border-color: $base-blue;
     }
   }
 }

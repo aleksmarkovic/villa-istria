@@ -3,6 +3,18 @@
 @use "mixins" as *;
 
 /* 02. Header */
+
+.base-header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 999;
+  background: $base-blue;
+  animation: 800ms ease-in-out 0s normal none 1 running fadeInDown;
+  @include transition(0.3s);
+}
+
 .transparent-header.sticky-header,
 .transparent-header.sticky-header {
   position: fixed;
@@ -28,7 +40,7 @@
   background-color: rgba(36, 38, 41, 0.102);
   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.1);
   & .header-space {
-    padding: 0px 65px;
+    padding: 0px 65px 0px 0px;
     @include mq(xxl) {
       padding: 0px 0px;
     }

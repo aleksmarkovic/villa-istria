@@ -3,6 +3,10 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+html {
+  min-height: 100%;
+}
+
 body {
   color: $body-color;
   font-size: $body-fz;
@@ -176,8 +180,8 @@ label {
   border: none;
   outline: none;
   font-weight: 700;
-  color: $white-color;
-  background: $theme-color;
+  color: white;
+  background: $base-blue;
   padding: 0px 50px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
@@ -185,7 +189,7 @@ label {
   z-index: 1;
   @include transition(0.3s);
   &::before {
-    background: $white-color;
+    background: $base-brown;
     content: "";
     position: absolute;
     left: auto;
@@ -198,7 +202,8 @@ label {
     z-index: -1;
   }
   &:hover {
-    color: $theme-color;
+    color: $base-blue;
+    background: $base-brown;
     &::before {
       left: 0px;
       right: auto;
@@ -212,12 +217,12 @@ label {
     line-height: 50px;
   }
   &.black-btn {
-    background: $heading-color;
+    background: $base-blue;
   }
 }
-.border-btn {
-  border: 1px solid $theme-color;
-}
+// .border-btn {
+//   border: 1px solid $base-blue;
+// }
 
 .btn-rounded {
   border-radius: 100% !important;
@@ -657,3 +662,8 @@ input.main-search-input:-ms-input-placeholder {
   color: #b79d82;
 }
 //search menu end
+
+.btn-primary:focus {
+  background-color: $base-blue;
+  // color: $base-blue;
+}
