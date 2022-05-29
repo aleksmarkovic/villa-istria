@@ -1,6 +1,11 @@
-const withImages = require('next-images');
+const withImages = require("next-images");
 module.exports = withImages({
-    webpack(config, options) {
-        return config
-    }
+  webpack(config, options) {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+    };
+
+    return config;
+  },
 });
