@@ -36,17 +36,7 @@ const Footer = () => {
                 <div className="footer-social">
                   <a href="#" target="_blank">
                     <i>
-                      <FontAwesomeIcon icon={["fab", "twitter"]} />
-                    </i>
-                  </a>
-                  <a href="#" target="_blank">
-                    <i>
                       <FontAwesomeIcon icon={["fab", "facebook"]} />
-                    </i>
-                  </a>
-                  <a href="#" target="_blank">
-                    <i>
-                      <FontAwesomeIcon icon={["fab", "pinterest-p"]} />
                     </i>
                   </a>
                   <a href="#" target="_blank">
@@ -100,7 +90,7 @@ const Footer = () => {
                   <li>
                     <img
                       src="assets/img/icon/footer-icon-1.png"
-                      className="img-fluid"
+                      className="img-fluid footer-icon"
                       alt="icon-img"
                     />
                     <a href="mailto:needhelp@company.com">

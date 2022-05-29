@@ -10,6 +10,7 @@ footer {
   background-size: cover;
   z-index: 1;
   overflow: hidden;
+
   & .common-shape-wrapper {
     background: $base-blue;
     z-index: -1;
@@ -57,7 +58,7 @@ footer {
           left: auto;
           right: 0;
           bottom: 6px;
-          background-color: $theme-color;
+          background-color: $base-brown;
           z-index: -1;
           @include transition(0.3s);
         }
@@ -74,6 +75,7 @@ footer {
   }
 }
 .footer-social {
+  text-align: center;
   & a {
     font-size: 18px;
     color: $white-color;
@@ -83,7 +85,7 @@ footer {
       margin-right: 0px;
     }
     &:hover {
-      color: $theme-color;
+      color: $base-brown;
     }
   }
 }
@@ -115,7 +117,7 @@ footer {
   & button {
     height: 50px;
     border: none;
-    background: $theme-color;
+    background: $base-brown;
     font-size: 14px;
     color: $white-color;
     outline: none;
@@ -220,4 +222,8 @@ footer {
   @include mq(xs) {
     text-align: center;
   }
+}
+
+.footer-icon {
+  color: $base-brown;
 }

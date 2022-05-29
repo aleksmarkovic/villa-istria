@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Image, Modal } from "react-bootstrap";
 
 const ImageComponent = (props) => {
-  const { pageTitle, image, description } = props;
+  const { image, description } = props;
 
   const [showImage, setShowImage] = useState(false);
 
@@ -25,15 +25,7 @@ const ImageComponent = (props) => {
           centered
         >
           <Modal.Body>
-            <Image
-              // fluid
-              rounded
-              show={showImage}
-              alt={description}
-              src={image}
-              // width={400}
-              // onClick={onImageClick}
-            />
+            <Image rounded show={showImage} alt={description} src={image} />
           </Modal.Body>
         </Modal>
       )}
