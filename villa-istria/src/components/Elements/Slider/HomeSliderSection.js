@@ -10,7 +10,7 @@ const images = [
   "assets/img/images/168543736.jpg",
   "assets/img/images/villas-in-croatia-1.jpg",
 ];
-console.log(images);
+
 const HomeSlider = () => {
   return (
     <section className="slider-area fix position-relative">
@@ -48,11 +48,11 @@ const HomeSlider = () => {
             }}
             // scrollbar={{ draggable: true }}
             // navigation={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
           >
             {images.map((image) => (
-              <SwiperSlide>
+              <SwiperSlide key={image}>
                 <div
                   className="single-slider slider-height swiper-slide"
                   data-swiper-autoplay="10000"

@@ -62,6 +62,7 @@ const Gallery = () => {
                     // height={10}
                     // offset={[-100, 100]}
                     placeholder={<Spinner />}
+                    style={{ cursor: "pointer" }}
                   >
                     <Image description="image" image={image.default.src} />
                   </LazyLoad>
