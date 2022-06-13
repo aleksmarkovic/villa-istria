@@ -99,7 +99,7 @@
         visibility: hidden;
         width: 240px;
         z-index: 9;
-        border-top: 4px solid $theme-color;
+        border-top: 4px solid $base-brown;
         text-align: left;
         padding: 15px 0;
         & li {
@@ -121,12 +121,12 @@
               right: 0;
               z-index: -1;
               transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
-              background: $theme-color;
+              background: $base-brown;
             }
           }
           &:hover {
             & a {
-              color: $theme-color;
+              color: $base-brown;
               &:before {
                 width: 100%;
                 left: 0;
@@ -139,7 +139,7 @@
       /*submenu end*/
       &:hover {
         & a {
-          color: $theme-color;
+          color: $base-brown;
         }
         & .sub-menu {
           opacity: 1;
@@ -175,7 +175,7 @@
       margin-right: 13px;
     }
     &:hover {
-      color: $theme-color;
+      color: $base-brown;
     }
   }
 }
