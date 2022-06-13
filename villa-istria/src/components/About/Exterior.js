@@ -137,7 +137,7 @@ const Exterior = ({}) => {
                       aria-expanded="false"
                       aria-controls="collapseExteriorThree"
                     >
-                      How is the property...kurcina? strukturirano razmjestaj
+                      What is the configuration of the property?
                     </button>
                   </h2>
                   <div
@@ -148,10 +148,11 @@ const Exterior = ({}) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        Front-end and design are remarkably complex these days.
-                        That’s why we invite kind, smart folks from the
-                        community to run online workshops for all of us to learn
-                        together. And we have new ones.
+                        Right after the main entrance is the parking place and
+                        the front door of the Villa. On the opposite side of
+                        building is the swimming pool area and under it, it's
+                        the outdoor fireplace/grill area. The other areas are
+                        decorated with herbs and other bushy plants
                       </p>
                     </div>
                   </div>

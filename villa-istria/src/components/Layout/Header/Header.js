@@ -48,6 +48,7 @@ const Header = () => {
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
         <title>Villa Istria</title>
         <link rel="icon" href="assets/img/logo/znak1.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <header>
         <div
@@ -95,11 +96,11 @@ const Header = () => {
                             <a>Contact</a>
                           </Link>
                         </li>
-                        <li className="menu-item-has-children">
-                          <Link href="/extra-content">
+                        {/* <li className="menu-item-has-children">
+                          <Link href="/places-to-visit">
                             <a>Extra Content</a>
-                          </Link>
-                          <ul className="sub-menu">
+                          </Link> */}
+                        {/* <ul className="sub-menu">
                             <li>
                               <Link href="/places-to-visit">
                                 <a>Places to Visit</a>
@@ -110,8 +111,8 @@ const Header = () => {
                                 <a>Local Products</a>
                               </Link>
                             </li>
-                          </ul>
-                        </li>
+                          </ul> */}
+                        {/* </li> */}
                       </ul>
                     </nav>
                   </div>
