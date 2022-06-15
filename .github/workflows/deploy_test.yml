@@ -1,4 +1,4 @@
-name: Publish Website to CPanel
+name: Deploy to test
 on:
   push:
     branches:
@@ -8,12 +8,26 @@ jobs:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.1.0
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.1.1
-      with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+      - uses: actions/checkout@v2.1.0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Install dependencies
+        run: npm install
+        working-directory: villa-istria/
+
+      - name: Build
+        run: ls && npm run build
+        working-directory: villa-istria/
+
+      - name: Export
+        run: npm run export
+        working-directory: villa-istria/
+
+      - name: Deploy
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          folder: villa-istria/out
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
