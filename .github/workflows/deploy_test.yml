@@ -4,8 +4,8 @@ on:
     branches:
       - staging
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  deploy-to-test:
+    name: Deploy to test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.1.0
@@ -13,21 +13,22 @@ jobs:
         with:
           node-version: "14"
       - name: Install dependencies
-        run: npm install
+        run: yarn install
         working-directory: villa-istria/
 
       - name: Build
-        run: ls && npm run build
+        run: yarn build
         working-directory: villa-istria/
 
       - name: Export
-        run: npm run export
+        run: yarn export
         working-directory: villa-istria/
 
       - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          folder: villa-istria/out
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: villa-istria/out/
+          server-dir: test.villa-istria.hr/
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
