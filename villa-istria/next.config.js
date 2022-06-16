@@ -1,11 +1,17 @@
-const withImages = require("next-images");
-module.exports = withImages({
-  webpack(config, options) {
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-    };
+const withOptimizedImages = require("next-optimized-images");
 
-    return config;
+module.exports = withOptimizedImages({
+  ...{
+    webpack(config, options) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+
+      return config;
+    },
+  },
+  images: {
+    disableStaticImages: true,
   },
 });
