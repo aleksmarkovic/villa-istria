@@ -1,0 +1,34 @@
+name: Deploy to Production
+on:
+  push:
+    branches:
+      - production
+jobs:
+  deploy-to-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - name: Install dependencies
+        run: yarn install
+        working-directory: villa-istria/
+
+      - name: Build
+        run: yarn build
+        working-directory: villa-istria/
+
+      - name: Export
+        run: yarn export
+        working-directory: villa-istria/
+
+      - name: Deploy
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          local-dir: villa-istria/out/
+          server-dir: public_html/
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
