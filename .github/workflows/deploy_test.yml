@@ -29,7 +29,7 @@ jobs:
           echo NEXT_PUBLIC_EMAILJS_URL=${{secrets.NEXT_PUBLIC_EMAILJS_URL}} >> villa-istria/.env
           echo NEXT_PUBLIC_FACEBOOK_URL=${{secrets.NEXT_PUBLIC_FACEBOOK_URL}} >> villa-istria/.env
           echo NEXT_PUBLIC_INSTAGRAM_URL=${{secrets.NEXT_PUBLIC_INSTAGRAM_URL}} >> villa-istria/.env
-          echo NEXT_EUROTOURS_URL=${{secrets.NEXT_EUROTOURS_URL}} >> villa-istria/.env
+          echo NEXT_PUBLIC_EUROTOURS_URL=${{secrets.NEXT_EUROTOURS_URL}} >> villa-istria/.env
 
       - name: Build
         run: yarn build

@@ -21,7 +21,7 @@ class ProjectDetailsPage extends React.Component {
 
 export default ProjectDetailsPage;
 
-export async function getStaticProps({ store }) {
+export async function getStaticProps({}) {
   return {
     props: {},
   };

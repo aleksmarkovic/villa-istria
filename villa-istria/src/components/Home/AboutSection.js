@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 import Link from "next/link";
+import { isMobile } from "react-device-detect";
 
 const About = () => {
   return (
-    <section className="about-area pt-120 pb-70 fix">
+    <section className="about-area pt-50 pb-70 fix">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6">
+          <div className="col-lg-6 mb-80">
             <div className="kabout-img mb-50 mr-70">
               <Image
                 src="assets/img/images/Villa_Istria-46-front.webp"
                 className="img-thumbnail z-index"
                 alt="about-img"
               />
-              <div className="kabout-img-small">
+              <div
+                className={!isMobile ? "kabout-img-small" : "kabout-img-mobile"}
+              >
                 <Image
                   src="assets/img/images/Villa_Istria-front.webp"
                   className="img-thumbnail"

@@ -5,10 +5,7 @@ import Link from "next/link";
 
 const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
   const [home, setHome] = useState(false);
-  const [courses, setcourses] = useState(false);
   const [blog, setBlog] = useState(false);
-  const [pages, setPages] = useState(false);
-  const [project, setProject] = useState(false);
 
   const router = useRouter();
   const [path, setPath] = useState("");

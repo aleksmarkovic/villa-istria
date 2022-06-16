@@ -21,7 +21,7 @@ class ContactPage extends React.Component {
 
 export default ContactPage;
 
-export async function getStaticProps({ store }) {
+export async function getStaticProps({}) {
   return {
     props: {},
   };

@@ -21,7 +21,7 @@ class FaqPage extends React.Component {
 
 export default FaqPage;
 
-export async function getStaticProps({ store }) {
+export async function getStaticProps({}) {
   return {
     props: {},
   };

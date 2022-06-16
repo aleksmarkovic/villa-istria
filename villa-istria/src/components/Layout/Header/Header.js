@@ -150,14 +150,15 @@ const Header = () => {
                       </a>
                     </div>
                     <div className="header-btn mr-10">
-                      <Link href={process.env.NEXT_PUBLIC_EUROTOURS_URL}>
-                        <a
-                          className="theme-btn theme-btn-small"
-                          target="_blank"
-                        >
-                          Check availability
-                        </a>
-                      </Link>
+                      {/* <Link > */}
+                      <a
+                        className="theme-btn theme-btn-small"
+                        target="_blank"
+                        href={process.env.NEXT_PUBLIC_EUROTOURS_URL}
+                      >
+                        Check availability
+                      </a>
+                      {/* </Link> */}
                     </div>
                   </div>
                 </div>
