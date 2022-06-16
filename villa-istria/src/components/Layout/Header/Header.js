@@ -46,6 +46,15 @@ const Header = () => {
     <React.Fragment>
       <Head>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-F5QZT899NR"
+        ></script>
+        <script>
+          window.dataLayer = window.dataLayer || []; function gtag()
+          {dataLayer.push(arguments)}
+          gtag('js', new Date()); gtag('config', 'G-F5QZT899NR');
+        </script>
         <title>Villa Istria</title>
         <link rel="icon" href="assets/img/logo/znak1.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
