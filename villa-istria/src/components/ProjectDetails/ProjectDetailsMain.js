@@ -1,34 +1,26 @@
-import React, { Component } from 'react';
-import Breadcrumb from '../Common/Breadcrumb';
-import Experience from './ExperienceSection';
-import PortPagination from './PortPagination';
-import RecentWork from './RecentWorkSection';
-
+import React, { Component } from "react";
+import Experience from "./ExperienceSection";
+import PortPagination from "./PortPagination";
+import RecentWork from "./RecentWorkSection";
 
 class ProjectDetails extends Component {
+  render() {
+    return (
+      <main>
+        {/* experience-start */}
+        <Experience />
+        {/* experience-end */}
 
-    render() {
+        {/* testimonial-start */}
+        <PortPagination />
+        {/* testimonial-end */}
 
-        return (
-            <main>
-                {/* breadcrumb-start */}
-				<Breadcrumb pageTitle="Project Details" />
-				{/* breadcrumb-end */}
-
-                {/* experience-start */}
-               <Experience />
-				{/* experience-end */}
-
-                {/* testimonial-start */}
-                <PortPagination />
-				{/* testimonial-end */}
-
-                {/* fact-start */}
-				<RecentWork />
-				{/* fact-end */}
-        	</main>
-        );
-    }
+        {/* fact-start */}
+        <RecentWork />
+        {/* fact-end */}
+      </main>
+    );
+  }
 }
 
 export default ProjectDetails;
