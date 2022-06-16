@@ -93,8 +93,8 @@ const Footer = () => {
                       className="img-fluid footer-icon"
                       alt="icon-img"
                     />
-                    <a href="mailto:needhelp@company.com">
-                      info@villa-istria.hr
+                    <a href={process.env.NEXT_PUBLIC_INFO_EMAIL}>
+                      {process.env.NEXT_PUBLIC_INFO_EMAIL}
                     </a>
                   </li>
                   {/* <li>

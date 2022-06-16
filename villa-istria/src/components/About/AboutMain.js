@@ -39,10 +39,6 @@ class AboutMain extends Component {
 
         <Exterior />
         <Interior />
-
-        {/* team-start */}
-        <TeamTwo />
-        {/* team-end */}
       </main>
     );
   }

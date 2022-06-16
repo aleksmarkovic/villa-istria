@@ -37,7 +37,7 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
           <div className="mm-menu">
             <ul>
               <li className="menu-item-has-children">
-                <Link href="/service">
+                <Link href="/">
                   <a>Home</a>
                 </Link>
               </li>
@@ -47,16 +47,16 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                 </Link>
               </li>
               <li className="menu-item-has-children">
-                <Link href="/service">
+                <Link href="/gallery">
                   <a>Gallery</a>
                 </Link>
               </li>
               <li className="menu-item-has-children">
-                <Link href="/service">
+                <Link href="/contact">
                   <a>Contact</a>
                 </Link>
               </li>
-              <li className={blog ? "has-droupdown active" : "has-droupdown"}>
+              {/* <li className={blog ? "has-droupdown active" : "has-droupdown"}>
                 <a
                   onClick={() => {
                     openMobileMenu("blog");
@@ -76,7 +76,7 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                     </Link>
                   </li>
                 </ul>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className="contact-infos mb-30">
@@ -89,7 +89,8 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                     className="img-fluid"
                     alt="icon-img"
                   />
-                  86 broklyn street road, New York
+                  Ulica Velog Jože 15a <br />
+                  Vabriga (Tar-Vabriga, Poreč) 52465, Istria, Croatia
                 </li>
                 <li>
                   <img
@@ -97,7 +98,9 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                     className="img-fluid"
                     alt="icon-img"
                   />
-                  <a href="mailto:info@sycho24.com">needhelp@company.com</a>
+                  <a href={`mailto:${process.env.NEXT_PUBLIC_INFO_EMAIL}`}>
+                    {process.env.NEXT_PUBLIC_INFO_EMAIL}
+                  </a>
                 </li>
                 <li>
                   <img
@@ -105,7 +108,9 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                     className="img-fluid"
                     alt="icon-img"
                   />
-                  <a href="tel:926668880000">92 666 888 0000</a>
+                  <a href={`tel: ${process.env.NEXT_PUBLIC_INFO_TEL}`}>
+                    {process.env.NEXT_PUBLIC_INFO_TEL}
+                  </a>
                 </li>
               </ul>
               <div className="sidebar__menu--social">
