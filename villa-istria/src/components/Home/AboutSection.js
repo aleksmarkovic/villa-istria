@@ -21,7 +21,6 @@ const About = () => {
                 src="assets/img/images/Villa_Istria-front.webp"
                 className="img-thumbnail"
                 alt="about-img"
-                // width={300}
               />
             </div>
           </div>

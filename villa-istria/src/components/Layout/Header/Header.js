@@ -116,7 +116,7 @@ const Header = () => {
                       </ul>
                     </nav>
                   </div>
-                  <div className="side-menu-icon d-xl-none text-end">
+                  <div className="side-menu-icon d-xl-none text-end mr-10">
                     <button
                       className="side-toggle"
                       onClick={() => {

@@ -48,12 +48,11 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-area pt-200 pb-80 fix">
-      <div className="container">
+    <section className="contact-area pt-200 mt-50 pb-200">
+      <div className="container justify-content-center">
         <div className="row">
           <div className="col-xxl-5 col-xl-6 col-lg-6">
             <div className="section-title-wrapper mb-15">
-              {/* <h5 className="section-subtitle mb-20">contact with us</h5> */}
               <h2 className="section-title">Contact info</h2>
             </div>
             <div className="contact-info mr-50 mr-xs-0  mr-md-0">
@@ -118,38 +117,40 @@ const Contact = () => {
             <div className="contact-form">
               <Form onSubmit={onSend} id="contact-form">
                 <div className="row">
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-20">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-40">
                     <Form.Control
                       name="name"
                       type="input"
                       placeholder={defaultData.name}
                     />
                   </div>
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-20">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-40">
                     <Form.Control
                       id="email"
                       type="input"
                       placeholder={defaultData.email}
                     />
                   </div>
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-20">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-40">
                     <Form.Control id="phone" type="input" placeholder="Phone" />
                   </div>
-                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-20">
+                  <div className="col-xxl-6 col-xl-6 col-lg-6 mb-40">
                     <Form.Control
                       id="subject"
                       type="input"
                       placeholder={defaultData.subject}
                     />
                   </div>
-                  <div className="col-xxl-12 col-xl-12 col-lg-12 mb-20">
+                  <div className="col-xxl-12 col-xl-12 col-lg-12 mb-40">
                     <Form.Control
                       placeholder={defaultData.message}
                       type="text"
                       name="message"
+                      as="textarea"
+                      rows={3}
                     ></Form.Control>
                   </div>
-                  <div className="col-xxl-12 col-xl-12 mb-20">
+                  <div className="col-xxl-12 col-xl-12 mb-40">
                     <Button
                       active={false}
                       type="submit"
