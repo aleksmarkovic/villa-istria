@@ -7,8 +7,9 @@ import "swiper/css/bundle";
 import Link from "next/link";
 
 const images = [
-  "assets/img/images/168543736.jpg",
-  "assets/img/images/villas-in-croatia-1.jpg",
+  "assets/img/images/Villa_Istria-48.webp",
+  "assets/img/images/Villa_Istria-34.webp",
+  "assets/img/images/Villa_Istria-20.webp",
 ];
 
 const HomeSlider = () => {
@@ -43,7 +44,7 @@ const HomeSlider = () => {
               el: ".slider-paginations",
             }}
             autoplay={{
-              delay: 3000,
+              delay: 4500,
               disableOnInteraction: true,
             }}
             // scrollbar={{ draggable: true }}
