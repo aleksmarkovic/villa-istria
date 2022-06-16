@@ -49,6 +49,13 @@ const Index = (props) => {
       <Header />
       <HomeMain />
       <Footer />
+
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMDKJTD"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`,
+        }}
+      />
     </React.Fragment>
   );
 };

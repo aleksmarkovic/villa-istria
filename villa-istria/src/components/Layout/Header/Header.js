@@ -46,15 +46,17 @@ const Header = () => {
     <React.Fragment>
       <Head>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
         <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-F5QZT899NR"
-        ></script>
-        <script>
-          window.dataLayer = window.dataLayer || []; function gtag()
-          {dataLayer.push(arguments)}
-          gtag('js', new Date()); gtag('config', 'G-F5QZT899NR');
-        </script>
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WMDKJTD');`,
+          }}
+        />
+
         <title>Villa Istria</title>
         <link rel="icon" href="assets/img/logo/znak1.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
