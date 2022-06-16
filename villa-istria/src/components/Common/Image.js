@@ -13,8 +13,9 @@ const ImageComponent = (props) => {
         rounded
         alt={description}
         src={image}
-        width={400}
+        // width={400}
         onClick={() => setShowImage(true)}
+        className="img-responsive"
       />
       {showImage && (
         <Modal

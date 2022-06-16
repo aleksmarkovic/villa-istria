@@ -55,20 +55,20 @@ const Gallery = () => {
       <section className="blog-2 pt-120 pb-115">
         <div className="container">
           {/* <div className="d-flex justify-content-center flex-wrap"> */}
-          <div className="row">
+          <div className="row justify-content-center">
             {/* <Table> */}
             {images &&
               images.map((image, i) => (
                 <div
                   key={image.default.src}
-                  className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-xs-1 mb-30"
+                  className="col-xxl-5 col-xl-5 col-lg-6 col-md-6 col-xs-1 mb-30"
                 >
-                  <LazyLoadImage
+                  {/* <LazyLoadImage
                     alt="image"
                     effect="blur"
                     src={image.default.src}
-                  />
-                  {/* <LazyLoad
+                  /> */}
+                  <LazyLoad
                     key={i}
                     // height={10}
                     // offset={[-100, 100]}
@@ -76,7 +76,7 @@ const Gallery = () => {
                     style={{ cursor: "pointer" }}
                   >
                     <Image description="image" image={image.default.src} />
-                  </LazyLoad> */}
+                  </LazyLoad>
                 </div>
               ))}
           </div>
