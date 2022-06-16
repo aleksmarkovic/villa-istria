@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Image as bImage, Modal } from "react-bootstrap";
-import Image from "next/image";
+import { Image, Modal } from "react-bootstrap";
 
 const ImageComponent = (props) => {
   const { image, description } = props;
@@ -14,8 +13,6 @@ const ImageComponent = (props) => {
         rounded
         alt={description}
         src={image}
-        width={600}
-        height={450}
         onClick={() => setShowImage(true)}
         layout="responsive"
       />
@@ -28,7 +25,7 @@ const ImageComponent = (props) => {
           centered
         >
           <Modal.Body>
-            <bImage rounded show={showImage} alt={description} src={image} />
+            <Image rounded show={showImage} alt={description} src={image} />
           </Modal.Body>
         </Modal>
       )}
