@@ -68,7 +68,7 @@ const Gallery = () => {
                     effect="blur"
                     src={image.default.src}
                   /> */}
-                  <LazyLoad
+                  {/* <LazyLoad
                     key={i}
                     offset={-1}
                     once={true}
@@ -76,9 +76,9 @@ const Gallery = () => {
                     // offset={[-100, 100]}
                     // placeholder={<Spinner />}
                     style={{ cursor: "pointer" }}
-                  >
-                    <Image description="image" image={image.default.src} />
-                  </LazyLoad>
+                  > */}
+                  <Image description="image" image={image.default.src} />
+                  {/* </LazyLoad> */}
                 </div>
               ))}
           </div>
