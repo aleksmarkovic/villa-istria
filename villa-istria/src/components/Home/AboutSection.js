@@ -8,22 +8,21 @@ const About = () => {
     <section className="about-area pt-50 pb-70 fix">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 mb-80">
+          <div className="col-lg-6 mb-100 kabout-image-container">
             <div className="kabout-img mb-50 mr-70">
               <Image
                 src="assets/img/images/Villa_Istria-46-front.webp"
                 className="img-thumbnail z-index"
                 alt="about-img"
               />
-              <div
-                className={!isMobile ? "kabout-img-small" : "kabout-img-mobile"}
-              >
-                <Image
-                  src="assets/img/images/Villa_Istria-front.webp"
-                  className="img-thumbnail"
-                  alt="about-img"
-                />
-              </div>
+            </div>
+            <div className="kabout-img-small">
+              <Image
+                src="assets/img/images/Villa_Istria-front.webp"
+                className="img-thumbnail"
+                alt="about-img"
+                // width={300}
+              />
             </div>
           </div>
           <div className="col-lg-6">
