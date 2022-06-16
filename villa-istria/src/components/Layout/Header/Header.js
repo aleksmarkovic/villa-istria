@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BurgerMenus from "./BurgerMenus";
+import Script from "next/script";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,9 +46,9 @@ const Header = () => {
   return (
     <React.Fragment>
       <Head>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <Script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></Script>
 
-        <script
+        <Script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -56,6 +57,22 @@ const Header = () => {
           })(window,document,'script','dataLayer','GTM-WMDKJTD');`,
           }}
         />
+
+        <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+
+        <Script strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+            page_path: window.location.pathname,
+            });
+        `}
+        </Script>
 
         <title>Villa Istria</title>
         <link rel="icon" href="assets/img/logo/znak1.svg" />
