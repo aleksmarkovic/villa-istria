@@ -34,12 +34,12 @@ const Footer = () => {
                   </Link>
                 </div>
                 <div className="footer-social">
-                  <a href="#" target="_blank">
+                  <a href={process.env.NEXT_FACEBOOK_URL} target="_blank">
                     <i>
                       <FontAwesomeIcon icon={["fab", "facebook"]} />
                     </i>
                   </a>
-                  <a href="#" target="_blank">
+                  <a href={process.env.NEXT_INSTAGRAM_URL} target="_blank">
                     <i>
                       <FontAwesomeIcon icon={["fab", "instagram"]} />
                     </i>
