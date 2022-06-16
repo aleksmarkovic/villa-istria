@@ -16,6 +16,18 @@ jobs:
         run: yarn install
         working-directory: villa-istria/
 
+      - name: Create env file
+        run: |
+          touch villa-istria/.env
+          echo NEXT_PUBLIC_INFO_EMAIL=${{secrets.NEXT_PUBLIC_INFO_EMAIL}} >> packages/web/.env
+          echo NEXT_PUBLIC_INFO_TEL=${{secrets.NEXT_PUBLIC_INFO_TEL}} >> packages/web/.env
+          echo NEXT_PUBLIC_LOCATION=${{secrets.NEXT_PUBLIC_LOCATION}} >> packages/web/.env
+          echo NEXT_PUBLIC_EMAILJS_SERVICE_ID=${{secrets.NEXT_PUBLIC_EMAILJS_SERVICE_ID}} >> packages/web/.env
+          echo NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=${{secrets.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}} >> packages/web/.env
+          echo NEXT_PUBLIC_EMAILJS_USER_ID=${{secrets.NEXT_PUBLIC_EMAILJS_USER_ID}} >> packages/web/.env
+          echo NEXT_PUBLIC_EMAILJS_TOKEN=${{secrets.NEXT_PUBLIC_EMAILJS_TOKEN}} >> packages/web/.env
+          echo NEXT_PUBLIC_EMAILJS_URL=${{secrets.NEXT_PUBLIC_EMAILJS_URL}} >> packages/web/.env
+
       - name: Build
         run: yarn build
         working-directory: villa-istria/
