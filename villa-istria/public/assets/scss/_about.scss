@@ -3,6 +3,10 @@
 @use "mixins" as *;
 
 /* 06. About */
+.kabout-image-container {
+  position: relative;
+}
+
 .kabout-img {
   position: relative;
 
@@ -33,20 +37,18 @@
       display: none;
     }
   }
-  &-small {
-    bottom: -180px;
-    z-index: 5;
-    left: -140px;
-    width: 60%;
-    display: inline-block;
-    position: absolute;
-  }
-  &-mobile {
-    width: 80%;
-    left: 30px;
-    position: absolute;
-    bottom: -180px;
-    z-index: 5;
+}
+.kabout-img-small {
+  z-index: 5;
+  position: absolute;
+  left: -25%;
+  top: 35%;
+  width: 50%;
+
+  @media only screen and (hover: none) and (pointer: coarse) {
+    top: 50%;
+    width: 75%;
+    left: 12.5%; //calc(25% - 40px);
   }
 }
 
