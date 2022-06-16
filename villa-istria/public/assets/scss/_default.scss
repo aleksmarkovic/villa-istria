@@ -149,7 +149,7 @@ label {
 }
 
 ::selection {
-  background: $theme-color;
+  background: $base-brown;
   color: #fff;
   text-shadow: none;
 }
@@ -514,7 +514,7 @@ div.swiper-fade .swiper-slide .swiper-slide {
   color: inherit;
 }
 .nav-search:hover {
-  color: $theme-color;
+  color: $base-brown;
 }
 .search-wrap {
   width: 100%;
@@ -665,5 +665,4 @@ input.main-search-input:-ms-input-placeholder {
 
 .btn-primary:focus {
   background-color: $base-blue;
-  // color: $base-blue;
 }

@@ -27,8 +27,9 @@ jobs:
           echo NEXT_PUBLIC_EMAILJS_USER_ID=${{secrets.NEXT_PUBLIC_EMAILJS_USER_ID}} >> villa-istria/.env
           echo NEXT_PUBLIC_EMAILJS_TOKEN=${{secrets.NEXT_PUBLIC_EMAILJS_TOKEN}} >> villa-istria/.env
           echo NEXT_PUBLIC_EMAILJS_URL=${{secrets.NEXT_PUBLIC_EMAILJS_URL}} >> villa-istria/.env
-          echo NEXT_FACEBOOK_URL=${{secrets.NEXT_FACEBOOK_URL}} >> villa-istria/.env
-          echo NEXT_INSTAGRAM_URL=${{secrets.NEXT_INSTAGRAM_URL}} >> villa-istria/.env
+          echo NEXT_PUBLIC_FACEBOOK_URL=${{secrets.NEXT_PUBLIC_FACEBOOK_URL}} >> villa-istria/.env
+          echo NEXT_PUBLIC_INSTAGRAM_URL=${{secrets.NEXT_PUBLIC_INSTAGRAM_URL}} >> villa-istria/.env
+          echo NEXT_EUROTOURS_URL=${{secrets.NEXT_EUROTOURS_URL}} >> villa-istria/.env
 
       - name: Build
         run: yarn build

@@ -132,20 +132,29 @@ const Header = () => {
                 <div className="col-xl-4 d-none d-xl-block">
                   <div className="header-right text-end">
                     <div className="header-social">
-                      <a href={process.env.NEXT_FACEBOOK_URL} target="_blank">
+                      <a
+                        href={process.env.NEXT_PUBLIC_FACEBOOK_URL}
+                        target="_blank"
+                      >
                         <i>
                           <FontAwesomeIcon icon={["fab", "facebook"]} />
                         </i>
                       </a>
-                      <a href={process.env.NEXT_INSTAGRAM_URL} target="_blank">
+                      <a
+                        href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}
+                        target="_blank"
+                      >
                         <i>
                           <FontAwesomeIcon icon={["fab", "instagram"]} />
                         </i>
                       </a>
                     </div>
-                    <div className="header-btn">
-                      <Link href="/about">
-                        <a className="theme-btn theme-btn-small">
+                    <div className="header-btn mr-10">
+                      <Link href={process.env.NEXT_PUBLIC_EUROTOURS_URL}>
+                        <a
+                          className="theme-btn theme-btn-small"
+                          target="_blank"
+                        >
                           Check availability
                         </a>
                       </Link>

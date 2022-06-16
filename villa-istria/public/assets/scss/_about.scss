@@ -5,14 +5,7 @@
 /* 06. About */
 .kabout-img {
   position: relative;
-  & img {
-    width: 100%;
-  }
-  .kabout-img-small-icon {
-    & img {
-      width: auto;
-    }
-  }
+
   @include mq(xl) {
     margin-right: 20px;
   }
@@ -41,9 +34,10 @@
     }
   }
   &-small {
-    bottom: -80px;
+    bottom: -180px;
     z-index: 5;
     left: -140px;
+    width: 60%;
     display: inline-block;
     position: absolute;
     &-icon {
@@ -80,26 +74,8 @@
       }
     }
   }
-  & img {
-    -webkit-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    @include transition(0.3s);
-    &:hover {
-      -webkit-filter: grayscale(0%);
-      -ms-filter: grayscale(0%);
-      -moz-filter: grayscale(0%);
-    }
-  }
 }
-.kabout-img:hover {
-  & .kabout-img-small-icon {
-    animation-name: wobble-vertical;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-  }
-}
+
 .play_btn::after,
 .play_btn::before {
   position: absolute;
@@ -107,8 +83,6 @@
   top: 0;
   content: "";
   border-radius: 50%;
-  width: 100%;
-  height: 100%;
   border: 1px dashed rgba(255, 255, 255, 0.7);
   animation-name: popupBtn;
   animation-duration: 1.8s;
@@ -127,7 +101,7 @@
     transform: scale(1.6);
     opacity: 0.3;
   }
-  100% {
+  20% {
     transform: scale(2.2);
     opacity: 0;
   }
@@ -227,7 +201,7 @@
   }
 }
 .why-tabs {
-  width: 100%;
+  width: 20%;
   border-bottom: 3px solid $base-brown;
   display: flex;
   margin-bottom: 20px;
@@ -235,7 +209,7 @@
     border: none;
     border: none;
     display: flex;
-    width: 100%;
+    width: 20%;
     margin: 0px;
     @include mq(xs) {
       display: block;
@@ -246,9 +220,9 @@
     border: none;
     padding: 0px;
     @include mq(xs) {
-      flex-basis: 100%;
+      flex-basis: 20%;
       text-align: left;
-      width: 100%;
+      width: 20%;
     }
     & .nav-link {
       font-size: 14px;
@@ -262,7 +236,7 @@
       background: transparent;
       cursor: pointer;
       display: block;
-      width: 100%;
+      width: 20%;
       text-align: center;
       padding: 17px 10px 13px 10px;
       @include mq(xs) {
@@ -312,9 +286,9 @@
     width: inherit;
   }
   & img {
-    -webkit-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
+    -webkit-filter: grayscale(20%);
+    -ms-filter: grayscale(20%);
+    -moz-filter: grayscale(20%);
     &:hover {
       -webkit-filter: grayscale(0%);
       -ms-filter: grayscale(0%);
@@ -352,12 +326,12 @@
     left: 0px;
     right: auto;
     border-radius: 0px;
-    border-top-right-radius: 100%;
+    border-top-right-radius: 20%;
     & .common-shape-inner {
       left: 0px;
       right: auto;
       border-radius: 0px;
-      border-top-right-radius: 100%;
+      border-top-right-radius: 20%;
     }
   }
 }
@@ -368,16 +342,16 @@
   position: absolute;
   z-index: -1;
   @include mq(lg) {
-    height: 100%;
-    width: 100%;
+    height: 20%;
+    width: 20%;
   }
   @include mq(md) {
-    height: 100%;
-    width: 100%;
+    height: 20%;
+    width: 20%;
   }
   @include mq(xs) {
-    height: 100%;
-    width: 100%;
+    height: 20%;
+    width: 20%;
   }
 }
 .intro-space {
@@ -449,7 +423,7 @@
     }
   }
   & img {
-    -webkit-filter: grayscale(100%);
+    -webkit-filter: grayscale(20%);
     @include transition(0.3s);
   }
 }
@@ -520,7 +494,7 @@
     &:after {
       content: "";
       background: $base-brown;
-      height: 100%;
+      height: 20%;
       width: 90%;
     }
     &.progress-two:after {
@@ -647,7 +621,7 @@
   }
   &::before {
     height: 15px;
-    width: 100%;
+    width: 20%;
     bottom: -25px;
     left: 0px;
     background: $base-brown;
@@ -657,7 +631,7 @@
   }
   &::after {
     height: 10px;
-    width: 100%;
+    width: 20%;
     bottom: -10px;
     left: 0px;
     background: $white-color;
@@ -667,10 +641,10 @@
   }
   & img {
     @include mq(md) {
-      width: 100%;
+      width: 20%;
     }
     @include mq(xs) {
-      width: 100%;
+      width: 20%;
     }
   }
 }

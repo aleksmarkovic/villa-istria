@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import Video from "../Elements/Video/VideoSection";
 import About from "./AboutSection";
-import Cta from "./CtaSection";
-import Service from "./ServiceSection";
 import dynamic from "next/dynamic";
 const HomeSlider = dynamic(
   () => import("../Elements/Slider/HomeSliderSection"),
@@ -10,25 +7,19 @@ const HomeSlider = dynamic(
     ssr: false,
   }
 );
-const Testimonial = dynamic(
-  () => import("../Elements/Testimonials/TestimonialsSection"),
-  {
-    ssr: false,
-  }
-);
-const Brand = dynamic(() => import("../Elements/Brand/BrandSection"), {
-  ssr: false,
-});
-import Trust from "./TrustSection";
-import Quality from "./QualitySection";
+// const Testimonial = dynamic(
+//   () => import("../Elements/Testimonials/TestimonialsSection"),
+//   {
+//     ssr: false,
+//   }
+// );
+// const Brand = dynamic(() => import("../Elements/Brand/BrandSection"), {
+//   ssr: false,
+// });
+// import Trust from "./TrustSection";
+// import Quality from "./QualitySection";
 import Map from "./MapSection";
-import Project from "./ProjectSection";
-const BlogSlider = dynamic(
-  () => import("../Elements/Slider/BlogSliderSection"),
-  {
-    ssr: false,
-  }
-);
+// import Surroundings from "./SurroundingsSection";
 
 class HomeMain extends Component {
   render() {
@@ -43,11 +34,11 @@ class HomeMain extends Component {
         {/* about-end */}
 
         {/* project-start */}
-        <Project />
+        {/* <Surroundings /> */}
         {/* project-end */}
 
         {/* quality-start */}
-        <Quality />
+        {/* <Quality /> */}
         {/* quality-end */}
 
         {/* map-start */}

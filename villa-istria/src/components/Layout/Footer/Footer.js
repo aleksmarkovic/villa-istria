@@ -36,7 +36,7 @@ const Footer = () => {
                 <div className="footer-social">
                   <a
                     title="facebook"
-                    href={process.env.NEXT_FACEBOOK_URL}
+                    href={process.env.NEXT_PUBLIC_FACEBOOK_URL}
                     target="_blank"
                   >
                     <i>
@@ -45,7 +45,7 @@ const Footer = () => {
                   </a>
                   <a
                     title="instagram"
-                    href={process.env.NEXT_INSTAGRAM_URL}
+                    href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}
                     target="_blank"
                   >
                     <i>

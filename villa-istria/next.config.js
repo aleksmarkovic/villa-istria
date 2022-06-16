@@ -14,4 +14,5 @@ module.exports = withOptimizedImages({
   images: {
     disableStaticImages: true,
   },
+  optimizeImages: false,
 });
