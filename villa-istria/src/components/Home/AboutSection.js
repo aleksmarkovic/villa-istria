@@ -29,9 +29,6 @@ const About = () => {
           <div className="col-lg-6">
             <div className="kabout mb-50">
               <div className="section-title-wrapper mb-45">
-                <h5 className="section-subtitle mb-20">
-                  Important information
-                </h5>
                 <h2 className="section-title mb-35">
                   Welcome to <br />
                   Villa Istria
