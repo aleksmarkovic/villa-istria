@@ -70,6 +70,8 @@ const Gallery = () => {
                   /> */}
                   <LazyLoad
                     key={i}
+                    offset={-1}
+                    once={true}
                     // height={10}
                     // offset={[-100, 100]}
                     // placeholder={<Spinner />}
