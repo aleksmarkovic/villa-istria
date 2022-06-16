@@ -32,13 +32,11 @@ class Mission extends Component {
                 data-aos-duration="1000"
               >
                 <img
-                  src="assets/img/about/about-img-6.jpg"
+                  src="assets/img/images/Villa Istria-37-terrace.webp"
                   className="img-fluid"
                   alt="about-img"
+                  width={600}
                 />
-                <div className="mission-img-text">
-                  <h4>The villa's terrace</h4>
-                </div>
               </div>
             </div>
           </div>

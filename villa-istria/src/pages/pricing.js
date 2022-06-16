@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Layout/Header/Header";
-import FooterTwo from "../components/Layout/Footer/FooterTwo";
 import PricingMain from "../components/Pricing/PricingMain";
 
 class PricingPage extends React.Component {
@@ -13,7 +12,6 @@ class PricingPage extends React.Component {
       <React.Fragment>
         <Header />
         <PricingMain />
-        <FooterTwo />
       </React.Fragment>
     );
   }

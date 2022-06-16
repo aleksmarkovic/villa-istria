@@ -70,20 +70,15 @@ const Footer = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/pricing">
-                      <a>Prices</a>
-                    </Link>
-                  </li>
-                  <li>
                     <Link href="/contact">
                       <a>Contact Form</a>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/extra-content">
                       <a>Additional information</a>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
@@ -101,7 +96,7 @@ const Footer = () => {
                       className="img-fluid footer-icon"
                       alt="icon-img"
                     />
-                    <a href={process.env.NEXT_PUBLIC_INFO_EMAIL}>
+                    <a href={`mailto: ${process.env.NEXT_PUBLIC_INFO_EMAIL}`}>
                       {process.env.NEXT_PUBLIC_INFO_EMAIL}
                     </a>
                   </li>

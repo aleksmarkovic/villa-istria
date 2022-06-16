@@ -462,38 +462,7 @@
     }
   }
 }
-.mission-img-text {
-  position: absolute;
-  left: 30px;
-  bottom: 0px;
-  background: $white-color;
-  padding: 40px 50px;
-  width: 330px;
-  @include mq(xs) {
-    padding: 20px 30px;
-    width: 250px;
-  }
-  & h4 {
-    font-size: 20px;
-    line-height: 30px;
-    color: #242629;
-    font-weight: 700;
-    font-family: $body-fonts;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    @include mq(xs) {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-  }
-  & a {
-    font-size: 12px;
-    color: $base-brown;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
-}
+
 .choose-left {
   & p {
     font-size: 16px;
