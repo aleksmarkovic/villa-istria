@@ -40,39 +40,13 @@
     width: 60%;
     display: inline-block;
     position: absolute;
-    &-icon {
-      position: absolute;
-      top: -60px;
-      right: -60px;
-      height: 150px;
-      width: 150px;
-      text-align: center;
-      border: 1px dashed rgba(255, 255, 255, 0.3);
-      padding: 18px;
-      display: inline-block;
-      border-radius: 50%;
-      @include transition(0.3s);
-      & span {
-        height: 114px;
-        width: 114px;
-        line-height: 114px;
-        display: inline-block;
-        background: $white-color;
-        border-radius: 50%;
-        & img {
-          vertical-align: middle;
-          -webkit-filter: grayscale(0%);
-          -ms-filter: grayscale(0%);
-          -moz-filter: grayscale(0%);
-        }
-        & i {
-          font-size: 60px;
-          color: $base-brown;
-          margin-top: 10px;
-          display: inline-block;
-        }
-      }
-    }
+  }
+  &-mobile {
+    width: 80%;
+    left: 30px;
+    position: absolute;
+    bottom: -180px;
+    z-index: 5;
   }
 }
 
@@ -285,16 +259,6 @@
     margin-bottom: 30px;
     width: inherit;
   }
-  & img {
-    -webkit-filter: grayscale(20%);
-    -ms-filter: grayscale(20%);
-    -moz-filter: grayscale(20%);
-    &:hover {
-      -webkit-filter: grayscale(0%);
-      -ms-filter: grayscale(0%);
-      -moz-filter: grayscale(0%);
-    }
-  }
 }
 .why-tab-list {
   & ul {
@@ -408,8 +372,6 @@
 .kintro-img {
   position: relative;
   &:hover {
-    & .kintro-img-text {
-    }
     & .kintro-img-text-icon {
       & i {
         animation-name: wobble-vertical;
@@ -418,12 +380,8 @@
         animation-iteration-count: infinite;
       }
     }
-    & i {
-      -webkit-filter: grayscale(0);
-    }
   }
   & img {
-    -webkit-filter: grayscale(20%);
     @include transition(0.3s);
   }
 }

@@ -1,10 +1,8 @@
 import "./index.scss";
 import App from "next/app";
-import { Provider } from "react-redux";
 import React from "react";
-import withRedux from "next-redux-wrapper";
-import store from "../redux/store";
 import { loadIcons } from "../utils/IconLoader";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 
 loadIcons();
 
@@ -24,19 +22,11 @@ class MyApp extends App {
   }
 
   render() {
-    //Page props that were returned  from 'getStaticProps' are stored in the props i.e. pageprops
-    const { Component, pageProps, store } = this.props;
+    //Page props that were returned  from 'getStaticProps' are d in the props i.e. pageprops
+    const { Component, pageProps } = this.props;
 
-    return (
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
-    );
+    return <Component {...pageProps} />;
   }
 }
 
-//makeStore function that returns a new store for every request
-const makeStore = () => store;
-
-//withRedux wrapper that passes the store to the App Component
-export default withRedux(makeStore)(MyApp);
+export default MyApp;

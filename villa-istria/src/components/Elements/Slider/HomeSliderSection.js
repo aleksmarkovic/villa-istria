@@ -39,10 +39,6 @@ const HomeSlider = () => {
                 slidesPerView: 1,
               },
             }}
-            pagination={{
-              clickable: true,
-              el: ".slider-paginations",
-            }}
             autoplay={{
               delay: 4500,
               disableOnInteraction: true,

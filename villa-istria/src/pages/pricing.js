@@ -21,7 +21,7 @@ class PricingPage extends React.Component {
 
 export default PricingPage;
 
-export async function getStaticProps({ store }) {
+export async function getStaticProps({}) {
   return {
     props: {},
   };

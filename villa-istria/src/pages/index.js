@@ -7,11 +7,11 @@ import HomeMain from "../components/Home/HomeMain";
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 // import {
-//   getFirestore,
+//   getFire,
 //   collection,
 //   getDocs,
 //   query,
-// } from "firebase/firestore/lite";
+// } from "firebase/fire/lite";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -29,7 +29,7 @@ import HomeMain from "../components/Home/HomeMain";
 
 // Initialize Firebase
 // const app = initializeApp(firebaseConfig);
-// const db = getFirestore(app);
+// const db = getFire(app);
 // const analytics = getAnalytics(app);
 
 // async function getCities() {
@@ -55,7 +55,7 @@ const Index = (props) => {
 
 export default Index;
 
-export async function getStaticProps({ store }) {
+export async function getStaticProps({}) {
   return {
     props: {},
   };

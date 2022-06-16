@@ -21,7 +21,7 @@ class ServicePage extends React.Component {
 
 export default ServicePage;
 
-export async function getStaticProps({ store }) {
+export async function getStaticProps({}) {
   return {
     props: {},
   };

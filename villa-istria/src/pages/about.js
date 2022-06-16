@@ -21,7 +21,7 @@ class AboutPage extends React.Component {
 
 export default AboutPage;
 
-export async function getStaticProps({ store }) {
+export async function getStaticProps({}) {
   return {
     props: {},
   };
