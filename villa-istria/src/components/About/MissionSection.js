@@ -19,7 +19,7 @@ class Mission extends Component {
                   </h2>
                 </div>
                 <p className="mb-45">
-                  Modern style forniture, equipment and devices match today's
+                  Modern style furniture, equipment and devices match today's
                   standards, while the traditional Istrian stone style is
                   preserved through the exterior elements.
                 </p>

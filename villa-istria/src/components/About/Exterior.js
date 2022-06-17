@@ -28,7 +28,7 @@ const Exterior = ({}) => {
                         icon={["fas", "minus"]}
                       />
                     </i>
-                    Parking place in front of the house closed by a electronic
+                    Parking place in front of the house closed by an electronic
                     gate.
                   </li>
                   <li>
