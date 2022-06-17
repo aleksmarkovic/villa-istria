@@ -184,7 +184,7 @@ const Header = () => {
                         target="_blank"
                         href={process.env.NEXT_PUBLIC_EUROTOURS_URL}
                       >
-                        Check availability
+                        Book now
                       </a>
                       {/* </Link> */}
                     </div>

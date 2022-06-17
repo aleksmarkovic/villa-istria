@@ -11,14 +11,14 @@ const About = () => {
           <div className="col-lg-6 mb-100 kabout-image-container">
             <div className="kabout-img mb-50 mr-70">
               <Image
-                src="assets/img/images/Villa_Istria-46-front.webp"
+                src="assets/img/images/cropped/Villa_Istria-46-front.webp"
                 className="img-thumbnail z-index"
                 alt="about-img"
               />
             </div>
             <div className="kabout-img-small">
               <Image
-                src="assets/img/images/Villa_Istria-front.webp"
+                src="assets/img/images/cropped/Villa_Istria-front.webp"
                 className="img-thumbnail"
                 alt="about-img"
               />
