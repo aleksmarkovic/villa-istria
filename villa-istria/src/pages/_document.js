@@ -7,7 +7,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <Script
+          {/* <Script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
           />
 
           {/* GTM */}
-          <Script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></Script>
+          {/* <Script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></Script>
 
           <Script
             dangerouslySetInnerHTML={{
@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','GTM-WMDKJTD');`,
             }}
-          />
+          /> } */}
 
           {/* Share preview */}
           <meta property="og:url" content="https://villa-istria.hr" />
