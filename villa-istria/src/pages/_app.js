@@ -1,32 +1,36 @@
 import "./index.scss";
-import App from "next/app";
-import React from "react";
+import React, { useEffect } from "react";
+import TagManager from "react-gtm-module";
+
 import { loadIcons } from "../utils/IconLoader";
+
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
 loadIcons();
 
-class MyApp extends App {
-  componentDidMount() {
+const App = ({ Component, pageProps }) => {
+  useEffect(() => {
     typeof document !== undefined
       ? require("bootstrap/dist/js/bootstrap")
       : null;
-  }
-  static async getStaticProps({ Component, ctx }) {
-    const pageProps = Component.getStaticProps
-      ? await Component.getStaticProps(ctx)
-      : {};
+  }, []);
 
-    //Anything returned here can be accessed by the client
-    return { pageProps: pageProps };
-  }
+  useEffect(() => {
+    TagManager.initialize({
+      gtmId: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER,
+    });
+  }, []);
 
-  render() {
-    //Page props that were returned  from 'getStaticProps' are d in the props i.e. pageprops
-    const { Component, pageProps } = this.props;
+  return <Component {...pageProps} />;
+};
 
-    return <Component {...pageProps} />;
-  }
+export async function getStaticProps({ Component, ctx }) {
+  const pageProps = Component.getStaticProps
+    ? await Component.getStaticProps(ctx)
+    : {};
+
+  //Anything returned here can be accessed by the client
+  return { pageProps: pageProps };
 }
 
-export default MyApp;
+export default App;
