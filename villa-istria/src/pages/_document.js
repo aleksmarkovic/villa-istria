@@ -36,6 +36,19 @@ export default class MyDocument extends Document {
           })(window,document,'script','dataLayer','GTM-WMDKJTD');`,
             }}
           />
+
+          {/* Share preview */}
+          <meta property="og:url" content="https://villa-istria.hr" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Villa Istria Vabriga" />
+          <meta
+            property="og:description"
+            content="Modern, luxury villa in Vabriga, near Poreč, Croatia"
+          />
+          <meta
+            property="og:image"
+            content="assets/img/images/Villa_Istria-20.webp"
+          />
         </Head>
         <body>
           <Main />
