@@ -53,6 +53,11 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                   <a>Contact</a>
                 </Link>
               </li>
+              <li className="menu-item-has-children">
+                <a target="_blank" href={process.env.NEXT_PUBLIC_EUROTOURS_URL}>
+                  Book now
+                </a>
+              </li>
               {/* <li className={blog ? "has-droupdown active" : "has-droupdown"}>
                 <a
                   onClick={() => {

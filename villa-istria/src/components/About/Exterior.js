@@ -28,7 +28,7 @@ const Exterior = ({}) => {
                         icon={["fas", "minus"]}
                       />
                     </i>
-                    Parking place in front of the house closed by an electronic
+                    Parking space in front of the house closed by an electronic
                     gate.
                   </li>
                   <li>
@@ -148,7 +148,7 @@ const Exterior = ({}) => {
                   >
                     <div className="accordion-body">
                       <p>
-                        Right after the main entrance is the parking place and
+                        Right after the main entrance is the parking space and
                         the front door of the Villa. On the opposite side of
                         building is the swimming pool area and under it, it's
                         the outdoor fireplace/grill area. The other areas are
