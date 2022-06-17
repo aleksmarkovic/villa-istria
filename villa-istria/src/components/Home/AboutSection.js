@@ -62,7 +62,7 @@ const About = () => {
                     <h4 className="kabout-service-title">
                       Modern and newly built
                     </h4>
-                    <p>Equipped with modern forniture and devices.</p>
+                    <p>Equipped with modern furniture and devices.</p>
                   </div>
                 </div>
               </div>
