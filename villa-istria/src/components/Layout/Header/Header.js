@@ -44,6 +44,10 @@ const Header = () => {
 
   return (
     <React.Fragment>
+      <Head>
+        <title>Villa Istria</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <header>
         <div
           className={
