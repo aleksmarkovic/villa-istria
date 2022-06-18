@@ -1,6 +1,7 @@
 import "./index.scss";
 import React, { useEffect } from "react";
 import TagManager from "react-gtm-module";
+import Script from "next/script";
 
 import { loadIcons } from "../utils/IconLoader";
 
@@ -21,7 +22,23 @@ const App = ({ Component, pageProps }) => {
     });
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-230750039-1"
+        strategy="afterInteractive"
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-230750039-1');`}
+      </Script>
+      <Component {...pageProps} />
+    </>
+  );
 };
 
 export async function getStaticProps({ Component, ctx }) {
