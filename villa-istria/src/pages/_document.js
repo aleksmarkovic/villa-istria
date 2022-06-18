@@ -1,11 +1,21 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import Script from "next/script";
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
+          <title>Villa Istria</title>
+          <description>
+            Modern Istrian holiday house with a swimming pool. Located between
+            Novigrad and Porec, near the sea.
+          </description>
+          <link rel="icon" href="assets/img/logo/znak1.svg" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+
           {/* Share preview */}
           <meta property="og:url" content="https://villa-istria.hr" />
           <meta property="og:type" content="website" />
