@@ -6,10 +6,11 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <title>Villa Istria</title>
-          <description>
-            Modern Istrian holiday house with a swimming pool. Located between
-            Novigrad and Porec, near the sea.
-          </description>
+          <meta
+            name="description"
+            content="Modern Istrian holiday house with a swimming pool. Located between
+            Novigrad and Porec, near the sea."
+          />
           <link rel="icon" href="assets/img/logo/znak1.svg" />
           <meta
             name="viewport"
