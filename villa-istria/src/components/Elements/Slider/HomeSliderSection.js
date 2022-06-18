@@ -71,13 +71,13 @@ const HomeSlider = () => {
                           >
                             Welcome to Vabriga near Poreč, Croatia
                           </h5>
-                          <h2
+                          <h1
                             className="kslider--title mb-40"
                             data-animation="fadeInUp"
                             data-delay="0.5s"
                           >
                             Villa Istria
-                          </h2>
+                          </h1>
                         </div>
                       </div>
                     </div>
