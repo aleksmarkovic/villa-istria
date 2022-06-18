@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <meta
             name="description"
@@ -11,11 +11,12 @@ export default class MyDocument extends Document {
             Novigrad and Porec, near the sea."
           />
           <link rel="icon" href="assets/img/logo/znak1.svg" />
+          <meta charSet="utf-8" />
 
           {/* Share preview */}
-          <meta property="og:url" content="https://villa-istria.hr" />
+          <meta property="og:url" content="https://www.villa-istria.hr" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Villa Istria Vabriga" />
+          <meta property="og:title" content="Villa Istria" />
           <meta
             property="og:description"
             content="Modern, luxury villa in Vabriga, near Poreč, Croatia"
