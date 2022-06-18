@@ -44,11 +44,6 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <Head>
-        <title>Villa Istria</title>
-        <link rel="icon" href="assets/img/logo/znak1.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <header>
         <div
           className={
