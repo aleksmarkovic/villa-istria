@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
           {/* Share preview */}
           <meta property="og:url" content="https://www.villa-istria.hr" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Villa Istria" />
+          <meta property="og:title" content="Villa Istria Vabriga" />
           <meta
             property="og:description"
             content="Modern, luxury villa in Vabriga, near Poreč, Croatia"
