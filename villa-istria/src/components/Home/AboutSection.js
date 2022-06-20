@@ -27,10 +27,7 @@ const About = () => {
           <div className="col-lg-6">
             <div className="kabout mb-50">
               <div className="section-title-wrapper mb-45">
-                <h1 className="section-title mb-35">
-                  Welcome to <br />
-                  Villa Istria
-                </h1>
+                <h1 className="section-title mb-35">Villa Istria Vabriga</h1>
                 <p>
                   A family villa located in Vabriga, a small town in the
                   Tar-Vabriga community which stands in the middle between Poreč
