@@ -6,23 +6,14 @@
 }
 
 @font-face {
-  font-family: "CinzelDecorative";
-  src: url("../fonts/Cinzel_Decorative/CinzelDecorative-Regular.ttf")
-    format("truetype");
+  font-family: "Cinzel";
+  src: url("../fonts/Cinzel-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 $body-fonts: "Montserrat", "Roboto", sans-serif;
-$icon-font: "CinzelDecorative", "Font Awesome 5 Pro";
-
-// $body-fz: 14px;
-// $body-color: #777a7e;
-// $heading-color: #242629;
-// $theme-color: #ff4040;
-// $white-color: #fff;
-// $grey-color: #f2f3f5;
-// $border-color: #e9ebed;
+$icon-font: "Cinzel", "Font Awesome 5 Pro";
 
 // design colors
 $base-blue: #1a3950;
