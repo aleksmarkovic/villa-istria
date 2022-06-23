@@ -37,7 +37,7 @@ const Gallery = () => {
                   /> */}
                   <LazyLoad
                     key={i}
-                    offset={-100}
+                    offset={-1}
                     once={true}
                     // height={10}
                     // offset={[-100, 100]}
