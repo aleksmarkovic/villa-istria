@@ -11,6 +11,10 @@ export default class MyDocument extends Document {
             Novigrad and Porec, near the sea."
           />
           <link rel="icon" href="assets/img/logo/znak1.svg" />
+          <link
+            rel="image_src"
+            href="assets/img/images/cropped/Villa_Istria-front.webp"
+          />
           <meta charSet="utf-8" />
 
           {/* Share preview */}
