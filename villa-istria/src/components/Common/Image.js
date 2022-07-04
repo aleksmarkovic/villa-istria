@@ -11,6 +11,7 @@ const ImageComponent = (props) => {
       <Image
         fluid
         rounded
+        key={image}
         alt={description}
         src={image}
         onClick={() => setShowImage(true)}
