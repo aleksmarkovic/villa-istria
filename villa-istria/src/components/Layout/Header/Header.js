@@ -152,7 +152,7 @@ const Header = () => {
                       <a
                         className="theme-btn theme-btn-small"
                         target="_blank"
-                        href={process.env.NEXT_PUBLIC_EUROTOURS_URL}
+                        href={process.env.NEXT_PUBLIC_AIRBNB_URL}
                       >
                         Book now
                       </a>
