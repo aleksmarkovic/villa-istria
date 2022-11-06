@@ -15,4 +15,5 @@ module.exports = withOptimizedImages({
     disableStaticImages: true,
   },
   optimizeImages: false,
+  distDir: "build",
 });

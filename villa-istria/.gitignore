@@ -1,6 +1,7 @@
 .next
 node_modules
 out
+build
 .idea
 yarn.lock
 .DS_Store
