@@ -52,7 +52,7 @@
     "src": "^1.1.2",
     "swiper": "^7.4.1",
     "tls": "^0.0.1",
-    "typescript": "4.3.2"
+    "typescript": "4.3.5"
   },
   "eslintConfig": {
     "extends": [
