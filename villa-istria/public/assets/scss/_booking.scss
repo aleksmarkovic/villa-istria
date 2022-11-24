@@ -1,0 +1,51 @@
+@use "common" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.calendar {
+  min-height: 1000px; // @TODO HC
+  margin: 200px;
+}
+
+.react-calendar {
+  border-radius: 10px;
+}
+
+.default {
+  background: unset !important;
+  background-color: #8cc63f !important;
+}
+
+.past {
+  background: unset !important;
+  background-color: lightgray !important;
+}
+
+.reserved {
+  background: unset !important;
+  background-color: #c1272d !important;
+}
+
+.arrival {
+  background: unset !important;
+  // background-color: yellow !important;
+
+  background-image: linear-gradient(
+    to bottom right,
+    #8cc63f 0%,
+    #8cc63f 49%,
+    #c1272d 51%,
+    #c1272d 100%
+  ) !important;
+}
+
+.departure {
+  background: unset !important;
+  background-image: linear-gradient(
+    to bottom right,
+    #c1272d 0%,
+    #c1272d 49%,
+    #8cc63f 51%,
+    #8cc63f 100%
+  ) !important;
+}

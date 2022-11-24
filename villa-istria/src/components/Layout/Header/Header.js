@@ -90,6 +90,11 @@ const Header = () => {
                           </Link>
                         </li>
                         <li className="menu-item-has-children">
+                          <Link href="/booking">
+                            <a>Booking</a>
+                          </Link>
+                        </li>
+                        <li className="menu-item-has-children">
                           <Link href="/contact">
                             <a>Contact</a>
                           </Link>
