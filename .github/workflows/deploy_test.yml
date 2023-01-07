@@ -30,6 +30,7 @@ jobs:
           echo NEXT_PUBLIC_FACEBOOK_URL=${{secrets.NEXT_PUBLIC_FACEBOOK_URL}} >> villa-istria/.env
           echo NEXT_PUBLIC_INSTAGRAM_URL=${{secrets.NEXT_PUBLIC_INSTAGRAM_URL}} >> villa-istria/.env
           echo NEXT_PUBLIC_AIRBNB_URL=${{secrets.NEXT_PUBLIC_AIRBNB_URL}} >> villa-istria/.env
+          echo NEXT_PUBLIC_BOOKING_URL=${{secrets.NEXT_PUBLIC_BOOKING_URL}} >> villa-istria/.env
           echo NEXT_PUBLIC_GOOGLE_ANALYTICS=${{secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS}} >> villa-istria/.env
 
       - name: Build
