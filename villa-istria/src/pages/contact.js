@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/Layout/Header/Header";
 import Footer from "../components/Layout/Footer/Footer";
-import ContactMain from "../components/Contact/ContactMain";
+import ContactSection from "../components/Contact/ContactSection";
 
 class ContactPage extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class ContactPage extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <ContactMain />
+        <ContactSection padding={150} />
         <Footer />
       </React.Fragment>
     );
