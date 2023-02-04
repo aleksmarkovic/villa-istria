@@ -1,91 +1,136 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import dayjs from "dayjs";
+import { isMobile } from "react-device-detect";
 
 import "react-calendar/dist/Calendar.css";
 
-const getDatesBetweenDates = (startDate, stopDate) => {
-  var dateArray = new Array({});
-  var currentDate = startDate;
-
-  while (currentDate <= stopDate) {
-    const date = { date: new Date(currentDate) };
-
-    if (currentDate === startDate) {
-      date.isArrivalDate = true;
-    } else if (currentDate.isSame(stopDate)) {
-      date.isDepartureDate = true;
-    }
-
-    dateArray.push(date);
-
-    currentDate = dayjs(currentDate).add(1, "day");
+const isStartDate = (dates, currentIndex) => {
+  if (dates[currentIndex - 1]?.availability === 1) {
+    return true;
   }
 
-  return dateArray;
+  return false;
 };
+
+const isEndDate = (dates, currentIndex) => {
+  if (
+    dates[currentIndex - 1] &&
+    dates[currentIndex]?.availability === 1 &&
+    dates[currentIndex - 1]?.availability !== 1
+  ) {
+    return true;
+  }
+
+  return false;
+};
+
+const calendarAdditionalSettings = {};
 
 const CalendarComponent = () => {
   const [value, onChange] = useState(new Date());
   const [reservations, setReservations] = useState([]);
+  const [currentDates, setCurrentDates] = useState([
+    dayjs(),
+    dayjs().add(2, "month"),
+  ]);
 
   useEffect(() => {
-    fetch(`/api/rentlio`)
-      .then((result) => result.json())
-      .then((data) => {
-        const expandedReservations =
-          data.reservations &&
-          data.reservations.map((reservation) => [
-            getDatesBetweenDates(
-              new Date(reservation.arrivalDate),
-              new Date(reservation.departureDate)
-            ),
-          ]);
+    fetch(`/api/rentlio?dateFrom=${currentDates[0]}&dateTo=${currentDates[1]}`)
+      .then((result) =>
+        result.json().then((data) => {
+          setReservations(data);
+        })
+      )
+      .catch();
+  }, [setReservations, currentDates]);
 
-        setReservations(expandedReservations.flat().flat());
-      })
-      .catch(console.error);
-  }, []);
+  const onActiveStartDateChange = ({ activeStartDate }) =>
+    setCurrentDates([
+      dayjs(activeStartDate),
+      dayjs(activeStartDate).add(2, "month"),
+    ]);
 
   return (
-    <div className="calendar">
-      <Calendar
-        onChange={onChange}
-        value={value}
-        tileClassName={({ date, view }) => {
-          if (!reservations) {
-            return;
-          }
+    <section className="bg-white position-relative pt-200 fix">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6">
+            <div className="kabout mb-50">
+              <div className="section-title-wrapper mb-45">
+                <h2 className="section-title mb-35">Available dates</h2>
+                <p className="">
+                  Check the availability of your desired dates and send us a
+                  message or proceed directly to our booking site.
+                </p>
+                {/* <p className="col-sm-3">Or simply </p> */}
+                <div className="header-btn mt-25">
+                  <a
+                    className="theme-btn theme-btn-small"
+                    target="_blank"
+                    href={process.env.NEXT_PUBLIC_AIRBNB_URL}
+                  >
+                    Book now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="calendar col-lg-6">
+            <Calendar
+              showDoubleView={!isMobile}
+              showFixedNumberOfWeeks={false}
+              showNeighboringMonth={false}
+              onChange={onChange}
+              onActiveStartDateChange={onActiveStartDateChange}
+              value={value}
+              locale="en-EN"
+              tileClassName={({ date, view }) => {
+                if (!reservations) {
+                  return;
+                }
 
-          let currentDate = new Date(date);
+                let currentDate = new Date(date);
 
-          // selects all dates before now
-          if (new Date(currentDate) <= new Date()) {
-            return "past"; // this is css
-          }
+                // selects all dates before now
+                if (new Date(currentDate) <= new Date()) {
+                  return "past"; // this is css
+                }
 
-          const indexOfReservation = reservations.findIndex(
-            (reservation) =>
-              dayjs(reservation.date).format("DD-MM-YYYY") ===
-              dayjs(currentDate).format("DD-MM-YYYY")
-          );
+                const indexOfDate = reservations?.findIndex(
+                  (reservation) =>
+                    dayjs(reservation.date).format("DD-MM-YYYY") ===
+                    dayjs(currentDate).format("DD-MM-YYYY")
+                );
 
-          if (indexOfReservation > -1) {
-            const reservation = reservations[indexOfReservation];
+                if (indexOfDate !== -1) {
+                  if (reservations[indexOfDate]?.availability !== 1) {
+                    if (isStartDate(reservations, indexOfDate)) {
+                      return "arrival";
+                    }
+                    return "reserved";
+                  } else if (isEndDate(reservations, indexOfDate)) {
+                    return "departure";
+                  }
+                }
 
-            if (reservation.isArrivalDate) {
-              return "arrival";
-            } else if (reservation.isDepartureDate) {
-              return "departure";
-            }
-
-            return "reserved";
-          }
-
-          return "default";
-        }}
-      />
-    </div>
+                return "default";
+              }}
+            />
+            <div className="rectangle-container">
+              <div className="rectangle-container__subcontainer">
+                <div className="rectangle-container__subcontainer__rectangle1" />
+                <span>Reserved</span>
+              </div>
+              <div className="rectangle-container__subcontainer">
+                <div className="rectangle-container__subcontainer__rectangle2" />
+                <span>Available</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

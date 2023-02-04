@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 import Link from "next/link";
-import { isMobile } from "react-device-detect";
 
 const About = () => {
   return (

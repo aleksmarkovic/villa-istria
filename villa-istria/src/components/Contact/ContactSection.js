@@ -19,7 +19,7 @@ const emailSettings = {
   template_params: defaultData,
 };
 
-const Contact = () => {
+const Contact = ({ padding }) => {
   const [alert, setAlert] = useState();
 
   const onSend = (event) => {
@@ -47,8 +47,10 @@ const Contact = () => {
       .catch(() => setAlert("danger"));
   };
 
+  const sectionClassName = `contact-area pt-${padding} mt-50 pb-100`;
+
   return (
-    <section className="contact-area pt-200 mt-50 pb-200">
+    <section className={sectionClassName}>
       <div className="container justify-content-center">
         <div className="row">
           <div className="col-xxl-5 col-xl-6 col-lg-6">
