@@ -49,6 +49,11 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                 </Link>
               </li>
               <li className="menu-item-has-children">
+                <Link href="/booking">
+                  <a>Booking</a>
+                </Link>
+              </li>
+              <li className="menu-item-has-children">
                 <Link href="/contact">
                   <a>Contact</a>
                 </Link>
@@ -58,27 +63,6 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                   Book now
                 </a>
               </li>
-              {/* <li className={blog ? "has-droupdown active" : "has-droupdown"}>
-                <a
-                  onClick={() => {
-                    openMobileMenu("blog");
-                  }}
-                >
-                  Extra Content
-                </a>
-                <ul className={blog ? "sub-menu active" : "sub-menu"}>
-                  <li>
-                    <Link href="/blog">
-                      <a>Places to Visit</a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-details">
-                      <a>Local Products</a>
-                    </Link>
-                  </li>
-                </ul>
-              </li> */}
             </ul>
           </div>
           <div className="contact-infos mb-30">
