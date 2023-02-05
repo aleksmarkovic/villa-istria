@@ -22,6 +22,10 @@
       pointer-events: none;
     }
   }
+
+  &__month-view {
+    width: 100% !important;
+  }
 }
 
 .default {
@@ -43,7 +47,6 @@
 
 .arrival {
   background: unset !important;
-  // background-color: yellow !important;
 
   background-image: linear-gradient(
     to bottom right,
