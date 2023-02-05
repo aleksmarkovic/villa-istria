@@ -99,23 +99,6 @@ const Header = () => {
                             <a>Contact</a>
                           </Link>
                         </li>
-                        {/* <li className="menu-item-has-children">
-                          <Link href="/places-to-visit">
-                            <a>Extra Content</a>
-                          </Link> */}
-                        {/* <ul className="sub-menu">
-                            <li>
-                              <Link href="/places-to-visit">
-                                <a>Places to Visit</a>
-                              </Link>
-                            </li>
-                            <li>
-                              <Link href="/local-products">
-                                <a>Local Products</a>
-                              </Link>
-                            </li>
-                          </ul> */}
-                        {/* </li> */}
                       </ul>
                     </nav>
                   </div>
