@@ -59,7 +59,7 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
                 </Link>
               </li>
               <li className="menu-item-has-children">
-                <a target="_blank" href={process.env.NEXT_PUBLIC_BOOKING_URL}>
+                <a target="_blank" href={process.env.NEXT_PUBLIC_RENTLIO_URL}>
                   Book now
                 </a>
               </li>
