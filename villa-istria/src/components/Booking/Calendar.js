@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
+import { Image } from "react-bootstrap";
 import dayjs from "dayjs";
 import { isMobile } from "react-device-detect";
+import Button from "react-bootstrap/Button";
 
 import "react-calendar/dist/Calendar.css";
 
@@ -63,15 +65,28 @@ const CalendarComponent = () => {
                   Check the availability of your desired dates and send us a
                   message or proceed directly to our booking site.
                 </p>
-                {/* <p className="col-sm-3">Or simply </p> */}
-                <div className="header-btn mt-25">
+                <div className={`header-btn mt-25 w-100 text-center`}>
                   <a
                     className="theme-btn theme-btn-small"
                     target="_blank"
                     href={process.env.NEXT_PUBLIC_RENTLIO_URL}
                   >
-                    Book now
+                    Book here
                   </a>
+                </div>
+                <div className="mt-25 w-100 external-booking-container">
+                  <Button
+                    href={process.env.NEXT_PUBLIC_AIRBNB_URL}
+                    className={`bg-transparent border-0 external-booking-container__booking-image`}
+                  >
+                    <Image src="/assets/img/airbnb.png" alt="airbnb" />
+                  </Button>
+                  <Button
+                    href={process.env.NEXT_PUBLIC_BOOKING_URL}
+                    className={`bg-transparent border-0 external-booking-container__booking-image`}
+                  >
+                    <Image src="/assets/img/booking.png" alt="airbnb" />
+                  </Button>
                 </div>
               </div>
             </div>
