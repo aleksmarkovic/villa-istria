@@ -70,7 +70,6 @@
 
 .rectangle-container {
   display: flex;
-  // justify-content: space-between;
   margin-top: 20px;
 
   &__subcontainer {
@@ -89,6 +88,26 @@
       width: 35px;
       height: 26px;
       background: $base-brown;
+    }
+  }
+}
+
+.external-booking-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__booking-image {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .external-booking-container {
+    &__booking-image {
+      width: auto;
+      min-width: 30%;
+      max-width: 50%;
     }
   }
 }
