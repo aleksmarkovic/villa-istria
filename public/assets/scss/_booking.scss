@@ -1,0 +1,113 @@
+@use "common" as *;
+@use "variables" as *;
+@use "mixins" as *;
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.react-calendar {
+  border-radius: 10px;
+  background: #f2f3f5 !important;
+  border: none !important;
+
+  &__viewContainer {
+    pointer-events: none;
+  }
+
+  &__navigation {
+    &__label {
+      pointer-events: none;
+    }
+  }
+
+  &__month-view {
+    width: 100% !important;
+  }
+}
+
+.default {
+  background: unset !important;
+  background-color: $base-brown !important;
+  color: $base-blue;
+}
+
+.past {
+  background: unset !important;
+  background-color: lightgray !important;
+}
+
+.reserved {
+  background: unset !important;
+  background-color: $base-blue !important;
+  color: $base-brown;
+}
+
+.arrival {
+  background: unset !important;
+
+  background-image: linear-gradient(
+    to bottom right,
+    $base-brown 0%,
+    $base-brown 49%,
+    $base-blue 51%,
+    $base-blue 100%
+  ) !important;
+}
+
+.departure {
+  background: unset !important;
+  background-image: linear-gradient(
+    to bottom right,
+    $base-blue 0%,
+    $base-blue 49%,
+    $base-brown 51%,
+    $base-brown 100%
+  ) !important;
+}
+
+.rectangle-container {
+  display: flex;
+  margin-top: 20px;
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+
+    &__rectangle1 {
+      width: 35px;
+      height: 26px;
+      background: $base-blue;
+    }
+
+    &__rectangle2 {
+      width: 35px;
+      height: 26px;
+      background: $base-brown;
+    }
+  }
+}
+
+.external-booking-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__booking-image {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .external-booking-container {
+    &__booking-image {
+      width: auto;
+      min-width: 30%;
+      max-width: 50%;
+    }
+  }
+}
