@@ -59,7 +59,7 @@ const Header = () => {
               <div className="row align-items-center">
                 <div className="col-xl-2 col-8">
                   <div className="header-logo">
-                    <Link href="/">
+                    <Link legacyBehavior href="/">
                       <a>
                         <img
                           src="assets/img/logo/horizontala1.svg"
@@ -75,27 +75,27 @@ const Header = () => {
                     <nav id="mobile-menu">
                       <ul>
                         <li className="menu-item-has-children">
-                          <Link href="/">
+                          <Link legacyBehavior href="/">
                             <a>Home</a>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/about">
+                          <Link legacyBehavior href="/about">
                             <a>About</a>
                           </Link>
                         </li>
                         <li className="menu-item-has-children">
-                          <Link href="/gallery">
+                          <Link legacyBehavior href="/gallery">
                             <a>Gallery</a>
                           </Link>
                         </li>
                         <li className="menu-item-has-children">
-                          <Link href="/booking">
+                          <Link legacyBehavior href="/booking">
                             <a>Booking</a>
                           </Link>
                         </li>
                         <li className="menu-item-has-children">
-                          <Link href="/contact">
+                          <Link legacyBehavior href="/contact">
                             <a>Contact</a>
                           </Link>
                         </li>
@@ -136,7 +136,7 @@ const Header = () => {
                       </a>
                     </div>
                     <div className="header-btn mr-10">
-                      {/* <Link > */}
+                      {/* <Link legacyBehavior > */}
                       <a
                         className="theme-btn theme-btn-small"
                         target="_blank"

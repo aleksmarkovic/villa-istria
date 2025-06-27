@@ -11,8 +11,12 @@ const GetAvailability = (dateFrom, dateTo) =>
       apiKey: process.env.RENTLIO_API_KEY,
     },
   }).then((data) =>
-    data.json().then((properties) =>
-      fetch(
+    data.json().then((properties) => {
+      if (!properties?.data?.[0]?.id) {
+        return null;
+      }
+
+      return fetch(
         `${process.env.RENTLIO_API_BASE_URL}/properties/${properties.data[0].id}/unit-types`,
         {
           headers: {
@@ -33,11 +37,13 @@ const GetAvailability = (dateFrom, dateTo) =>
               },
             }
           ).then((availability) =>
-            availability.json().then((availabilityData) => availabilityData)
+            availability
+              .json()
+              .then((availabilityData) => availabilityData.data)
           )
         )
-      )
-    )
+      );
+    })
   );
 
 export default async function handler(req, res) {
@@ -45,5 +51,5 @@ export default async function handler(req, res) {
 
   let data = await GetAvailability(dateFrom, dateTo);
 
-  return res.status(200).json(data.data);
+  return res.status(200).json(data);
 }
