@@ -7,43 +7,16 @@ const HomeSlider = dynamic(
     ssr: false,
   }
 );
-// const Testimonial = dynamic(
-//   () => import("../Elements/Testimonials/TestimonialsSection"),
-//   {
-//     ssr: false,
-//   }
-// );
-// const Brand = dynamic(() => import("../Elements/Brand/BrandSection"), {
-//   ssr: false,
-// });
-// import Trust from "./TrustSection";
-// import Quality from "./QualitySection";
+
 import Map from "./MapSection";
-// import Surroundings from "./SurroundingsSection";
 
 class HomeMain extends Component {
   render() {
     return (
       <main>
-        {/* slider-start */}
         <HomeSlider />
-        {/* slider-end */}
-
-        {/* about-start */}
         <About />
-        {/* about-end */}
-
-        {/* project-start */}
-        {/* <Surroundings /> */}
-        {/* project-end */}
-
-        {/* quality-start */}
-        {/* <Quality /> */}
-        {/* quality-end */}
-
-        {/* map-start */}
         <Map />
-        {/* map-end */}
       </main>
     );
   }
