@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 const HomeSlider = dynamic(
   () => import("../Elements/Slider/HomeSliderSection"),
   {
-    ssr: false,
+    ssr: true,
   }
 );
 
