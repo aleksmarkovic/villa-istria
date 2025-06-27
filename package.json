@@ -50,8 +50,7 @@
     "sass": "^1.56.0",
     "src": "^1.1.2",
     "swiper": "^7.4.1",
-    "tls": "^0.0.1",
-    "typescript": "4.3.5"
+    "tls": "^0.0.1"
   },
   "eslintConfig": {
     "extends": [
@@ -73,7 +72,9 @@
   },
   "devDependencies": {
     "@types/bootstrap": "^5.1.9",
-    "@types/node": "^20.4.10",
-    "@types/react": "^16.0.1"
+    "@types/node": "^22.15.33",
+    "@types/react": "^18.3.23",
+    "eslint": "^9.29.0",
+    "typescript": "5.8.3"
   }
 }
