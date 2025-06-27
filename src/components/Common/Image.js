@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Image, Modal } from "react-bootstrap";
+import Image from "next/image";
+import { Modal, Image as BootstrapImage } from "react-bootstrap";
 
 const ImageComponent = (props) => {
   const { image, description } = props;
@@ -7,15 +8,17 @@ const ImageComponent = (props) => {
   const [showImage, setShowImage] = useState(false);
 
   return (
-    <div>
+    <div style={{ position: "relative", height: "35vh" }}>
       <Image
-        fluid
-        rounded
         key={image}
         alt={description}
         src={image}
         onClick={() => setShowImage(true)}
-        layout="responsive"
+        loading="lazy"
+        fill
+        style={{
+          borderRadius: "5px",
+        }}
       />
       {showImage && (
         <Modal
@@ -26,7 +29,12 @@ const ImageComponent = (props) => {
           centered
         >
           <Modal.Body>
-            <Image rounded show={showImage} alt={description} src={image} />
+            <BootstrapImage
+              rounded
+              show={showImage}
+              alt={description}
+              src={image}
+            />
           </Modal.Body>
         </Modal>
       )}
