@@ -63,8 +63,8 @@ const About = () => {
                 </div>
               </div>
               <div className="kabout-btn">
-                <Link href="/about">
-                  <a className="theme-btn border-btn">Discover more</a>
+                <Link href="/about" className="theme-btn border-btn">
+                  Discover more
                 </Link>
               </div>
             </div>

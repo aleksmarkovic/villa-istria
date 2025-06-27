@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "../Common/Image";
-import LazyLoad from "react-lazyload";
 
 import "react-lazy-load-image-component/src/effects/blur.css";
 
@@ -26,14 +25,7 @@ const Gallery = () => {
                   key={image}
                   className="col-xxl-5 col-xl-5 col-lg-6 col-md-6 col-xs-1 mb-30"
                 >
-                  <LazyLoad
-                    key={i}
-                    offset={-1}
-                    once={true}
-                    style={{ cursor: "pointer" }}
-                  >
-                    <Image description="image" image={image} />
-                  </LazyLoad>
+                  <Image description="image" image={image} />
                 </div>
               ))}
           </div>

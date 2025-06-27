@@ -34,29 +34,19 @@ const BurgerMenus = ({ setMenuOpen, menuOpen }) => {
           <div className="mm-menu">
             <ul>
               <li className="menu-item-has-children">
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a>About</a>
-                </Link>
+                <Link href="/about">About</Link>
               </li>
               <li className="menu-item-has-children">
-                <Link href="/gallery">
-                  <a>Gallery</a>
-                </Link>
+                <Link href="/gallery">Gallery</Link>
               </li>
               <li className="menu-item-has-children">
-                <Link href="/booking">
-                  <a>Booking</a>
-                </Link>
+                <Link href="/booking">Booking</Link>
               </li>
               <li className="menu-item-has-children">
-                <Link href="/contact">
-                  <a>Contact</a>
-                </Link>
+                <Link href="/contact">Contact</Link>
               </li>
               <li className="menu-item-has-children">
                 <a target="_blank" href={process.env.NEXT_PUBLIC_RENTLIO_URL}>

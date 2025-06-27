@@ -22,8 +22,8 @@ class Quality extends Component {
             <div className="col-lg-4">
               <div className="text-lg-end mb-30" data-aos="zoom-in-left">
                 <div className="kabout-btn">
-                  <Link href="/extra-content">
-                    <a className="theme-btn border-btn">More content</a>
+                  <Link href="/extra-content" className="theme-btn border-btn">
+                    More content
                   </Link>
                 </div>
               </div>
