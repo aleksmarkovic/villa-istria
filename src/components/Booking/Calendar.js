@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
-import { Image } from "react-bootstrap";
+import Image from "next/image";
 import dayjs from "dayjs";
 import { isMobile } from "react-device-detect";
 import Button from "react-bootstrap/Button";
@@ -42,7 +42,7 @@ const CalendarComponent = () => {
       .then((result) =>
         result.json().then((data) => {
           setReservations(data);
-        })
+        }),
       )
       .catch();
   }, [setReservations, currentDates]);
@@ -79,13 +79,25 @@ const CalendarComponent = () => {
                     href={process.env.NEXT_PUBLIC_AIRBNB_URL}
                     className={`bg-transparent border-0 external-booking-container__booking-image`}
                   >
-                    <Image src="/assets/img/airbnb.png" alt="airbnb" />
+                    <Image
+                      src="/assets/img/airbnb.png"
+                      alt="airbnb"
+                      width={320}
+                      height={98}
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </Button>
                   <Button
                     href={process.env.NEXT_PUBLIC_BOOKING_URL}
                     className={`bg-transparent border-0 external-booking-container__booking-image`}
                   >
-                    <Image src="/assets/img/booking.png" alt="airbnb" />
+                    <Image
+                      src="/assets/img/booking.png"
+                      alt="booking"
+                      width={320}
+                      height={98}
+                      style={{ width: "100%", height: "auto" }}
+                    />
                   </Button>
                 </div>
               </div>
@@ -115,7 +127,7 @@ const CalendarComponent = () => {
                 const indexOfDate = reservations?.findIndex(
                   (reservation) =>
                     dayjs(reservation.date).format("DD-MM-YYYY") ===
-                    dayjs(currentDate).format("DD-MM-YYYY")
+                    dayjs(currentDate).format("DD-MM-YYYY"),
                 );
 
                 if (indexOfDate !== -1) {

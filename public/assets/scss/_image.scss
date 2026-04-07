@@ -4,4 +4,39 @@
 
 .custom-modal-content {
   width: auto;
+  border: 0;
+
+  .modal-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+  }
+}
+
+.custom-modal-image-wrap {
+  position: relative;
+  width: min(92vw, 1100px);
+  height: min(78vh, 820px);
+  margin: 0 auto;
+}
+
+.gallery-image-col {
+  @media (max-width: 767px) {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-modal-content .modal-body {
+    min-height: 72vh;
+    padding: 10px;
+  }
+
+  .custom-modal-image-wrap {
+    width: 88vw;
+    height: 62vh;
+  }
 }

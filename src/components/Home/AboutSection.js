@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Image } from "react-bootstrap";
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const About = () => {
@@ -10,16 +10,22 @@ const About = () => {
           <div className="col-lg-6 mb-100 kabout-image-container">
             <div className="kabout-img mb-50 mr-70">
               <Image
-                src="assets/img/images/cropped/Villa_Istria-46-land.webp"
+                src="/assets/img/images/cropped/Villa_Istria-46-land.webp"
+                width={900}
+                height={600}
                 className="img-thumbnail z-index"
                 alt="about-img"
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
             <div className="kabout-img-small">
               <Image
-                src="assets/img/images/cropped/Villa_Istria-front.webp"
+                src="/assets/img/images/cropped/Villa_Istria-front.webp"
+                width={650}
+                height={450}
                 className="img-thumbnail"
                 alt="about-img"
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
           </div>
