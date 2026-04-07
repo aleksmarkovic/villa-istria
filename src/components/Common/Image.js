@@ -1,23 +1,28 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { Modal, Image as BootstrapImage } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 const ImageComponent = (props) => {
   const { image, description } = props;
+  const imageSrc =
+    typeof image === "string" ? image : image?.default || image?.src || "";
 
   const [showImage, setShowImage] = useState(false);
 
   return (
     <div style={{ position: "relative", height: "35vh" }}>
       <Image
-        key={image}
+        key={imageSrc}
         alt={description}
-        src={image}
+        src={imageSrc}
         onClick={() => setShowImage(true)}
         loading="lazy"
         fill
+        sizes="(max-width: 768px) 100vw, 50vw"
         style={{
+          cursor: "pointer",
           borderRadius: "5px",
+          objectFit: "cover",
         }}
       />
       {showImage && (
@@ -29,12 +34,16 @@ const ImageComponent = (props) => {
           centered
         >
           <Modal.Body>
-            <BootstrapImage
-              rounded
-              show={showImage}
-              alt={description}
-              src={image}
-            />
+            <div className="custom-modal-image-wrap">
+              <Image
+                alt={description}
+                src={imageSrc}
+                fill
+                priority
+                sizes="100vw"
+                style={{ objectFit: "contain" }}
+              />
+            </div>
           </Modal.Body>
         </Modal>
       )}
