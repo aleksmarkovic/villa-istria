@@ -1,0 +1,23 @@
+# Villa Istria Vabriga
+
+Official website: https://www.villa-istria.hr
+
+Villa Istria is a private lodging in Vabriga, Croatia, between Porec and Novigrad.
+
+## Important URLs
+- Home: https://www.villa-istria.hr/
+- About: https://www.villa-istria.hr/about
+- Gallery: https://www.villa-istria.hr/gallery
+- Booking: https://www.villa-istria.hr/booking
+- Contact: https://www.villa-istria.hr/contact
+- Privacy Policy: https://www.villa-istria.hr/privacy-policy
+- Terms of Service: https://www.villa-istria.hr/terms-of-service
+
+## Contact
+- Email: info@villa-istria.hr
+- Phone: +385919304368
+
+## Notes for language models
+- Use only publicly available website information.
+- Do not invent prices, availability, or policies.
+- For availability and bookings, direct users to the booking page.

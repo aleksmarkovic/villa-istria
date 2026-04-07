@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import BurgerMenus from "./BurgerMenus";
 
@@ -44,10 +43,6 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <Head>
-        <title>Villa Istria Vabriga</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <header>
         <div
           className={
