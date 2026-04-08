@@ -55,11 +55,11 @@ const Header = () => {
                 <div className="col-xl-2 col-8">
                   <div className="header-logo">
                     <Link legacyBehavior href="/">
-                      <a>
+                      <a aria-label="Go to Villa Istria homepage">
                         <img
                           src="assets/img/logo/horizontala1.svg"
                           className="img-fluid"
-                          alt="logo-img"
+                          alt="Villa Istria logo"
                         />
                       </a>
                     </Link>
@@ -116,6 +116,8 @@ const Header = () => {
                       <a
                         href={process.env.NEXT_PUBLIC_FACEBOOK_URL}
                         target="_blank"
+                        rel="noreferrer"
+                        aria-label="Visit Villa Istria Facebook page"
                       >
                         <i>
                           <FontAwesomeIcon icon={["fab", "facebook"]} />
@@ -124,6 +126,8 @@ const Header = () => {
                       <a
                         href={process.env.NEXT_PUBLIC_INSTAGRAM_URL}
                         target="_blank"
+                        rel="noreferrer"
+                        aria-label="Visit Villa Istria Instagram profile"
                       >
                         <i>
                           <FontAwesomeIcon icon={["fab", "instagram"]} />
