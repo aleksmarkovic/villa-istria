@@ -57,7 +57,7 @@ const Footer = () => {
                 <h4 className="widget-title mb-35">Links</h4>
                 <ul>
                   <li>
-                    <Link href="/about">Information</Link>
+                    <Link href="/about">About Villa Istria</Link>
                   </li>
                   <li>
                     <Link href="/gallery">Photo gallery</Link>
