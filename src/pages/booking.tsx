@@ -4,6 +4,7 @@ import Header from "../components/Layout/Header/Header";
 import Footer from "../components/Layout/Footer/Footer";
 import Seo from "../components/Common/Seo";
 import { LangContext, Lang } from "../context/LangContext";
+import { sendEmail } from "../utils/sendEmail";
 
 function range(y: number, m: number, d1: number, d2: number) {
   const out: string[] = [];
@@ -198,6 +199,8 @@ const BookingPage = () => {
   const [guests, setGuests] = useState("2");
   const [form, setForm] = useState({ name: "", email: "", phone: "", msg: "" });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
 
   const nextM =
     viewM.m === 11 ? { y: viewM.y + 1, m: 0 } : { y: viewM.y, m: viewM.m + 1 };
@@ -214,9 +217,24 @@ const BookingPage = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
+    setSubmitting(true);
+    setError(false);
+    try {
+      await sendEmail({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        subject: `Booking inquiry — ${checkin || "?"} → ${checkout || "?"} (${guests} guests)`,
+        message: form.msg,
+      });
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const f = b.f;
@@ -562,10 +580,16 @@ const BookingPage = () => {
                   <button
                     type="submit"
                     className="vi-btn vi-btn--primary"
-                    style={{ alignSelf: "flex-start" }}
+                    style={{ alignSelf: "flex-start", opacity: submitting ? 0.6 : 1 }}
+                    disabled={submitting}
                   >
-                    {f.submit}
+                    {submitting ? "…" : f.submit}
                   </button>
+                  {error && (
+                    <p style={{ color: "#b00020", fontSize: "0.88rem", margin: 0 }}>
+                      {f.error}
+                    </p>
+                  )}
                 </form>
               )}
             </div>

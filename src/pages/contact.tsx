@@ -4,6 +4,7 @@ import Header from "../components/Layout/Header/Header";
 import Footer from "../components/Layout/Footer/Footer";
 import Seo from "../components/Common/Seo";
 import { LangContext } from "../context/LangContext";
+import { sendEmail } from "../utils/sendEmail";
 
 const ContactPage = () => {
   const { t } = useContext(LangContext);
@@ -11,6 +12,27 @@ const ContactPage = () => {
   const f = c.f;
   const [form, setForm] = useState({ name: "", email: "", msg: "" });
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(false);
+    try {
+      await sendEmail({
+        name: form.name,
+        email: form.email,
+        subject: "Contact form — Villa Istria",
+        message: form.msg,
+      });
+      setSent(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   return (
     <div className="vi">
@@ -120,10 +142,7 @@ const ContactPage = () => {
                   </div>
                 ) : (
                   <form
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      setSent(true);
-                    }}
+                    onSubmit={handleSubmit}
                     style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
                   >
                     <input
@@ -146,9 +165,19 @@ const ContactPage = () => {
                       onChange={(e) => setForm({ ...form, msg: e.target.value })}
                       style={{ minHeight: 180 }}
                     />
-                    <button type="submit" className="vi-btn vi-btn--primary" style={{ alignSelf: "flex-start" }}>
-                      {f.submit}
+                    <button
+                      type="submit"
+                      className="vi-btn vi-btn--primary"
+                      style={{ alignSelf: "flex-start", opacity: submitting ? 0.6 : 1 }}
+                      disabled={submitting}
+                    >
+                      {submitting ? "…" : f.submit}
                     </button>
+                    {error && (
+                      <p style={{ color: "#b00020", fontSize: "0.88rem", margin: 0 }}>
+                        {f.error}
+                      </p>
+                    )}
                   </form>
                 )}
               </div>

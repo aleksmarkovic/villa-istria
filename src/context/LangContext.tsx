@@ -55,6 +55,7 @@ export type Translation = {
       msg: string;
       submit: string;
       success: string;
+      error: string;
     };
     bcEyebrow: string;
     bcTitle: string;
@@ -68,7 +69,7 @@ export type Translation = {
     addr: string;
     email: string;
     phone: string;
-    f: { name: string; email: string; msg: string; submit: string; success: string };
+    f: { name: string; email: string; msg: string; submit: string; success: string; error: string };
   };
   footer: {
     explore: string;
@@ -174,6 +175,7 @@ export const translations: Record<Lang, Translation> = {
         msg: "Message (optional)",
         submit: "Send enquiry",
         success: "Thank you — we'll be in touch within 24 hours.",
+        error: "Something went wrong. Please try again or email us directly.",
       },
       bcEyebrow: "Book through partner channels",
       bcTitle: "Live availability & instant confirmation",
@@ -188,7 +190,14 @@ export const translations: Record<Lang, Translation> = {
       addr: "Ulica Velog Jože 15a\nVabriga (Tar-Vabriga, Poreč)\n52465, Istria, Croatia",
       email: "info@villa-istria.hr",
       phone: "+385 91 930 4368",
-      f: { name: "Name", email: "Email", msg: "Message", submit: "Send message", success: "Message sent — we'll reply shortly." },
+      f: {
+        name: "Name",
+        email: "Email",
+        msg: "Message",
+        submit: "Send message",
+        success: "Message sent — we'll reply shortly.",
+        error: "Something went wrong. Please try again or email us directly.",
+      },
     },
     footer: {
       explore: "Explore",
@@ -291,6 +300,7 @@ export const translations: Record<Lang, Translation> = {
         msg: "Poruka (neobavezno)",
         submit: "Pošalji upit",
         success: "Hvala — javit ćemo se u roku od 24 sata.",
+        error: "Došlo je do greške. Pokušajte ponovno ili nam pišite izravno e-mailom.",
       },
       bcEyebrow: "Rezervacija putem partnerskih kanala",
       bcTitle: "Dostupnost uživo i trenutna potvrda",
@@ -305,7 +315,14 @@ export const translations: Record<Lang, Translation> = {
       addr: "Ulica Velog Jože 15a\nVabriga (Tar-Vabriga, Poreč)\n52465, Istra, Hrvatska",
       email: "info@villa-istria.hr",
       phone: "+385 91 930 4368",
-      f: { name: "Ime", email: "E-mail", msg: "Poruka", submit: "Pošalji poruku", success: "Poruka poslana — odgovorit ćemo uskoro." },
+      f: {
+        name: "Ime",
+        email: "E-mail",
+        msg: "Poruka",
+        submit: "Pošalji poruku",
+        success: "Poruka poslana — odgovorit ćemo uskoro.",
+        error: "Došlo je do greške. Pokušajte ponovno ili nam pišite izravno e-mailom.",
+      },
     },
     footer: {
       explore: "Istraži",
