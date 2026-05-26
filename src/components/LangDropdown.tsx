@@ -41,7 +41,7 @@ const LangDropdown = ({ light = false }: LangDropdownProps) => {
           display: "flex",
           alignItems: "center",
           gap: "0.35rem",
-          fontSize: "0.7rem",
+          fontSize: "0.88rem",
           letterSpacing: "0.18em",
           textTransform: "uppercase",
           color: fg,
@@ -57,7 +57,7 @@ const LangDropdown = ({ light = false }: LangDropdownProps) => {
         {current.code.toUpperCase()}
         <span
           style={{
-            fontSize: "0.55rem",
+            fontSize: "0.7rem",
             opacity: 0.7,
             transform: open ? "rotate(180deg)" : "rotate(0)",
             transition: "transform 0.25s",

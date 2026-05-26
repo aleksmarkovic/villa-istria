@@ -8,7 +8,9 @@ import { LangContext, Lang } from "../context/LangContext";
 function range(y: number, m: number, d1: number, d2: number) {
   const out: string[] = [];
   for (let d = d1; d <= d2; d++)
-    out.push(`${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`);
+    out.push(
+      `${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
+    );
   return out;
 }
 
@@ -30,12 +32,32 @@ function firstDay(y: number, m: number) {
 }
 
 const MONTHS_EN = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December",
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 const MONTHS_HR = [
-  "Siječanj", "Veljača", "Ožujak", "Travanj", "Svibanj", "Lipanj",
-  "Srpanj", "Kolovoz", "Rujan", "Listopad", "Studeni", "Prosinac",
+  "Siječanj",
+  "Veljača",
+  "Ožujak",
+  "Travanj",
+  "Svibanj",
+  "Lipanj",
+  "Srpanj",
+  "Kolovoz",
+  "Rujan",
+  "Listopad",
+  "Studeni",
+  "Prosinac",
 ];
 const DAYS_EN = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 const DAYS_HR = ["Ned", "Pon", "Uto", "Sri", "Čet", "Pet", "Sub"];
@@ -49,7 +71,14 @@ type MonthGridProps = {
   lang: Lang;
 };
 
-const MonthGrid = ({ year, month, checkin, checkout, onDay, lang }: MonthGridProps) => {
+const MonthGrid = ({
+  year,
+  month,
+  checkin,
+  checkout,
+  onDay,
+  lang,
+}: MonthGridProps) => {
   const days = daysInMonth(year, month);
   const start = firstDay(year, month);
   const today = new Date();
@@ -73,7 +102,13 @@ const MonthGrid = ({ year, month, checkin, checkout, onDay, lang }: MonthGridPro
       >
         {MONTHS[month]} {year}
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(7, 1fr)", gap: "2px" }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(7, 1fr)",
+          gap: "2px",
+        }}
+      >
         {DAYS.map((d) => (
           <div
             key={d}
@@ -154,14 +189,18 @@ const BookingPage = () => {
   const { lang, t } = useContext(LangContext);
   const b = t.booking;
   const today = new Date();
-  const [viewM, setViewM] = useState({ y: today.getFullYear(), m: today.getMonth() });
+  const [viewM, setViewM] = useState({
+    y: today.getFullYear(),
+    m: today.getMonth(),
+  });
   const [checkin, setCheckin] = useState("");
   const [checkout, setCheckout] = useState("");
   const [guests, setGuests] = useState("2");
   const [form, setForm] = useState({ name: "", email: "", phone: "", msg: "" });
   const [sent, setSent] = useState(false);
 
-  const nextM = viewM.m === 11 ? { y: viewM.y + 1, m: 0 } : { y: viewM.y, m: viewM.m + 1 };
+  const nextM =
+    viewM.m === 11 ? { y: viewM.y + 1, m: 0 } : { y: viewM.y, m: viewM.m + 1 };
 
   const onDay = (key: string) => {
     if (!checkin || (checkin && checkout)) {
@@ -192,11 +231,33 @@ const BookingPage = () => {
       />
       <Header />
       <div className="vi-page">
-        <div style={{ background: "var(--bg-dark)", color: "#fff", padding: "7rem 0 5rem", textAlign: "center" }}>
+        <div
+          style={{
+            background: "var(--bg-dark)",
+            color: "#fff",
+            padding: "7rem 0 5rem",
+            textAlign: "center",
+          }}
+        >
           <div className="vi-container">
             <span className="vi-overline vi-overline--light">{b.eyebrow}</span>
-            <h1 style={{ fontSize: "clamp(2rem, 5vw, 4rem)", letterSpacing: "0.06em" }}>{b.title}</h1>
-            <p style={{ color: "rgba(255,255,255,0.55)", marginTop: "1rem", fontSize: "0.9rem" }}>{b.calNote}</p>
+            <h1
+              style={{
+                fontSize: "clamp(2rem, 5vw, 4rem)",
+                letterSpacing: "0.06em",
+              }}
+            >
+              {b.title}
+            </h1>
+            <p
+              style={{
+                color: "rgba(255,255,255,0.55)",
+                marginTop: "1rem",
+                fontSize: "0.9rem",
+              }}
+            >
+              {b.calNote}
+            </p>
           </div>
         </div>
 
@@ -236,7 +297,11 @@ const BookingPage = () => {
                     textTransform: "uppercase",
                   }}
                 >
-                  {checkin && checkout ? `${checkin}  →  ${checkout}` : checkin ? checkin : "—"}
+                  {checkin && checkout
+                    ? `${checkin}  →  ${checkout}`
+                    : checkin
+                      ? checkin
+                      : "—"}
                 </div>
                 <button
                   onClick={() => {
@@ -286,7 +351,9 @@ const BookingPage = () => {
                 <span>
                   ■ <span style={{ color: "var(--accent)" }}>Selected</span>
                 </span>
-                <span>● <span>Booked</span></span>
+                <span>
+                  ● <span>Booked</span>
+                </span>
               </div>
             </div>
 
@@ -298,14 +365,31 @@ const BookingPage = () => {
                 marginBottom: "4rem",
               }}
             >
-              <span className="vi-overline" style={{ display: "block", marginBottom: "0.6rem" }}>
+              <span
+                className="vi-overline"
+                style={{ display: "block", marginBottom: "0.6rem" }}
+              >
                 {b.bcEyebrow}
               </span>
               <h3 style={{ marginBottom: "0.6rem" }}>{b.bcTitle}</h3>
-              <p style={{ color: "var(--fg-2)", fontSize: "0.92rem", maxWidth: "58ch", marginBottom: "1.8rem" }}>
+              <p
+                style={{
+                  color: "var(--fg-2)",
+                  fontSize: "0.92rem",
+                  maxWidth: "58ch",
+                  marginBottom: "1.8rem",
+                }}
+              >
                 {b.bcText}
               </p>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexWrap: "wrap",
+                  gap: "1rem",
+                  alignItems: "stretch",
+                }}
+              >
                 <a
                   href="https://www.booking.com/hotel/hr/villa-istria-vabriga1"
                   target="_blank"
@@ -313,53 +397,20 @@ const BookingPage = () => {
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
-                    gap: "0.7rem",
-                    padding: "0.95rem 1.5rem",
-                    background: "#003b95",
-                    color: "#fff",
-                    textDecoration: "none",
-                    fontWeight: 600,
-                    fontSize: "0.95rem",
-                    letterSpacing: "0.01em",
-                    border: "1.5px solid #003b95",
-                    transition: "transform 0.15s, box-shadow 0.15s",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,59,149,0.25)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "none";
-                  }}
-                >
-                  <span>{b.bcCta} — Booking.com</span>
-                  <span aria-hidden="true" style={{ fontSize: "0.85em", opacity: 0.9 }}>
-                    ↗
-                  </span>
-                </a>
-                <a
-                  href="https://airbnb.com/h/villa-istria"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "0.7rem",
-                    padding: "0.95rem 1.5rem",
+                    justifyContent: "center",
+                    width: 220,
+                    height: 80,
+                    padding: "0 1.75rem",
                     background: "#fff",
-                    color: "#222",
-                    textDecoration: "none",
-                    fontWeight: 600,
-                    fontSize: "0.95rem",
-                    letterSpacing: "0.01em",
-                    border: "1.5px solid var(--border)",
-                    transition: "transform 0.15s, box-shadow 0.15s, border-color 0.15s",
+                    border: "1px solid var(--border)",
+                    transition:
+                      "transform 0.15s, box-shadow 0.15s, border-color 0.15s",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.10)";
-                    e.currentTarget.style.borderColor = "var(--fg)";
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 6px 20px rgba(0,0,0,0.08)";
+                    e.currentTarget.style.borderColor = "var(--fg-3)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "translateY(0)";
@@ -367,16 +418,54 @@ const BookingPage = () => {
                     e.currentTarget.style.borderColor = "var(--border)";
                   }}
                 >
-                  <span style={{ color: "#FF385C" }}>●</span>
-                  <span>{b.bcCta2} — Airbnb</span>
-                  <span aria-hidden="true" style={{ fontSize: "0.85em", opacity: 0.6 }}>
-                    ↗
-                  </span>
+                  <img
+                    src="/assets/img/booking.png"
+                    alt="Booking.com"
+                    style={{ maxHeight: 28, width: "auto", display: "block" }}
+                  />
                 </a>
+                {/* <a
+                  href="https://airbnb.com/h/villa-istria"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: 220,
+                    height: 80,
+                    padding: "0 1.75rem",
+                    background: "#fff",
+                    border: "1px solid var(--border)",
+                    transition: "transform 0.15s, box-shadow 0.15s, border-color 0.15s",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                    e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.08)";
+                    e.currentTarget.style.borderColor = "var(--fg-3)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "none";
+                    e.currentTarget.style.borderColor = "var(--border)";
+                  }}
+                >
+                  <img
+                    src="/assets/img/airbnb.png"
+                    alt="Airbnb"
+                    style={{ maxHeight: 36, width: "auto", display: "block" }}
+                  />
+                </a> */}
               </div>
             </div>
 
-            <div style={{ maxWidth: 600, borderTop: "1px solid var(--border)", paddingTop: "3rem" }}>
+            <div
+              style={{
+                maxWidth: 600,
+                borderTop: "1px solid var(--border)",
+                paddingTop: "3rem",
+              }}
+            >
               <h3 style={{ marginBottom: "2rem" }}>{b.formTitle}</h3>
               {sent ? (
                 <div
@@ -387,32 +476,63 @@ const BookingPage = () => {
                     textAlign: "center",
                   }}
                 >
-                  <div style={{ fontSize: "1.5rem", color: "var(--accent)", marginBottom: "0.5rem" }}>✓</div>
+                  <div
+                    style={{
+                      fontSize: "1.5rem",
+                      color: "var(--accent)",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    ✓
+                  </div>
                   <p>{f.success}</p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <form
+                  onSubmit={handleSubmit}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1rem",
+                  }}
+                >
                   <input
                     placeholder={f.name}
                     required
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                   />
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "1fr 1fr",
+                      gap: "1rem",
+                    }}
+                  >
                     <input
                       type="email"
                       placeholder={f.email}
                       required
                       value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, email: e.target.value })
+                      }
                     />
                     <input
                       placeholder={f.phone}
                       value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      onChange={(e) =>
+                        setForm({ ...form, phone: e.target.value })
+                      }
                     />
                   </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem" }}>
+                  <div
+                    style={{
+                      display: "grid",
+                      gridTemplateColumns: "1fr 1fr 1fr",
+                      gap: "1rem",
+                    }}
+                  >
                     <input
                       placeholder={f.checkin}
                       value={checkin}
@@ -423,7 +543,10 @@ const BookingPage = () => {
                       value={checkout}
                       onChange={(e) => setCheckout(e.target.value)}
                     />
-                    <select value={guests} onChange={(e) => setGuests(e.target.value)}>
+                    <select
+                      value={guests}
+                      onChange={(e) => setGuests(e.target.value)}
+                    >
                       {[1, 2, 3, 4, 5, 6].map((n) => (
                         <option key={n} value={n}>
                           {n} {f.guests || "guests"}
@@ -436,7 +559,11 @@ const BookingPage = () => {
                     value={form.msg}
                     onChange={(e) => setForm({ ...form, msg: e.target.value })}
                   />
-                  <button type="submit" className="vi-btn vi-btn--primary" style={{ alignSelf: "flex-start" }}>
+                  <button
+                    type="submit"
+                    className="vi-btn vi-btn--primary"
+                    style={{ alignSelf: "flex-start" }}
+                  >
                     {f.submit}
                   </button>
                 </form>
