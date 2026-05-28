@@ -15,6 +15,7 @@ interface SeoProps {
   robots?: string;
   type?: string;
   schema?: Record<string, unknown>;
+  preloadImage?: string;
 }
 
 const toAbsoluteUrl = (path?: string): string => {
@@ -39,6 +40,7 @@ const Seo = ({
   robots = "index, follow, max-image-preview:large",
   type = "website",
   schema,
+  preloadImage,
 }: SeoProps) => {
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const canonicalUrl = toAbsoluteUrl(path);
@@ -64,6 +66,9 @@ const Seo = ({
 
   return (
     <Head>
+      {preloadImage && (
+        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
+      )}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="robots" content={robots} />

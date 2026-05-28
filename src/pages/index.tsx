@@ -16,6 +16,7 @@ const HomePage = () => (
       description="Book Villa Istria in Vabriga: private pool, modern interiors, and a calm location between Porec and Novigrad."
       path="/"
       image="/assets/img/images/Villa_Istria-20.webp"
+      preloadImage="/assets/img/images/Villa_Istria-32.webp"
     />
     <Header />
     <HeroSlider />

@@ -58,6 +58,8 @@ const HeroSlider = () => {
           key={i}
           src={src}
           alt={`Villa Istria ${i + 1}`}
+          fetchPriority={i === 0 ? "high" : undefined}
+          loading={i === 0 ? "eager" : "lazy"}
           style={{
             position: "absolute",
             inset: 0,
