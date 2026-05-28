@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { LangContext } from "../../context/LangContext";
-import { BOOKED, fmt, daysInMonth, firstDay } from "../../common/constants/calendarData";
+import { fmt, daysInMonth, firstDay } from "../../common/constants/calendarData";
 
 type MonthGridProps = {
   year: number;
@@ -8,6 +8,7 @@ type MonthGridProps = {
   checkin: string;
   checkout: string;
   onDay: (key: string) => void;
+  booked: Set<string>;
 };
 
 const MonthGrid = ({
@@ -16,6 +17,7 @@ const MonthGrid = ({
   checkin,
   checkout,
   onDay,
+  booked,
 }: MonthGridProps) => {
   const { t } = useContext(LangContext);
   const monthDays = daysInMonth(year, month);
@@ -68,7 +70,7 @@ const MonthGrid = ({
           const key = fmt(year, month, d);
           const date = new Date(year, month, d);
           const past = date < today;
-          const book = BOOKED.has(key);
+          const book = booked.has(key);
           const isCi = checkin === key;
           const isCo = checkout === key;
           const inRng = checkin && checkout && key > checkin && key < checkout;

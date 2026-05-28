@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { LangContext } from "../../context/LangContext";
 import MonthGrid from "./MonthGrid";
 
@@ -17,6 +17,19 @@ const BookingCalendar = ({
 }: BookingCalendarProps) => {
   const { t } = useContext(LangContext);
   const today = new Date();
+  const [booked, setBooked] = useState<Set<string>>(new Set());
+  useEffect(() => {
+    const from = today.toISOString().slice(0, 10);
+    const to = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
+      .toISOString()
+      .slice(0, 10);
+    fetch(`/api/rentlio?dateFrom=${from}&dateTo=${to}`)
+      .then((r) => r.json())
+      .then((data: { date: string; availability: number }[]) => {
+        setBooked(new Set(data.filter((d) => d.availability === 0).map((d) => d.date)));
+      })
+      .catch(() => {});
+  }, []);
   const [viewM, setViewM] = useState({
     y: today.getFullYear(),
     m: today.getMonth(),
@@ -49,8 +62,11 @@ const BookingCalendar = ({
       >
         <button
           onClick={() => {
-            if (viewM.m === 0) setViewM({ y: viewM.y - 1, m: 11 });
-            else setViewM({ y: viewM.y, m: viewM.m - 1 });
+            if (viewM.m === 0) {
+              setViewM({ y: viewM.y - 1, m: 11 });
+            } else {
+              setViewM({ y: viewM.y, m: viewM.m - 1 });
+            }
           }}
           aria-label="Previous month"
           style={{
@@ -80,8 +96,11 @@ const BookingCalendar = ({
         </div>
         <button
           onClick={() => {
-            if (viewM.m === 11) setViewM({ y: viewM.y + 1, m: 0 });
-            else setViewM({ y: viewM.y, m: viewM.m + 1 });
+            if (viewM.m === 11) {
+              setViewM({ y: viewM.y + 1, m: 0 });
+            } else {
+              setViewM({ y: viewM.y, m: viewM.m + 1 });
+            }
           }}
           aria-label="Next month"
           style={{
@@ -103,6 +122,7 @@ const BookingCalendar = ({
           checkin={checkin}
           checkout={checkout}
           onDay={onDay}
+          booked={booked}
         />
         <MonthGrid
           year={nextM.y}
@@ -110,6 +130,7 @@ const BookingCalendar = ({
           checkin={checkin}
           checkout={checkout}
           onDay={onDay}
+          booked={booked}
         />
       </div>
       <div
@@ -122,7 +143,10 @@ const BookingCalendar = ({
         }}
       >
         <span>
-          ■ <span style={{ color: "var(--accent)" }}>{t.booking.legendSelected}</span>
+          ■{" "}
+          <span style={{ color: "var(--accent)" }}>
+            {t.booking.legendSelected}
+          </span>
         </span>
         <span>
           ● <span>{t.booking.legendBooked}</span>

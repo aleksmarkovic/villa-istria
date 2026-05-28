@@ -1,19 +1,3 @@
-function range(y: number, m: number, d1: number, d2: number) {
-  const out: string[] = [];
-  for (let d = d1; d <= d2; d++)
-    out.push(
-      `${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`,
-    );
-  return out;
-}
-
-export const BOOKED = new Set([
-  ...range(2026, 5, 15, 28),
-  ...range(2026, 6, 5, 19),
-  ...range(2026, 7, 1, 16),
-  ...range(2026, 8, 2, 12),
-]);
-
 export function fmt(y: number, m: number, d: number) {
   return `${y}-${String(m + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
 }
