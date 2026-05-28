@@ -17,23 +17,24 @@ const BookingCalendar = ({
 }: BookingCalendarProps) => {
   const { t } = useContext(LangContext);
   const today = new Date();
+  const [viewM, setViewM] = useState({
+    y: today.getFullYear(),
+    m: today.getMonth(),
+  });
   const [booked, setBooked] = useState<Set<string>>(new Set());
   useEffect(() => {
-    const from = today.toISOString().slice(0, 10);
-    const to = new Date(today.getFullYear() + 1, today.getMonth(), today.getDate())
-      .toISOString()
-      .slice(0, 10);
+    const nextM = viewM.m === 11 ? { y: viewM.y + 1, m: 0 } : { y: viewM.y, m: viewM.m + 1 };
+    const pad = (n: number) => String(n).padStart(2, "0");
+    const from = `${viewM.y}-${pad(viewM.m + 1)}-01`;
+    const lastDay = new Date(nextM.y, nextM.m + 1, 0).getDate();
+    const to = `${nextM.y}-${pad(nextM.m + 1)}-${pad(lastDay)}`;
     fetch(`/api/rentlio?dateFrom=${from}&dateTo=${to}`)
       .then((r) => r.json())
       .then((data: { date: string; availability: number }[]) => {
         setBooked(new Set(data.filter((d) => d.availability === 0).map((d) => d.date)));
       })
       .catch(() => {});
-  }, []);
-  const [viewM, setViewM] = useState({
-    y: today.getFullYear(),
-    m: today.getMonth(),
-  });
+  }, [viewM]);
 
   const nextM =
     viewM.m === 11 ? { y: viewM.y + 1, m: 0 } : { y: viewM.y, m: viewM.m + 1 };
