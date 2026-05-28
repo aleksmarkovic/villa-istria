@@ -1,22 +1,12 @@
-import "./index.scss";
+import "../styles/villa.css";
 import React, { useEffect } from "react";
 import type { AppProps } from "next/app";
 import TagManager from "react-gtm-module";
 import Script from "next/script";
 
-import { loadIcons } from "../utils/IconLoader";
-
-import "@fortawesome/fontawesome-svg-core/styles.css";
-
-loadIcons();
+import { LangProvider } from "../context/LangContext";
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
-  useEffect(() => {
-    typeof document !== undefined
-      ? require("bootstrap/dist/js/bootstrap")
-      : null;
-  }, []);
-
   useEffect(() => {
     TagManager.initialize({
       gtmId: process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER,
@@ -37,7 +27,9 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 
       gtag('config', 'UA-230750039-1');`}
       </Script>
-      <Component {...pageProps} />
+      <LangProvider>
+        <Component {...pageProps} />
+      </LangProvider>
     </>
   );
 };

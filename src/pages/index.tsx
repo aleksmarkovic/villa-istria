@@ -2,33 +2,31 @@ import React from "react";
 import type { GetStaticProps } from "next";
 import Header from "../components/Layout/Header/Header";
 import Footer from "../components/Layout/Footer/Footer";
-import HomeMain from "../components/Home/HomeMain";
 import Seo from "../components/Common/Seo";
+import HeroSlider from "../components/Home/HeroSlider";
+import FeaturesSection from "../components/Home/FeaturesSection";
+import AboutPreview from "../components/Home/AboutPreview";
+import ReviewsSection from "../components/Home/ReviewsSection";
+import LocationSection from "../components/Home/LocationSection";
 
-const Index = () => {
-  return (
-    <React.Fragment>
-      <Seo
-        title="Luxury Villa in Vabriga"
-        description="Book Villa Istria in Vabriga: private pool, modern interiors, and a calm location between Porec and Novigrad."
-        path="/"
-        image="/assets/img/images/Villa_Istria-20.webp"
-      />
-      <Header />
-      <HomeMain />
-      <Footer />
+const HomePage = () => (
+  <div className="vi">
+    <Seo
+      page="home"
+      image="/assets/img/images/Villa_Istria-20.webp"
+      preloadImage="/assets/img/images/Villa_Istria-32.webp"
+    />
+    <Header />
+    <HeroSlider />
+    <FeaturesSection />
+    <AboutPreview />
+    <ReviewsSection />
+    <LocationSection />
+    <Footer />
+  </div>
+);
 
-      <noscript
-        dangerouslySetInnerHTML={{
-          __html: `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMDKJTD"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`,
-        }}
-      />
-    </React.Fragment>
-  );
-};
-
-export default Index;
+export default HomePage;
 
 export const getStaticProps: GetStaticProps = async () => {
   return { props: {} };

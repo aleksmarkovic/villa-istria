@@ -9,6 +9,12 @@ const nextConfig = {
   },
 
   distDir: "build",
+
+  i18n: {
+    locales: ["en", "hr", "sl", "de", "it", "fr", "nl", "pl"],
+    defaultLocale: "en",
+    localeDetection: false,
+  },
 };
 
 module.exports = nextConfig;

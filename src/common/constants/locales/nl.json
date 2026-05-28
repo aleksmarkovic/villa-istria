@@ -1,0 +1,197 @@
+{
+  "seo": {
+    "home": {
+      "title": "Luxe villa met zwembad in Vabriga, Istrië",
+      "description": "Villa Istria in Vabriga: moderne Istrische villa met privézwembad, 3 slaapkamers met badkamer en overdekt terras met grill, op 2 km van de Adriatische Zee."
+    },
+    "about": {
+      "title": "Over Villa Istria — moderne familievilla in Istrië",
+      "description": "Hedendaagse interieurs, lokale Istrische steen, drie slaapkamers met privébadkamer en privézwembad. Rustige locatie tussen Poreč en Novigrad."
+    },
+    "gallery": {
+      "title": "Fotogalerij — Villa Istria Vabriga",
+      "description": "Bekijk foto's van Villa Istria: zwembad, terras, slaapkamers, keuken en de Istrische omgeving van Vabriga en Poreč."
+    },
+    "booking": {
+      "title": "Villa Istria boeken — beschikbaarheid en aanvraag",
+      "description": "Bekijk de beschikbaarheid en boek uw verblijf in Villa Istria in Vabriga rechtstreeks of via geverifieerde partnerkanalen."
+    },
+    "contact": {
+      "title": "Contact — Villa Istria Vabriga",
+      "description": "Neem contact op met Villa Istria voor boekingsvragen, beschikbaarheid en informatie over uw verblijf in Vabriga, Istrië, Kroatië."
+    },
+    "privacy": {
+      "title": "Privacybeleid — Villa Istria Vabriga",
+      "description": "Hoe Villa Istria Vabriga boekings- en websitegegevens verzamelt, gebruikt en beschermt."
+    },
+    "terms": {
+      "title": "Algemene voorwaarden — Villa Istria Vabriga",
+      "description": "Algemene voorwaarden voor het boeken en verblijven in Villa Istria Vabriga."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Over de villa",
+    "gallery": "Galerij",
+    "booking": "Boeking",
+    "contact": "Contact",
+    "book": "Nu boeken"
+  },
+  "home": {
+    "eyebrow": "Vabriga · Istrië · Kroatië",
+    "headline": "Villa Istria",
+    "sub": "Een luxe familievilla met zwembad, twee kilometer van de Adriatische Zee.",
+    "cta": "Ontdek de villa",
+    "ctaBook": "Boek uw verblijf",
+    "featuresTitle": "Alles wat u nodig heeft",
+    "features": [
+      {
+        "label": "3 slaapkamers",
+        "desc": "Kingsize bedden, eigen badkamers, Smart TV en Netflix in elke kamer."
+      },
+      {
+        "label": "Zwembad",
+        "desc": "Groot verlicht zwembad met variabele diepte, ligbedden en zonnedouche."
+      },
+      {
+        "label": "Privéparkeren",
+        "desc": "Beveiligde parkeerplaats voor twee voertuigen met directe toegang vanaf de weg."
+      },
+      {
+        "label": "Istrisch karakter",
+        "desc": "Open leefruimte, terras met grill, detail in natuursteen."
+      }
+    ],
+    "aboutEyebrow": "De villa",
+    "aboutTitle": "Modern comfort,\nIstrische ziel",
+    "aboutText": "Rustig gelegen tussen Poreč en Novigrad combineert Villa Istria hedendaags ontwerp met de warmte van inheemse natuursteen. De zee ligt op 2 km; Poreč, met de UNESCO Eufrasius-basiliek, op 10 km.",
+    "reviewsEyebrow": "Ervaringen van gasten",
+    "reviewsTitle": "Wat onze gasten zeggen",
+    "reviews": [
+      {
+        "name": "Sophie L.",
+        "origin": "Parijs, Frankrijk",
+        "text": "Werkelijk prachtig. Het zwembad bij avond is magisch en de locatie is perfect — rustig en toch dicht bij alles. We komen zeker terug.",
+        "rating": 5
+      },
+      {
+        "name": "Marco & Anna",
+        "origin": "Milaan, Italië",
+        "text": "Elk detail was perfect. De kamer met zeezicht, de avonden bij de grill, de Istrische zonsondergangen — een werkelijk bijzondere plek.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas B.",
+        "origin": "München, Duitsland",
+        "text": "Ruim, modern en prachtig ingericht. De gastheren reageren direct. Sterk aanbevolen voor gezinnen.",
+        "rating": 5
+      }
+    ],
+    "locEyebrow": "Locatie",
+    "locTitle": "U vindt ons in Vabriga",
+    "locText": "Ulica Velog Jože 15a, Vabriga, 52465 Istrië, Kroatië"
+  },
+  "about": {
+    "eyebrow": "Over de villa",
+    "title": "Een modern huis\nmet een vleugje traditie",
+    "subtitle": "Hedendaags interieur ontmoet de tijdloze warmte van Istrisch natuursteen.",
+    "extTitle": "Buitenruimte",
+    "extText": "De gevel combineert inheems natuursteen met moderne lijnen. In de tuin: een groot verlicht zwembad met variabele diepte, ligbedden, zonnedouche, een overdekt eetterras en een buitenhaard met grill.",
+    "intTitle": "Interieur",
+    "intText": "Een open keuken, eet- en woonkamer geeft direct toegang tot het zwembadterras. Elk van de drie slaapkamers heeft een kingsize bed, eigen badkamer en Smart TV met Netflix.",
+    "rooms": [
+      {
+        "name": "Slaapkamer 1",
+        "desc": "Kingsize bed · eigen badkamer · directe toegang tot het zwembad"
+      },
+      {
+        "name": "Slaapkamer 2",
+        "desc": "Kingsize bed · eigen badkamer · terras met zeezicht"
+      },
+      {
+        "name": "Slaapkamer 3",
+        "desc": "2 eenpersoonsbedden (samen te schuiven) · eigen badkamer · tuinzicht"
+      }
+    ],
+    "faqTitle": "Veelgestelde vragen",
+    "faqs": [
+      {
+        "q": "Hoe ver is de zee?",
+        "a": "Slechts 2 km van de villa — het dichtstbijzijnde strand ligt in Vabriga zelf."
+      },
+      {
+        "q": "Hoeveel auto's kunnen parkeren?",
+        "a": "Op de afgesloten parkeerplaats passen 2 auto's of grotere voertuigen zoals busjes."
+      },
+      {
+        "q": "Is er directe toegang vanaf de weg?",
+        "a": "Ja — de oprit ligt direct aan de hoofdweg, zonder zijwegen."
+      },
+      {
+        "q": "Is het zwembad 's avonds verlicht?",
+        "a": "Ja, het zwembad is volledig verlicht voor avondzwemsessies."
+      },
+      {
+        "q": "Is er airconditioning?",
+        "a": "Ja, alle slaapkamers en de woonruimte zijn volledig voorzien van airconditioning."
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "Galerij",
+    "title": "De villa, binnen en buiten"
+  },
+  "booking": {
+    "eyebrow": "Boeking",
+    "title": "Plan uw verblijf",
+    "calNote": "Selecteer hieronder uw gewenste data — vul daarna het aanvraagformulier in.",
+    "formTitle": "Stuur een aanvraag",
+    "f": {
+      "name": "Volledige naam",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "guests": "Aantal gasten",
+      "checkin": "Aankomst",
+      "checkout": "Vertrek",
+      "msg": "Bericht (optioneel)",
+      "submit": "Aanvraag versturen",
+      "success": "Bedankt — we nemen binnen 24 uur contact op.",
+      "error": "Er is iets misgegaan. Probeer het opnieuw of mail ons direct."
+    },
+    "bcEyebrow": "Boek via partnerkanalen",
+    "bcTitle": "Live beschikbaarheid en directe bevestiging",
+    "bcText": "Liever reserveren via een vertrouwd platform? Bekijk live beschikbaarheid, geverifieerde gastenrecensies en directe bevestiging op onze officiële partneradvertenties.",
+    "bcCta": "Bekijk advertentie",
+    "bcCta2": "Bekijk advertentie"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Neem contact op",
+    "addr": "Ulica Velog Jože 15a\nVabriga (Tar-Vabriga, Poreč)\n52465, Istrië, Kroatië",
+    "email": "info@villa-istria.hr",
+    "phone": "+385 91 930 4368",
+    "f": {
+      "name": "Naam",
+      "email": "E-mail",
+      "msg": "Bericht",
+      "submit": "Bericht versturen",
+      "success": "Bericht verzonden — we reageren spoedig.",
+      "error": "Er is iets misgegaan. Probeer het opnieuw of mail ons direct."
+    }
+  },
+  "footer": {
+    "explore": "Ontdek",
+    "contact": "Contact",
+    "availability": "Beschikbaarheid",
+    "availabilityText": "Bekijk beschikbare data en stuur ons een aanvraag voor uw verblijf in Istrië.",
+    "availabilityCta": "Bekijk beschikbaarheid",
+    "home": "Home",
+    "about": "Over Villa Istria",
+    "gallery": "Fotogalerij",
+    "booking": "Boek uw verblijf",
+    "contactUs": "Neem contact op",
+    "terms": "Servicevoorwaarden",
+    "privacy": "Privacybeleid",
+    "copyright": "© 2026 Villa Istria, Vabriga. Alle rechten voorbehouden."
+  }
+}
