@@ -1,4 +1,34 @@
 {
+  "seo": {
+    "home": {
+      "title": "Luxe villa met zwembad in Vabriga, Istrië",
+      "description": "Villa Istria in Vabriga: moderne Istrische villa met privézwembad, 3 slaapkamers met badkamer en overdekt terras met grill, op 2 km van de Adriatische Zee."
+    },
+    "about": {
+      "title": "Over Villa Istria — moderne familievilla in Istrië",
+      "description": "Hedendaagse interieurs, lokale Istrische steen, drie slaapkamers met privébadkamer en privézwembad. Rustige locatie tussen Poreč en Novigrad."
+    },
+    "gallery": {
+      "title": "Fotogalerij — Villa Istria Vabriga",
+      "description": "Bekijk foto's van Villa Istria: zwembad, terras, slaapkamers, keuken en de Istrische omgeving van Vabriga en Poreč."
+    },
+    "booking": {
+      "title": "Villa Istria boeken — beschikbaarheid en aanvraag",
+      "description": "Bekijk de beschikbaarheid en boek uw verblijf in Villa Istria in Vabriga rechtstreeks of via geverifieerde partnerkanalen."
+    },
+    "contact": {
+      "title": "Contact — Villa Istria Vabriga",
+      "description": "Neem contact op met Villa Istria voor boekingsvragen, beschikbaarheid en informatie over uw verblijf in Vabriga, Istrië, Kroatië."
+    },
+    "privacy": {
+      "title": "Privacybeleid — Villa Istria Vabriga",
+      "description": "Hoe Villa Istria Vabriga boekings- en websitegegevens verzamelt, gebruikt en beschermt."
+    },
+    "terms": {
+      "title": "Algemene voorwaarden — Villa Istria Vabriga",
+      "description": "Algemene voorwaarden voor het boeken en verblijven in Villa Istria Vabriga."
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "Over de villa",

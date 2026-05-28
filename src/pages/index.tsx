@@ -12,9 +12,7 @@ import LocationSection from "../components/Home/LocationSection";
 const HomePage = () => (
   <div className="vi">
     <Seo
-      title="Luxury Villa in Vabriga"
-      description="Book Villa Istria in Vabriga: private pool, modern interiors, and a calm location between Porec and Novigrad."
-      path="/"
+      page="home"
       image="/assets/img/images/Villa_Istria-20.webp"
       preloadImage="/assets/img/images/Villa_Istria-32.webp"
     />

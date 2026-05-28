@@ -1,4 +1,34 @@
 {
+  "seo": {
+    "home": {
+      "title": "Luxusvilla mit Pool in Vabriga, Istrien",
+      "description": "Villa Istria in Vabriga: moderne istrische Villa mit Privatpool, 3 Schlafzimmer mit eigenem Bad und überdachte Grillterrasse, 2 km vom Meer entfernt."
+    },
+    "about": {
+      "title": "Über Villa Istria — moderne Familienvilla in Istrien",
+      "description": "Zeitgenössische Innenräume, einheimischer istrischer Stein, drei Schlafzimmer mit eigenem Bad und Privatpool. Ruhige Lage zwischen Poreč und Novigrad."
+    },
+    "gallery": {
+      "title": "Fotogalerie — Villa Istria Vabriga",
+      "description": "Sehen Sie Fotos der Villa Istria: Pool, Terrasse, Schlafzimmer, Küche und die istrische Umgebung von Vabriga und Poreč."
+    },
+    "booking": {
+      "title": "Villa Istria buchen — Verfügbarkeit und Anfrage",
+      "description": "Prüfen Sie die Verfügbarkeit und buchen Sie Ihren Aufenthalt in der Villa Istria in Vabriga direkt oder über geprüfte Partnerkanäle."
+    },
+    "contact": {
+      "title": "Kontakt — Villa Istria Vabriga",
+      "description": "Wenden Sie sich an Villa Istria für Buchungsanfragen, Verfügbarkeit und Aufenthaltsinformationen in Vabriga, Istrien, Kroatien."
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung — Villa Istria Vabriga",
+      "description": "Wie Villa Istria Vabriga Buchungs- und Website-Daten erhebt, nutzt und schützt."
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen — Villa Istria Vabriga",
+      "description": "Allgemeine Geschäftsbedingungen für Buchung und Aufenthalt in der Villa Istria Vabriga."
+    }
+  },
   "nav": {
     "home": "Start",
     "about": "Villa",

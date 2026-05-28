@@ -1,4 +1,34 @@
 {
+  "seo": {
+    "home": {
+      "title": "Villa di lusso con piscina a Vabriga, Istria",
+      "description": "Villa Istria a Vabriga: moderna villa istriana con piscina privata, 3 camere con bagno e terrazza con grill, a 2 km dal mare Adriatico."
+    },
+    "about": {
+      "title": "Villa Istria — moderna villa familiare in Istria",
+      "description": "Interni contemporanei, pietra istriana autoctona, tre camere con bagno privato e piscina. Posizione tranquilla tra Parenzo e Novigrad."
+    },
+    "gallery": {
+      "title": "Galleria fotografica — Villa Istria Vabriga",
+      "description": "Sfoglia le foto di Villa Istria: piscina, terrazza, camere, cucina e l'ambiente istriano di Vabriga e Parenzo."
+    },
+    "booking": {
+      "title": "Prenota Villa Istria — disponibilità e richiesta",
+      "description": "Verifica la disponibilità e prenota il tuo soggiorno a Villa Istria a Vabriga direttamente o tramite canali partner verificati."
+    },
+    "contact": {
+      "title": "Contatti — Villa Istria Vabriga",
+      "description": "Contatta Villa Istria per richieste di prenotazione, disponibilità e informazioni sul soggiorno a Vabriga, Istria, Croazia."
+    },
+    "privacy": {
+      "title": "Informativa sulla privacy — Villa Istria Vabriga",
+      "description": "Come Villa Istria Vabriga raccoglie, utilizza e protegge i dati di prenotazione e del sito web."
+    },
+    "terms": {
+      "title": "Termini di servizio — Villa Istria Vabriga",
+      "description": "Condizioni generali per la prenotazione e il soggiorno a Villa Istria Vabriga."
+    }
+  },
   "nav": {
     "home": "Home",
     "about": "La villa",

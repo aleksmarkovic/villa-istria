@@ -1,4 +1,34 @@
 {
+  "seo": {
+    "home": {
+      "title": "Luksusowa willa z basenem w Vabrigu, Istria",
+      "description": "Villa Istria w Vabrigu: nowoczesna istryjska willa z prywatnym basenem, 3 sypialnie z łazienkami i zadaszony taras z grillem, 2 km od Adriatyku."
+    },
+    "about": {
+      "title": "O Villa Istria — nowoczesna willa rodzinna w Istrii",
+      "description": "Nowoczesne wnętrza, lokalny istryjski kamień, trzy sypialnie z łazienkami i prywatny basen. Spokojna lokalizacja między Poreč a Novigradem."
+    },
+    "gallery": {
+      "title": "Galeria zdjęć — Villa Istria Vabriga",
+      "description": "Zobacz zdjęcia Villa Istria: basen, taras, sypialnie, kuchnia oraz istryjskie otoczenie Vabrigi i Poreča."
+    },
+    "booking": {
+      "title": "Rezerwacja Villa Istria — dostępność i zapytanie",
+      "description": "Sprawdź dostępność i zarezerwuj pobyt w Villa Istria w Vabrigu bezpośrednio lub przez zweryfikowane kanały partnerskie."
+    },
+    "contact": {
+      "title": "Kontakt — Villa Istria Vabriga",
+      "description": "Skontaktuj się z Villa Istria w sprawie rezerwacji, dostępności i pobytu w Vabrigu, Istria, Chorwacja."
+    },
+    "privacy": {
+      "title": "Polityka prywatności — Villa Istria Vabriga",
+      "description": "Jak Villa Istria Vabriga zbiera, wykorzystuje i chroni dane dotyczące rezerwacji i strony internetowej."
+    },
+    "terms": {
+      "title": "Regulamin — Villa Istria Vabriga",
+      "description": "Ogólne warunki rezerwacji i pobytu w Villa Istria Vabriga."
+    }
+  },
   "nav": {
     "home": "Strona główna",
     "about": "O willi",

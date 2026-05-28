@@ -1,4 +1,34 @@
 {
+  "seo": {
+    "home": {
+      "title": "Luksuzna vila s bazenom u Vabrigi, Istra",
+      "description": "Villa Istria u Vabrigi: moderna istarska vila s privatnim bazenom, 3 sobe s vlastitom kupaonicom i natkrivenom terasom s roštiljem, 2 km od mora."
+    },
+    "about": {
+      "title": "O Villi Istria — moderna obiteljska vila u Istri",
+      "description": "Suvremeni interijer, autohtoni istarski kamen, tri spavaće sobe s vlastitim kupaonicama i privatni bazen. Mirna lokacija između Poreča i Novigrada."
+    },
+    "gallery": {
+      "title": "Galerija fotografija — Villa Istria Vabriga",
+      "description": "Pogledajte fotografije Ville Istria: bazen, terasa, spavaće sobe, kuhinja i istarsko okruženje Vabrige i Poreča."
+    },
+    "booking": {
+      "title": "Rezervirajte Villa Istria — dostupnost i upit",
+      "description": "Provjerite dostupnost i izravno rezervirajte boravak u Villi Istria u Vabrigi ili putem provjerenih partnerskih kanala."
+    },
+    "contact": {
+      "title": "Kontakt — Villa Istria Vabriga",
+      "description": "Kontaktirajte Villa Istria za upite o rezervaciji, dostupnosti i boravku u Vabrigi, Istra, Hrvatska."
+    },
+    "privacy": {
+      "title": "Pravila privatnosti — Villa Istria Vabriga",
+      "description": "Kako Villa Istria Vabriga prikuplja, koristi i štiti podatke vezane uz rezervacije i web stranicu."
+    },
+    "terms": {
+      "title": "Opći uvjeti — Villa Istria Vabriga",
+      "description": "Opći uvjeti rezervacije i boravka u Villi Istria Vabriga."
+    }
+  },
   "nav": {
     "home": "Početna",
     "about": "O vili",

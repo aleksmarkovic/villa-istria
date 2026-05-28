@@ -17,12 +17,7 @@ const BookingPage = () => {
 
   return (
     <div className="vi">
-      <Seo
-        title="Booking"
-        description="Check available dates and book your stay at Villa Istria directly through trusted booking channels."
-        path="/booking"
-        image="/assets/img/images/Villa_Istria-34.webp"
-      />
+      <Seo page="booking" image="/assets/img/images/Villa_Istria-34.webp" />
       <Header />
       <div className="vi-page">
         <PageHero eyebrow={b.eyebrow} title={b.title} note={b.calNote} />

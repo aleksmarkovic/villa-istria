@@ -15,12 +15,7 @@ const AboutPage = () => {
 
   return (
     <div className="vi">
-      <Seo
-        title="About Villa Istria"
-        description="Learn about Villa Istria, a modern family villa in Vabriga near the sea, designed for comfortable stays in Istria."
-        path="/about"
-        image="/assets/img/images/cropped/Villa_Istria-front.webp"
-      />
+      <Seo page="about" image="/assets/img/images/cropped/Villa_Istria-front.webp" />
       <Header />
       <div className="vi-page">
         <PageHero

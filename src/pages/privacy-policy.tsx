@@ -8,11 +8,7 @@ import Seo from "../components/Common/Seo";
 const PrivacyPolicyPage = () => {
   return (
     <div className="vi">
-      <Seo
-        title="Privacy Policy"
-        description="Read the Privacy Policy for Villa Istria Vabriga and learn how booking and website data are handled."
-        path="/privacy-policy"
-      />
+      <Seo page="privacy" />
       <Header />
       <PolicyContent type="privacy" />
       <Footer />

@@ -1,9 +1,10 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript, DocumentProps } from "next/document";
 
 export default class MyDocument extends Document {
   render(): JSX.Element {
+    const locale = (this.props as DocumentProps).__NEXT_DATA__.locale || "en";
     return (
-      <Html lang="en">
+      <Html lang={locale}>
         <Head>
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon/favicon.ico" />

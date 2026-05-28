@@ -14,12 +14,7 @@ const ContactPage = () => {
 
   return (
     <div className="vi">
-      <Seo
-        title="Contact"
-        description="Contact Villa Istria for booking questions, availability, and stay details in Vabriga, Croatia."
-        path="/contact"
-        image="/assets/img/images/cropped/Villa_Istria-front.webp"
-      />
+      <Seo page="contact" image="/assets/img/images/cropped/Villa_Istria-front.webp" />
       <Header />
       <div className="vi-page">
         <PageHero eyebrow={c.eyebrow} title={c.title} />

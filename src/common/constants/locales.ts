@@ -8,8 +8,12 @@ type Feature = { label: string; desc: string };
 type Review = { name: string; origin: string; text: string; rating: number };
 type Room = { name: string; desc: string };
 type Faq = { q: string; a: string };
+type SeoEntry = { title: string; description: string };
+
+export type SeoPage = "home" | "about" | "gallery" | "booking" | "contact" | "privacy" | "terms";
 
 export type Translation = {
+  seo: Record<SeoPage, SeoEntry>;
   nav: { home: string; about: string; gallery: string; booking: string; contact: string; book: string };
   home: {
     eyebrow: string;

@@ -16,12 +16,7 @@ const GalleryPage = () => {
 
   return (
     <div className="vi">
-      <Seo
-        title="Gallery"
-        description="Browse photos of Villa Istria, including rooms, pool, terrace, and details of the accommodation."
-        path="/gallery"
-        image="/assets/img/images/Villa_Istria-48.webp"
-      />
+      <Seo page="gallery" image="/assets/img/images/Villa_Istria-48.webp" />
       <Header />
       <div className="vi-page">
         <PageHero eyebrow={g.eyebrow} title={g.title} />

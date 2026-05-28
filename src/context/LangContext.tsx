@@ -1,4 +1,5 @@
-import React, { createContext, useState, useEffect, ReactNode } from "react";
+import React, { createContext, ReactNode } from "react";
+import { useRouter } from "next/router";
 import { Lang, Translation, translations, isLang } from "../common/constants/locales";
 
 export type { Lang, Translation };
@@ -16,16 +17,12 @@ export const LangContext = createContext<LangContextValue>({
 });
 
 export const LangProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLangState] = useState<Lang>("en");
-
-  useEffect(() => {
-    const stored = typeof window !== "undefined" ? localStorage.getItem("vi-lang") : null;
-    if (isLang(stored)) setLangState(stored);
-  }, []);
+  const router = useRouter();
+  const lang: Lang = isLang(router.locale) ? router.locale : "en";
 
   const setLang = (l: Lang) => {
-    setLangState(l);
-    if (typeof window !== "undefined") localStorage.setItem("vi-lang", l);
+    const { pathname, asPath, query } = router;
+    router.push({ pathname, query }, asPath, { locale: l });
   };
 
   return <LangContext.Provider value={{ lang, setLang, t: translations[lang] }}>{children}</LangContext.Provider>;
