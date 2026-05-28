@@ -1,14 +1,10 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
-import { LangContext, Lang } from "../context/LangContext";
+import { LangContext } from "../context/LangContext";
+import { LANGS } from "../common/constants/locales";
 
 interface LangDropdownProps {
   light?: boolean;
 }
-
-const LANGS: { code: Lang; label: string }[] = [
-  { code: "en", label: "English" },
-  { code: "hr", label: "Hrvatski" },
-];
 
 const LangDropdown = ({ light = false }: LangDropdownProps) => {
   const { lang, setLang } = useContext(LangContext);
