@@ -174,7 +174,7 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
             style={{
               fontFamily: "var(--font-serif)",
-              fontSize: "1.6rem",
+              fontSize: "clamp(1.1rem, 4.5vw, 1.6rem)",
               letterSpacing: "0.06em",
               color: isActive(l.href) ? "var(--accent)" : "var(--fg)",
               background: "none",
