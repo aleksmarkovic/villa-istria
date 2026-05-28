@@ -55,62 +55,45 @@ const baseLodgingSchema = (
   url: string,
   image: string,
   description: string,
-) => ({
-  "@context": "https://schema.org",
-  "@type": "LodgingBusiness",
-  "@id": `${SITE_URL()}/#lodging`,
-  name: SITE_NAME,
-  description,
-  url,
-  image,
-  inLanguage: lang,
-  telephone: "+385919304368",
-  email: "info@villa-istria.hr",
-  priceRange: "€€€",
-  numberOfRooms: 3,
-  starRating: { "@type": "Rating", ratingValue: "5" },
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "Ulica Velog Jože 15a",
-    postalCode: "52465",
-    addressLocality: "Tar-Vabriga",
-    addressRegion: "Istria",
-    addressCountry: "HR",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 45.293382,
-    longitude: 13.611912,
-  },
-  amenityFeature: [
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Private pool",
-      value: true,
+) => {
+  const a = translations[lang].seo.amenities;
+  return {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "@id": `${SITE_URL()}/#lodging`,
+    name: SITE_NAME,
+    description,
+    url,
+    image,
+    inLanguage: lang,
+    telephone: "+385919304368",
+    email: "info@villa-istria.hr",
+    priceRange: "€€€",
+    numberOfRooms: 3,
+    starRating: { "@type": "Rating", ratingValue: "5" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Ulica Velog Jože 15a",
+      postalCode: "52465",
+      addressLocality: "Tar-Vabriga",
+      addressRegion: "Istria",
+      addressCountry: "HR",
     },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Free parking",
-      value: true,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 45.293382,
+      longitude: 13.611912,
     },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Air conditioning",
-      value: true,
-    },
-    { "@type": "LocationFeatureSpecification", name: "Wi-Fi", value: true },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Outdoor grill",
-      value: true,
-    },
-    {
-      "@type": "LocationFeatureSpecification",
-      name: "Smart TV & Netflix",
-      value: true,
-    },
-  ],
-});
+    amenityFeature: [
+      { "@type": "LocationFeatureSpecification", name: a.pool, value: true },
+      { "@type": "LocationFeatureSpecification", name: a.parking, value: true },
+      { "@type": "LocationFeatureSpecification", name: a.ac, value: true },
+      { "@type": "LocationFeatureSpecification", name: a.wifi, value: true },
+      { "@type": "LocationFeatureSpecification", name: a.grill, value: true },
+      { "@type": "LocationFeatureSpecification", name: a.tv, value: true },
+    ],
+  };
+};
 
 const faqSchema = (lang: Lang): Record<string, unknown> => ({
   "@context": "https://schema.org",

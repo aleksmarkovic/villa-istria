@@ -27,6 +27,14 @@
     "terms": {
       "title": "Conditions générales — Villa Istria Vabriga",
       "description": "Conditions générales de réservation et de séjour à la Villa Istria Vabriga."
+    },
+    "amenities": {
+      "pool": "Piscine privée",
+      "parking": "Parking gratuit",
+      "ac": "Climatisation",
+      "wifi": "Wi-Fi",
+      "grill": "Barbecue extérieur",
+      "tv": "Smart TV et Netflix"
     }
   },
   "nav": {
@@ -137,6 +145,10 @@
       }
     ]
   },
+  "calendar": {
+    "months": ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"],
+    "days": ["Di","Lu","Ma","Me","Je","Ve","Sa"]
+  },
   "gallery": {
     "eyebrow": "Galerie",
     "title": "La villa, intérieur et extérieur"
@@ -162,7 +174,9 @@
     "bcTitle": "Disponibilités en direct et confirmation immédiate",
     "bcText": "Vous préférez réserver via une plateforme reconnue ? Consultez les disponibilités en direct, les avis vérifiés et la confirmation immédiate sur nos annonces partenaires officielles.",
     "bcCta": "Voir l'annonce",
-    "bcCta2": "Voir l'annonce"
+    "bcCta2": "Voir l'annonce",
+    "legendSelected": "Sélectionné",
+    "legendBooked": "Réservé"
   },
   "contact": {
     "eyebrow": "Contact",

@@ -15,7 +15,7 @@ const BookingCalendar = ({
   onCheckinChange,
   onCheckoutChange,
 }: BookingCalendarProps) => {
-  const { lang } = useContext(LangContext);
+  const { t } = useContext(LangContext);
   const today = new Date();
   const [viewM, setViewM] = useState({
     y: today.getFullYear(),
@@ -103,7 +103,6 @@ const BookingCalendar = ({
           checkin={checkin}
           checkout={checkout}
           onDay={onDay}
-          lang={lang}
         />
         <MonthGrid
           year={nextM.y}
@@ -111,7 +110,6 @@ const BookingCalendar = ({
           checkin={checkin}
           checkout={checkout}
           onDay={onDay}
-          lang={lang}
         />
       </div>
       <div
@@ -124,10 +122,10 @@ const BookingCalendar = ({
         }}
       >
         <span>
-          ■ <span style={{ color: "var(--accent)" }}>Selected</span>
+          ■ <span style={{ color: "var(--accent)" }}>{t.booking.legendSelected}</span>
         </span>
         <span>
-          ● <span>Booked</span>
+          ● <span>{t.booking.legendBooked}</span>
         </span>
       </div>
     </div>

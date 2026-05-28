@@ -1,5 +1,3 @@
-import { Lang } from "../../context/LangContext";
-
 function range(y: number, m: number, d1: number, d2: number) {
   const out: string[] = [];
   for (let d = d1; d <= d2; d++)
@@ -27,39 +25,3 @@ export function daysInMonth(y: number, m: number) {
 export function firstDay(y: number, m: number) {
   return new Date(y, m, 1).getDay();
 }
-
-const MONTHS_EN = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-const MONTHS_HR = [
-  "Siječanj",
-  "Veljača",
-  "Ožujak",
-  "Travanj",
-  "Svibanj",
-  "Lipanj",
-  "Srpanj",
-  "Kolovoz",
-  "Rujan",
-  "Listopad",
-  "Studeni",
-  "Prosinac",
-];
-
-const DAYS_EN = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
-const DAYS_HR = ["Ned", "Pon", "Uto", "Sri", "Čet", "Pet", "Sub"];
-
-export const months = (lang: Lang) => (lang === "hr" ? MONTHS_HR : MONTHS_EN);
-export const days = (lang: Lang) => (lang === "hr" ? DAYS_HR : DAYS_EN);

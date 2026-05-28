@@ -27,6 +27,14 @@
     "terms": {
       "title": "Opći uvjeti — Villa Istria Vabriga",
       "description": "Opći uvjeti rezervacije i boravka u Villi Istria Vabriga."
+    },
+    "amenities": {
+      "pool": "Privatni bazen",
+      "parking": "Besplatno parkiranje",
+      "ac": "Klimatizacija",
+      "wifi": "Wi-Fi",
+      "grill": "Vanjski roštilj",
+      "tv": "Smart TV i Netflix"
     }
   },
   "nav": {
@@ -137,6 +145,10 @@
       }
     ]
   },
+  "calendar": {
+    "months": ["Siječanj","Veljača","Ožujak","Travanj","Svibanj","Lipanj","Srpanj","Kolovoz","Rujan","Listopad","Studeni","Prosinac"],
+    "days": ["Ned","Pon","Uto","Sri","Čet","Pet","Sub"]
+  },
   "gallery": {
     "eyebrow": "Galerija",
     "title": "Vila iznutra i izvana"
@@ -162,7 +174,9 @@
     "bcTitle": "Dostupnost uživo i trenutna potvrda",
     "bcText": "Preferirate rezervaciju putem provjerene platforme? Pogledajte aktualnu dostupnost, recenzije gostiju i trenutnu potvrdu na našim službenim oglasima.",
     "bcCta": "Pogledaj oglas",
-    "bcCta2": "Pogledaj oglas"
+    "bcCta2": "Pogledaj oglas",
+    "legendSelected": "Odabrano",
+    "legendBooked": "Rezervirano"
   },
   "contact": {
     "eyebrow": "Kontakt",

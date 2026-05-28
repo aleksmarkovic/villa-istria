@@ -27,6 +27,14 @@
     "terms": {
       "title": "Algemene voorwaarden — Villa Istria Vabriga",
       "description": "Algemene voorwaarden voor het boeken en verblijven in Villa Istria Vabriga."
+    },
+    "amenities": {
+      "pool": "Privézwembad",
+      "parking": "Gratis parkeren",
+      "ac": "Airconditioning",
+      "wifi": "Wifi",
+      "grill": "Buitengrill",
+      "tv": "Smart-tv en Netflix"
     }
   },
   "nav": {
@@ -137,6 +145,10 @@
       }
     ]
   },
+  "calendar": {
+    "months": ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"],
+    "days": ["Zo","Ma","Di","Wo","Do","Vr","Za"]
+  },
   "gallery": {
     "eyebrow": "Galerij",
     "title": "De villa, binnen en buiten"
@@ -162,7 +174,9 @@
     "bcTitle": "Live beschikbaarheid en directe bevestiging",
     "bcText": "Liever reserveren via een vertrouwd platform? Bekijk live beschikbaarheid, geverifieerde gastenrecensies en directe bevestiging op onze officiële partneradvertenties.",
     "bcCta": "Bekijk advertentie",
-    "bcCta2": "Bekijk advertentie"
+    "bcCta2": "Bekijk advertentie",
+    "legendSelected": "Geselecteerd",
+    "legendBooked": "Geboekt"
   },
   "contact": {
     "eyebrow": "Contact",

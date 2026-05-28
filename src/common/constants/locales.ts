@@ -9,11 +9,12 @@ type Review = { name: string; origin: string; text: string; rating: number };
 type Room = { name: string; desc: string };
 type Faq = { q: string; a: string };
 type SeoEntry = { title: string; description: string };
+type Amenities = { pool: string; parking: string; ac: string; wifi: string; grill: string; tv: string };
 
 export type SeoPage = "home" | "about" | "gallery" | "booking" | "contact" | "privacy" | "terms";
 
 export type Translation = {
-  seo: Record<SeoPage, SeoEntry>;
+  seo: Record<SeoPage, SeoEntry> & { amenities: Amenities };
   nav: { home: string; about: string; gallery: string; booking: string; contact: string; book: string };
   home: {
     eyebrow: string;
@@ -45,6 +46,7 @@ export type Translation = {
     faqTitle: string;
     faqs: Faq[];
   };
+  calendar: { months: string[]; days: string[] };
   gallery: { eyebrow: string; title: string };
   booking: {
     eyebrow: string;
@@ -68,6 +70,8 @@ export type Translation = {
     bcText: string;
     bcCta: string;
     bcCta2: string;
+    legendSelected: string;
+    legendBooked: string;
   };
   contact: {
     eyebrow: string;

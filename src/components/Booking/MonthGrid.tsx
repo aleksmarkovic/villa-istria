@@ -1,6 +1,6 @@
-import React from "react";
-import { Lang } from "../../context/LangContext";
-import { BOOKED, fmt, daysInMonth, firstDay, months, days } from "./calendarData";
+import React, { useContext } from "react";
+import { LangContext } from "../../context/LangContext";
+import { BOOKED, fmt, daysInMonth, firstDay } from "../../common/constants/calendarData";
 
 type MonthGridProps = {
   year: number;
@@ -8,7 +8,6 @@ type MonthGridProps = {
   checkin: string;
   checkout: string;
   onDay: (key: string) => void;
-  lang: Lang;
 };
 
 const MonthGrid = ({
@@ -17,14 +16,14 @@ const MonthGrid = ({
   checkin,
   checkout,
   onDay,
-  lang,
 }: MonthGridProps) => {
+  const { t } = useContext(LangContext);
   const monthDays = daysInMonth(year, month);
   const start = firstDay(year, month);
   const today = new Date();
   today.setHours(0, 0, 0, 0);
-  const MONTHS = months(lang);
-  const DAYS = days(lang);
+  const MONTHS = t.calendar.months;
+  const DAYS = t.calendar.days;
   const cells: (number | null)[] = [];
   for (let i = 0; i < start; i++) cells.push(null);
   for (let d = 1; d <= monthDays; d++) cells.push(d);
@@ -100,7 +99,7 @@ const MonthGrid = ({
                 transition: "background 0.15s",
                 position: "relative",
               }}
-              title={book ? "Booked" : ""}
+              title={book ? t.booking.legendBooked : ""}
             >
               {d}
               {book && (
