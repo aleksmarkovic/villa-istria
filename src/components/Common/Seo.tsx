@@ -2,7 +2,12 @@ import React, { useContext } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { LangContext } from "../../context/LangContext";
-import { LANG_CODES, Lang, SeoPage, translations } from "../../common/constants/locales";
+import {
+  LANG_CODES,
+  Lang,
+  SeoPage,
+  translations,
+} from "../../common/constants/locales";
 
 const SITE_NAME = "Villa Istria Vabriga";
 const DEFAULT_URL = "https://www.villa-istria.hr";
@@ -45,7 +50,12 @@ const toAbsoluteUrl = (path: string): string => {
   return `${SITE_URL()}${path.startsWith("/") ? path : `/${path}`}`;
 };
 
-const baseLodgingSchema = (lang: Lang, url: string, image: string, description: string) => ({
+const baseLodgingSchema = (
+  lang: Lang,
+  url: string,
+  image: string,
+  description: string,
+) => ({
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "@id": `${SITE_URL()}/#lodging`,
@@ -73,12 +83,32 @@ const baseLodgingSchema = (lang: Lang, url: string, image: string, description: 
     longitude: 13.611912,
   },
   amenityFeature: [
-    { "@type": "LocationFeatureSpecification", name: "Private pool", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Free parking", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Air conditioning", value: true },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Private pool",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Free parking",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Air conditioning",
+      value: true,
+    },
     { "@type": "LocationFeatureSpecification", name: "Wi-Fi", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Outdoor grill", value: true },
-    { "@type": "LocationFeatureSpecification", name: "Smart TV & Netflix", value: true },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Outdoor grill",
+      value: true,
+    },
+    {
+      "@type": "LocationFeatureSpecification",
+      name: "Smart TV & Netflix",
+      value: true,
+    },
   ],
 });
 
@@ -93,7 +123,11 @@ const faqSchema = (lang: Lang): Record<string, unknown> => ({
   })),
 });
 
-const breadcrumbSchema = (page: SeoPage, lang: Lang, url: string): Record<string, unknown> => {
+const breadcrumbSchema = (
+  page: SeoPage,
+  lang: Lang,
+  url: string,
+): Record<string, unknown> => {
   const home = `${SITE_URL()}${buildLocalePath("/", lang)}`;
   const items: { name: string; item: string }[] = [
     { name: translations[lang].nav.home, item: home },
@@ -169,9 +203,7 @@ const Seo = ({
 
   return (
     <Head>
-      {preloadImage && (
-        <link rel="preload" as="image" href={preloadImage} fetchPriority="high" />
-      )}
+      {preloadImage && <link rel="preload" as="image" href={preloadImage} />}
       <title>{fullTitle}</title>
       <meta name="description" content={t.description} />
       <meta name="robots" content={robots} />
@@ -179,7 +211,11 @@ const Seo = ({
 
       <link rel="canonical" href={canonicalUrl} />
       {untranslated ? (
-        <link rel="alternate" hrefLang="en" href={toAbsoluteUrl(buildLocalePath(pathname, "en"))} />
+        <link
+          rel="alternate"
+          hrefLang="en"
+          href={toAbsoluteUrl(buildLocalePath(pathname, "en"))}
+        />
       ) : (
         LANG_CODES.map((code) => (
           <link
