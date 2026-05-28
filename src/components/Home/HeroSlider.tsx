@@ -175,6 +175,7 @@ const HeroSlider = () => {
           goSlide((slide - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)
         }
         aria-label="Previous slide"
+        className="vi-hero-arrow"
         style={{
           position: "absolute",
           left: "1.5rem",
@@ -205,6 +206,7 @@ const HeroSlider = () => {
       <button
         onClick={() => goSlide((slide + 1) % HERO_SLIDES.length)}
         aria-label="Next slide"
+        className="vi-hero-arrow"
         style={{
           position: "absolute",
           right: "1.5rem",
