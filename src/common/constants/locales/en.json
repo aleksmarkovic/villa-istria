@@ -63,7 +63,7 @@
       },
       {
         "label": "Private Parking",
-        "desc": "Secure gated parking for two vehicles, with direct road access."
+        "desc": "Secure gated parking for three vehicles, with direct road access."
       },
       {
         "label": "Istrian Character",
@@ -129,7 +129,7 @@
       },
       {
         "q": "How many cars can park?",
-        "a": "The gated parking fits 2 cars or larger vehicles such as vans."
+        "a": "The gated parking fits 3 cars or larger vehicles such as vans."
       },
       {
         "q": "Is there direct road access?",

@@ -63,7 +63,7 @@
       },
       {
         "label": "Privéparkeren",
-        "desc": "Beveiligde parkeerplaats voor twee voertuigen met directe toegang vanaf de weg."
+        "desc": "Beveiligde parkeerplaats voor drie voertuigen met directe toegang vanaf de weg."
       },
       {
         "label": "Istrisch karakter",
@@ -129,7 +129,7 @@
       },
       {
         "q": "Hoeveel auto's kunnen parkeren?",
-        "a": "Op de afgesloten parkeerplaats passen 2 auto's of grotere voertuigen zoals busjes."
+        "a": "Op de afgesloten parkeerplaats passen 3 auto's of grotere voertuigen zoals busjes."
       },
       {
         "q": "Is er directe toegang vanaf de weg?",

@@ -63,7 +63,7 @@
       },
       {
         "label": "Privatparkplatz",
-        "desc": "Geschützter Parkplatz für zwei Fahrzeuge mit direkter Straßenanbindung."
+        "desc": "Geschützter Parkplatz für drei Fahrzeuge mit direkter Straßenanbindung."
       },
       {
         "label": "Istrischer Charakter",
@@ -129,7 +129,7 @@
       },
       {
         "q": "Wie viele Autos können parken?",
-        "a": "Der geschützte Parkplatz bietet Platz für 2 Pkw oder größere Fahrzeuge wie Vans."
+        "a": "Der geschützte Parkplatz bietet Platz für 3 Pkw oder größere Fahrzeuge wie Vans."
       },
       {
         "q": "Gibt es einen direkten Straßenzugang?",

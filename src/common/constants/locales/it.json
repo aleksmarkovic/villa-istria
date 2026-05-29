@@ -63,7 +63,7 @@
       },
       {
         "label": "Parcheggio privato",
-        "desc": "Parcheggio recintato per due veicoli, con accesso diretto dalla strada."
+        "desc": "Parcheggio recintato per tre veicoli, con accesso diretto dalla strada."
       },
       {
         "label": "Carattere istriano",
@@ -129,7 +129,7 @@
       },
       {
         "q": "Quante auto possono parcheggiare?",
-        "a": "Il parcheggio recintato accoglie 2 auto o veicoli più grandi come furgoni."
+        "a": "Il parcheggio recintato accoglie 3 auto o veicoli più grandi come furgoni."
       },
       {
         "q": "C'è accesso diretto dalla strada?",

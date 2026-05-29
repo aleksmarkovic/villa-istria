@@ -63,7 +63,7 @@
       },
       {
         "label": "Parking privé",
-        "desc": "Parking sécurisé pour deux véhicules, accès direct depuis la route."
+        "desc": "Parking sécurisé pour trois véhicules, accès direct depuis la route."
       },
       {
         "label": "Caractère istrien",
@@ -129,7 +129,7 @@
       },
       {
         "q": "Combien de voitures peuvent stationner ?",
-        "a": "Le parking sécurisé accueille 2 voitures ou des véhicules plus grands comme des vans."
+        "a": "Le parking sécurisé accueille 3 voitures ou des véhicules plus grands comme des vans."
       },
       {
         "q": "Y a-t-il un accès direct depuis la route ?",

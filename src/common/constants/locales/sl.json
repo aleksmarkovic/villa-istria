@@ -63,7 +63,7 @@
       },
       {
         "label": "Zasebno parkirišče",
-        "desc": "Zavarovano parkirišče za dve vozili z neposrednim dostopom s ceste."
+        "desc": "Zavarovano parkirišče za tri vozila z neposrednim dostopom s ceste."
       },
       {
         "label": "Istrski značaj",
@@ -129,7 +129,7 @@
       },
       {
         "q": "Koliko avtomobilov lahko parkira?",
-        "a": "Zaprto parkirišče sprejme 2 avtomobila ali večja vozila, kot so kombiji."
+        "a": "Zaprto parkirišče sprejme 3 avtomobile ali večja vozila, kot so kombiji."
       },
       {
         "q": "Je dostop neposredno s ceste?",

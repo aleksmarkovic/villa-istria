@@ -63,7 +63,7 @@
       },
       {
         "label": "Privatno parkiranje",
-        "desc": "Zaštićeno parkiralište za dva vozila s direktnim pristupom s ceste."
+        "desc": "Zaštićeno parkiralište za tri vozila s direktnim pristupom s ceste."
       },
       {
         "label": "Istarski karakter",
@@ -129,7 +129,7 @@
       },
       {
         "q": "Koliko auta može parkirati?",
-        "a": "Zaštićeno parkiralište prima 2 auta ili veća vozila poput kombija."
+        "a": "Zaštićeno parkiralište prima 3 auta ili veća vozila poput kombija."
       },
       {
         "q": "Postoji li direktan pristup s ceste?",

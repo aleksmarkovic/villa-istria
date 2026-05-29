@@ -63,7 +63,7 @@
       },
       {
         "label": "Parking prywatny",
-        "desc": "Zamknięty parking dla dwóch pojazdów z bezpośrednim dojazdem z drogi."
+        "desc": "Zamknięty parking dla trzech pojazdów z bezpośrednim dojazdem z drogi."
       },
       {
         "label": "Istryjski charakter",
@@ -129,7 +129,7 @@
       },
       {
         "q": "Ile aut może zaparkować?",
-        "a": "Zamknięty parking mieści 2 samochody lub większe pojazdy, np. busy."
+        "a": "Zamknięty parking mieści 3 samochody lub większe pojazdy, np. busy."
       },
       {
         "q": "Czy jest bezpośredni dojazd z drogi?",
