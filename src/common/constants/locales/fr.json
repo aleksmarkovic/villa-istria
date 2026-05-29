@@ -1,0 +1,211 @@
+{
+  "seo": {
+    "home": {
+      "title": "Villa de luxe avec piscine à Vabriga, Istrie",
+      "description": "Villa Istria à Vabriga : villa istrienne moderne avec piscine privée, 3 chambres avec salle de bain et terrasse barbecue, à 2 km de la mer Adriatique."
+    },
+    "about": {
+      "title": "À propos de Villa Istria — villa familiale moderne en Istrie",
+      "description": "Intérieurs contemporains, pierre istrienne locale, trois chambres avec salle de bain privative et piscine. Emplacement calme entre Poreč et Novigrad."
+    },
+    "gallery": {
+      "title": "Galerie photo — Villa Istria Vabriga",
+      "description": "Parcourez les photos de Villa Istria : piscine, terrasse, chambres, cuisine et l'environnement istrien de Vabriga et Poreč."
+    },
+    "booking": {
+      "title": "Réserver Villa Istria — disponibilités et demande",
+      "description": "Vérifiez les disponibilités et réservez votre séjour à la Villa Istria à Vabriga directement ou via des canaux partenaires vérifiés."
+    },
+    "contact": {
+      "title": "Contact — Villa Istria Vabriga",
+      "description": "Contactez Villa Istria pour les demandes de réservation, la disponibilité et les informations sur votre séjour à Vabriga, Istrie, Croatie."
+    },
+    "privacy": {
+      "title": "Politique de confidentialité — Villa Istria Vabriga",
+      "description": "Comment Villa Istria Vabriga collecte, utilise et protège les données de réservation et du site web."
+    },
+    "terms": {
+      "title": "Conditions générales — Villa Istria Vabriga",
+      "description": "Conditions générales de réservation et de séjour à la Villa Istria Vabriga."
+    },
+    "amenities": {
+      "pool": "Piscine privée",
+      "parking": "Parking gratuit",
+      "ac": "Climatisation",
+      "wifi": "Wi-Fi",
+      "grill": "Barbecue extérieur",
+      "tv": "Smart TV et Netflix"
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "La villa",
+    "gallery": "Galerie",
+    "booking": "Réservation",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "home": {
+    "eyebrow": "Vabriga · Istrie · Croatie",
+    "headline": "Villa Istria",
+    "sub": "Une villa familiale de luxe avec piscine, à deux kilomètres de l'Adriatique.",
+    "cta": "Découvrir la villa",
+    "ctaBook": "Réserver votre séjour",
+    "featuresTitle": "Tout ce qu'il vous faut",
+    "features": [
+      {
+        "label": "3 chambres",
+        "desc": "Lits king-size, salles de bain privatives, Smart TV et Netflix dans chaque chambre."
+      },
+      {
+        "label": "Piscine",
+        "desc": "Grande piscine éclairée à profondeur variable, transats et douche solaire."
+      },
+      {
+        "label": "Parking privé",
+        "desc": "Parking sécurisé pour trois véhicules, accès direct depuis la route."
+      },
+      {
+        "label": "Caractère istrien",
+        "desc": "Espace de vie ouvert, terrasse avec grill, détails en pierre locale."
+      }
+    ],
+    "aboutEyebrow": "La villa",
+    "aboutTitle": "Confort moderne,\nâme istrienne",
+    "aboutText": "Nichée entre Poreč et Novigrad, la Villa Istria mêle design contemporain et chaleur de la pierre istrienne. La mer est à 2 km ; Poreč et sa basilique euphrasienne (UNESCO) à 10 km.",
+    "reviewsEyebrow": "Expériences des hôtes",
+    "reviewsTitle": "Ce que disent nos hôtes",
+    "reviews": [
+      {
+        "name": "Sophie L.",
+        "origin": "Paris, France",
+        "text": "Absolument magnifique. La piscine la nuit est magique et l'emplacement est parfait — calme et proche de tout. Nous reviendrons.",
+        "rating": 5
+      },
+      {
+        "name": "Marco & Anna",
+        "origin": "Milan, Italie",
+        "text": "Chaque détail était parfait. La chambre vue mer, les soirées au grill, les couchers de soleil istriens — un lieu vraiment unique.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas B.",
+        "origin": "Munich, Allemagne",
+        "text": "Spacieux, moderne et joliment aménagé. Les hôtes répondent immédiatement. Vivement recommandé aux familles.",
+        "rating": 5
+      }
+    ],
+    "locEyebrow": "Emplacement",
+    "locTitle": "Retrouvez-nous à Vabriga",
+    "locText": "Ulica Velog Jože 15a, Vabriga, 52465 Istrie, Croatie"
+  },
+  "about": {
+    "eyebrow": "La villa",
+    "title": "Une maison moderne\ntouchée par la tradition",
+    "subtitle": "Des intérieurs contemporains rencontrent la chaleur intemporelle de la pierre istrienne.",
+    "extTitle": "Extérieur",
+    "extText": "La façade de la villa allie pierre locale et lignes contemporaines. Le jardin offre une grande piscine éclairée à profondeur variable, transats, douche solaire, terrasse couverte pour les repas et cheminée-grill extérieure.",
+    "intTitle": "Intérieur",
+    "intText": "Cuisine, salle à manger et salon ouverts donnent directement sur la terrasse de la piscine. Chacune des trois chambres dispose d'un lit king-size, d'une salle de bain privative et d'une Smart TV avec Netflix.",
+    "rooms": [
+      {
+        "name": "Chambre 1",
+        "desc": "Lit king-size · salle de bain privative · accès direct à la piscine"
+      },
+      {
+        "name": "Chambre 2",
+        "desc": "Lit king-size · salle de bain privative · terrasse vue mer"
+      },
+      {
+        "name": "Chambre 3",
+        "desc": "2 lits simples (jumelables) · salle de bain privative · vue jardin"
+      }
+    ],
+    "faqTitle": "Questions fréquentes",
+    "faqs": [
+      {
+        "q": "À quelle distance se trouve la mer ?",
+        "a": "À seulement 2 km de la villa — la plage la plus proche est à Vabriga même."
+      },
+      {
+        "q": "Combien de voitures peuvent stationner ?",
+        "a": "Le parking sécurisé accueille 3 voitures ou des véhicules plus grands comme des vans."
+      },
+      {
+        "q": "Y a-t-il un accès direct depuis la route ?",
+        "a": "Oui — l'entrée donne directement sur la route principale, sans voies secondaires."
+      },
+      {
+        "q": "La piscine est-elle éclairée la nuit ?",
+        "a": "Oui, la piscine est entièrement éclairée pour les baignades en soirée."
+      },
+      {
+        "q": "Y a-t-il la climatisation ?",
+        "a": "Oui, toutes les chambres et le salon sont entièrement climatisés."
+      }
+    ]
+  },
+  "calendar": {
+    "months": ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"],
+    "days": ["Di","Lu","Ma","Me","Je","Ve","Sa"]
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "La villa, intérieur et extérieur"
+  },
+  "booking": {
+    "eyebrow": "Réservation",
+    "title": "Planifiez votre séjour",
+    "calNote": "Sélectionnez vos dates ci-dessous — puis remplissez le formulaire de demande.",
+    "formTitle": "Envoyer une demande",
+    "f": {
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "guests": "Nombre d'hôtes",
+      "checkin": "Arrivée",
+      "checkout": "Départ",
+      "msg": "Message (facultatif)",
+      "submit": "Envoyer la demande",
+      "success": "Merci — nous vous répondrons sous 24 heures.",
+      "error": "Une erreur est survenue. Veuillez réessayer ou nous écrire directement par email."
+    },
+    "bcEyebrow": "Réservez via nos partenaires",
+    "bcTitle": "Disponibilités en direct et confirmation immédiate",
+    "bcText": "Vous préférez réserver via une plateforme reconnue ? Consultez les disponibilités en direct, les avis vérifiés et la confirmation immédiate sur nos annonces partenaires officielles.",
+    "bcCta": "Voir l'annonce",
+    "bcCta2": "Voir l'annonce",
+    "legendSelected": "Sélectionné",
+    "legendBooked": "Réservé"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Contactez-nous",
+    "addr": "Ulica Velog Jože 15a\nVabriga (Tar-Vabriga, Poreč)\n52465, Istrie, Croatie",
+    "email": "info@villa-istria.hr",
+    "phone": "+385 91 930 4368",
+    "f": {
+      "name": "Nom",
+      "email": "Email",
+      "msg": "Message",
+      "submit": "Envoyer le message",
+      "success": "Message envoyé — nous vous répondrons bientôt.",
+      "error": "Une erreur est survenue. Veuillez réessayer ou nous écrire directement par email."
+    }
+  },
+  "footer": {
+    "explore": "Explorer",
+    "contact": "Contact",
+    "availability": "Disponibilités",
+    "availabilityText": "Consultez les dates disponibles et envoyez-nous une demande pour votre séjour en Istrie.",
+    "availabilityCta": "Vérifier les disponibilités",
+    "home": "Accueil",
+    "about": "À propos de Villa Istria",
+    "gallery": "Galerie photo",
+    "booking": "Réserver le séjour",
+    "contactUs": "Nous contacter",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Confidentialité",
+    "copyright": "© 2026 Villa Istria, Vabriga. Tous droits réservés."
+  }
+}

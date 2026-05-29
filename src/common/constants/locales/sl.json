@@ -1,0 +1,211 @@
+{
+  "seo": {
+    "home": {
+      "title": "Razkošna vila z bazenom v Vabrigi, Istra",
+      "description": "Villa Istria v Vabrigi: sodobna istrska vila z zasebnim bazenom, 3 spalnice z lastno kopalnico in pokrita terasa z žarom, 2 km od morja."
+    },
+    "about": {
+      "title": "O Villi Istria — sodobna družinska vila v Istri",
+      "description": "Sodobna notranjost, avtohtoni istrski kamen, tri spalnice z lastno kopalnico in zasebni bazen. Mirna lokacija med Porečem in Novigradom."
+    },
+    "gallery": {
+      "title": "Fotogalerija — Villa Istria Vabriga",
+      "description": "Oglejte si fotografije Ville Istria: bazen, terasa, spalnice, kuhinja in istrska okolica Vabrige in Poreča."
+    },
+    "booking": {
+      "title": "Rezervirajte Villo Istria — razpoložljivost in povpraševanje",
+      "description": "Preverite razpoložljivost in neposredno rezervirajte bivanje v Villi Istria v Vabrigi ali prek preverjenih partnerskih kanalov."
+    },
+    "contact": {
+      "title": "Kontakt — Villa Istria Vabriga",
+      "description": "Stopite v stik z Villo Istria za vprašanja o rezervaciji, razpoložljivosti in bivanju v Vabrigi, Istra, Hrvaška."
+    },
+    "privacy": {
+      "title": "Pravilnik o zasebnosti — Villa Istria Vabriga",
+      "description": "Kako Villa Istria Vabriga zbira, uporablja in varuje podatke o rezervacijah in spletni strani."
+    },
+    "terms": {
+      "title": "Splošni pogoji — Villa Istria Vabriga",
+      "description": "Splošni pogoji rezervacije in bivanja v Villi Istria Vabriga."
+    },
+    "amenities": {
+      "pool": "Zasebni bazen",
+      "parking": "Brezplačno parkiranje",
+      "ac": "Klimatska naprava",
+      "wifi": "Wi-Fi",
+      "grill": "Zunanji žar",
+      "tv": "Smart TV in Netflix"
+    }
+  },
+  "nav": {
+    "home": "Domov",
+    "about": "O vili",
+    "gallery": "Galerija",
+    "booking": "Rezervacija",
+    "contact": "Kontakt",
+    "book": "Rezerviraj"
+  },
+  "home": {
+    "eyebrow": "Vabriga · Istra · Hrvaška",
+    "headline": "Villa Istria",
+    "sub": "Luksuzna družinska vila z bazenom, dva kilometra od Jadranskega morja.",
+    "cta": "Odkrijte vilo",
+    "ctaBook": "Rezervirajte bivanje",
+    "featuresTitle": "Vse, kar potrebujete",
+    "features": [
+      {
+        "label": "3 spalnice",
+        "desc": "Zakonske postelje, lastne kopalnice, Smart TV in Netflix v vsaki sobi."
+      },
+      {
+        "label": "Bazen",
+        "desc": "Velik osvetljen bazen s spreminjajočo se globino, ležalniki in solarna prha."
+      },
+      {
+        "label": "Zasebno parkirišče",
+        "desc": "Zavarovano parkirišče za tri vozila z neposrednim dostopom s ceste."
+      },
+      {
+        "label": "Istrski značaj",
+        "desc": "Odprt dnevni prostor, terasa z žarom, podrobnosti iz domačega kamna."
+      }
+    ],
+    "aboutEyebrow": "Vila",
+    "aboutTitle": "Sodobno udobje,\nistrska duša",
+    "aboutText": "Villa Istria leži med Porečem in Novigradom in združuje sodobno oblikovanje s toplino domačega kamna. Morje je oddaljeno 2 km, Poreč z Evfrazijevo baziliko (UNESCO) pa 10 km.",
+    "reviewsEyebrow": "Izkušnje gostov",
+    "reviewsTitle": "Kaj pravijo naši gostje",
+    "reviews": [
+      {
+        "name": "Sophie L.",
+        "origin": "Pariz, Francija",
+        "text": "Naravnost osupljivo. Bazen ponoči je čaroben, lokacija pa popolna — mirna in hkrati blizu vsemu. Zagotovo se vrnemo.",
+        "rating": 5
+      },
+      {
+        "name": "Marco & Anna",
+        "origin": "Milano, Italija",
+        "text": "Vsaka podrobnost je bila popolna. Soba s pogledom na morje, večeri ob žaru, istrski sončni zahodi — resnično poseben kraj.",
+        "rating": 5
+      },
+      {
+        "name": "Thomas B.",
+        "origin": "München, Nemčija",
+        "text": "Prostorno, sodobno in lepo opremljeno. Gostitelji odgovarjajo takoj. Toplo priporočamo družinam.",
+        "rating": 5
+      }
+    ],
+    "locEyebrow": "Lokacija",
+    "locTitle": "Najdete nas v Vabrigi",
+    "locText": "Ulica Velog Jože 15a, Vabriga, 52465 Istra, Hrvaška"
+  },
+  "about": {
+    "eyebrow": "O vili",
+    "title": "Sodobna hiša\nz dotikom tradicije",
+    "subtitle": "Sodobne notranjosti se srečujejo z brezčasno toplino istrskega kamna.",
+    "extTitle": "Zunanjost",
+    "extText": "Pročelje vile združuje domači kamen s sodobnimi linijami. Na vrtu so velik osvetljen bazen s spreminjajočo se globino, ležalniki, solarna prha, pokrita jedilna terasa in zunanji kamin z žarom.",
+    "intTitle": "Notranjost",
+    "intText": "Odprt prostor kuhinje, jedilnice in dnevne sobe se odpira neposredno na teraso z bazenom. Vsaka od treh spalnic ima zakonsko posteljo, lastno kopalnico in Smart TV z Netflixom.",
+    "rooms": [
+      {
+        "name": "Spalnica 1",
+        "desc": "Zakonska postelja · lastna kopalnica · neposreden dostop do bazena"
+      },
+      {
+        "name": "Spalnica 2",
+        "desc": "Zakonska postelja · lastna kopalnica · terasa s pogledom na morje"
+      },
+      {
+        "name": "Spalnica 3",
+        "desc": "2 ločeni postelji (združljivi) · lastna kopalnica · pogled na vrt"
+      }
+    ],
+    "faqTitle": "Pogosta vprašanja",
+    "faqs": [
+      {
+        "q": "Kako daleč je morje?",
+        "a": "Samo 2 km od vile — najbližja plaža je v sami Vabrigi."
+      },
+      {
+        "q": "Koliko avtomobilov lahko parkira?",
+        "a": "Zaprto parkirišče sprejme 3 avtomobile ali večja vozila, kot so kombiji."
+      },
+      {
+        "q": "Je dostop neposredno s ceste?",
+        "a": "Da — vhod je neposredno ob glavni cesti, brez stranskih poti."
+      },
+      {
+        "q": "Ali je bazen osvetljen ponoči?",
+        "a": "Da, bazen je v celoti osvetljen za večerno kopanje."
+      },
+      {
+        "q": "Ali ima vila klimatske naprave?",
+        "a": "Da, vse spalnice in dnevni prostor so popolnoma klimatizirani."
+      }
+    ]
+  },
+  "calendar": {
+    "months": ["Januar","Februar","Marec","April","Maj","Junij","Julij","Avgust","September","Oktober","November","December"],
+    "days": ["Ned","Pon","Tor","Sre","Čet","Pet","Sob"]
+  },
+  "gallery": {
+    "eyebrow": "Galerija",
+    "title": "Vila znotraj in zunaj"
+  },
+  "booking": {
+    "eyebrow": "Rezervacija",
+    "title": "Načrtujte svoje bivanje",
+    "calNote": "Izberite želene datume spodaj — nato izpolnite povpraševanje.",
+    "formTitle": "Pošljite povpraševanje",
+    "f": {
+      "name": "Ime in priimek",
+      "email": "E-pošta",
+      "phone": "Telefon",
+      "guests": "Število gostov",
+      "checkin": "Prihod",
+      "checkout": "Odhod",
+      "msg": "Sporočilo (neobvezno)",
+      "submit": "Pošlji povpraševanje",
+      "success": "Hvala — javili se vam bomo v 24 urah.",
+      "error": "Prišlo je do napake. Poskusite znova ali nam pišite neposredno po e-pošti."
+    },
+    "bcEyebrow": "Rezervacija prek partnerskih kanalov",
+    "bcTitle": "Razpoložljivost v živo in takojšnja potrditev",
+    "bcText": "Raje rezervirate prek priznane platforme? Oglejte si trenutno razpoložljivost, preverjene ocene gostov in takojšnjo potrditev na naših uradnih partnerskih oglasih.",
+    "bcCta": "Ogled oglasa",
+    "bcCta2": "Ogled oglasa",
+    "legendSelected": "Izbrano",
+    "legendBooked": "Rezervirano"
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Stopite v stik",
+    "addr": "Ulica Velog Jože 15a\nVabriga (Tar-Vabriga, Poreč)\n52465, Istra, Hrvaška",
+    "email": "info@villa-istria.hr",
+    "phone": "+385 91 930 4368",
+    "f": {
+      "name": "Ime",
+      "email": "E-pošta",
+      "msg": "Sporočilo",
+      "submit": "Pošlji sporočilo",
+      "success": "Sporočilo poslano — kmalu se vam bomo oglasili.",
+      "error": "Prišlo je do napake. Poskusite znova ali nam pišite neposredno po e-pošti."
+    }
+  },
+  "footer": {
+    "explore": "Raziščite",
+    "contact": "Kontakt",
+    "availability": "Razpoložljivost",
+    "availabilityText": "Preverite proste termine in nam pošljite povpraševanje za bivanje v Istri.",
+    "availabilityCta": "Preveri razpoložljivost",
+    "home": "Domov",
+    "about": "O Villa Istria",
+    "gallery": "Foto galerija",
+    "booking": "Rezervirajte bivanje",
+    "contactUs": "Kontaktirajte nas",
+    "terms": "Pogoji uporabe",
+    "privacy": "Politika zasebnosti",
+    "copyright": "© 2026 Villa Istria, Vabriga. Vse pravice pridržane."
+  }
+}

@@ -74,6 +74,8 @@
     "@types/bootstrap": "^5.1.9",
     "@types/node": "^22.15.33",
     "@types/react": "^18.3.23",
+    "@types/react-calendar": "^3.9.0",
+    "@types/react-gtm-module": "^2.0.4",
     "eslint": "^9.29.0",
     "typescript": "5.8.3"
   }

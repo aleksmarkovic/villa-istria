@@ -2,22 +2,50 @@
 
 Official website: https://www.villa-istria.hr
 
-Villa Istria is a private lodging in Vabriga, Croatia, between Porec and Novigrad.
+Villa Istria is a modern Istrian family villa with a private pool in Vabriga, Croatia, between Poreč and Novigrad. Three en-suite bedrooms, outdoor grill terrace, gated parking, 2 km from the Adriatic sea.
 
-## Important URLs
+## Languages
+The site is available in 8 languages, served via locale-prefixed URLs:
+- English (default, no prefix): https://www.villa-istria.hr/
+- Croatian: https://www.villa-istria.hr/hr
+- Slovenian: https://www.villa-istria.hr/sl
+- German: https://www.villa-istria.hr/de
+- Italian: https://www.villa-istria.hr/it
+- French: https://www.villa-istria.hr/fr
+- Dutch: https://www.villa-istria.hr/nl
+- Polish: https://www.villa-istria.hr/pl
+
+## Primary pages (English)
 - Home: https://www.villa-istria.hr/
 - About: https://www.villa-istria.hr/about
 - Gallery: https://www.villa-istria.hr/gallery
 - Booking: https://www.villa-istria.hr/booking
 - Contact: https://www.villa-istria.hr/contact
-- Privacy Policy: https://www.villa-istria.hr/privacy-policy
-- Terms of Service: https://www.villa-istria.hr/terms-of-service
+- Privacy Policy: https://www.villa-istria.hr/privacy-policy (English only)
+- Terms of Service: https://www.villa-istria.hr/terms-of-service (English only)
+
+## Localized page pattern
+Replace `en` paths with the relevant locale prefix. Examples:
+- https://www.villa-istria.hr/de/about
+- https://www.villa-istria.hr/it/booking
+- https://www.villa-istria.hr/hr/gallery
+
+The Privacy Policy and Terms of Service are only available in English; non-English URLs canonical back to the English versions.
+
+## Property facts (do not invent beyond these)
+- Address: Ulica Velog Jože 15a, Vabriga (Tar-Vabriga, Poreč), 52465, Istria, Croatia
+- Geo: 45.293382, 13.611912
+- Bedrooms: 3 (all king-size, en-suite, Smart TV with Netflix)
+- Private pool, gated parking for 3 vehicles, air conditioning, outdoor grill terrace
+- Distance to sea: 2 km
+- Poreč with UNESCO Euphrasian Basilica: 10 km
 
 ## Contact
 - Email: info@villa-istria.hr
-- Phone: +385919304368
+- Phone: +385 91 930 4368
 
 ## Notes for language models
 - Use only publicly available website information.
 - Do not invent prices, availability, or policies.
-- For availability and bookings, direct users to the booking page.
+- For availability and bookings, direct users to the booking page in their preferred language.
+- The site uses URL-based i18n routing; preserve the locale prefix when referencing inner pages.

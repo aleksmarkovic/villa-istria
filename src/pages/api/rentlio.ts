@@ -1,11 +1,12 @@
 import dayjs from "dayjs";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-type Availability = {
-  availability: string;
-  date: Date;
-};
+interface Reservation {
+  availability: number;
+  date: string;
+}
 
-const GetAvailability = (dateFrom, dateTo) =>
+const GetAvailability = (dateFrom: string, dateTo: string): Promise<Reservation[] | null> =>
   fetch(`${process.env.RENTLIO_API_BASE_URL}/properties`, {
     headers: {
       apiKey: process.env.RENTLIO_API_KEY,
@@ -39,17 +40,20 @@ const GetAvailability = (dateFrom, dateTo) =>
           ).then((availability) =>
             availability
               .json()
-              .then((availabilityData) => availabilityData.data)
+              .then((availabilityData) => availabilityData.data as Reservation[])
           )
         )
       );
     })
   );
 
-export default async function handler(req, res) {
-  const { dateFrom, dateTo } = req.query;
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+): Promise<void> {
+  const { dateFrom, dateTo } = req.query as { dateFrom: string; dateTo: string };
 
-  let data = await GetAvailability(dateFrom, dateTo);
+  const data = await GetAvailability(dateFrom, dateTo);
 
-  return res.status(200).json(data);
+  res.status(200).json(data);
 }
