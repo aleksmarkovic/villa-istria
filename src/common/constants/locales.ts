@@ -10,6 +10,8 @@ type Room = { name: string; desc: string };
 type Faq = { q: string; a: string };
 type SeoEntry = { title: string; description: string };
 type Amenities = { pool: string; parking: string; ac: string; wifi: string; grill: string; tv: string };
+type LegalSection = { heading: string; body: string };
+type LegalDoc = { title: string; intro?: string; sections: LegalSection[] };
 
 export type SeoPage = "home" | "about" | "gallery" | "booking" | "contact" | "privacy" | "terms";
 
@@ -96,6 +98,7 @@ export type Translation = {
     privacy: string;
     copyright: string;
   };
+  legal: { terms: LegalDoc; privacy: LegalDoc };
 };
 
 import en from "./locales/en.json";
