@@ -72,6 +72,7 @@ export type Translation = {
     bcText: string;
     bcCta: string;
     bcCta2: string;
+    legendAvailable: string;
     legendSelected: string;
     legendBooked: string;
   };

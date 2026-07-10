@@ -77,14 +77,18 @@ const MonthGrid = ({
           let bg: string = "transparent";
           let color: string = past || book ? "var(--fg-3)" : "var(--fg)";
           let cursor: string = "pointer";
+          let textDecoration: string = "none";
           if (past || book) cursor = "default";
           if (isCi || isCo) {
             bg = "var(--accent)";
             color = "#fff";
           } else if (inRng) {
-            bg = "oklch(88% 0.030 45)";
+            bg = "var(--cal-range)";
           }
-          if (book) bg = "var(--bg-2)";
+          if (book) {
+            bg = "var(--cal-booked)";
+            textDecoration = "line-through";
+          }
           return (
             <div
               key={i}
@@ -96,28 +100,15 @@ const MonthGrid = ({
                 cursor,
                 background: bg,
                 color,
-                borderRadius: "1px",
+                borderRadius: "2px",
                 fontWeight: isCi || isCo ? 500 : 300,
+                textDecoration,
                 transition: "background 0.15s",
                 position: "relative",
               }}
-              title={book ? t.booking.legendBooked : ""}
+              title={book ? t.booking.legendBooked : t.booking.legendAvailable}
             >
               {d}
-              {book && (
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: 3,
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    width: 4,
-                    height: 4,
-                    borderRadius: "50%",
-                    background: "var(--accent-l)",
-                  }}
-                />
-              )}
             </div>
           );
         })}
