@@ -2,6 +2,31 @@ import React, { useContext, useEffect, useState } from "react";
 import { LangContext } from "../../context/LangContext";
 import MonthGrid from "./MonthGrid";
 
+const LegendItem = ({
+  swatch,
+  label,
+  strike,
+}: {
+  swatch: React.CSSProperties;
+  label: string;
+  strike?: boolean;
+}) => (
+  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+    <span
+      style={{
+        display: "inline-block",
+        width: 12,
+        height: 12,
+        borderRadius: "2px",
+        ...swatch,
+      }}
+    />
+    <span style={{ textDecoration: strike ? "line-through" : "none" }}>
+      {label}
+    </span>
+  </span>
+);
+
 interface BookingCalendarProps {
   checkin: string;
   checkout: string;
@@ -136,22 +161,27 @@ const BookingCalendar = ({
       </div>
       <div
         style={{
-          marginTop: "1.2rem",
+          marginTop: "1.4rem",
           display: "flex",
-          gap: "2rem",
+          gap: "1.8rem",
+          flexWrap: "wrap",
           fontSize: "0.72rem",
-          color: "var(--fg-3)",
+          color: "var(--fg-2)",
         }}
       >
-        <span>
-          ■{" "}
-          <span style={{ color: "var(--accent)" }}>
-            {t.booking.legendSelected}
-          </span>
-        </span>
-        <span>
-          ● <span>{t.booking.legendBooked}</span>
-        </span>
+        <LegendItem
+          swatch={{ background: "transparent", border: "1.5px solid var(--accent-l)" }}
+          label={t.booking.legendAvailable}
+        />
+        <LegendItem
+          swatch={{ background: "var(--accent)", border: "1.5px solid var(--accent)" }}
+          label={t.booking.legendSelected}
+        />
+        <LegendItem
+          swatch={{ background: "var(--cal-booked)", border: "1.5px solid var(--cal-booked)" }}
+          label={t.booking.legendBooked}
+          strike
+        />
       </div>
     </div>
   );

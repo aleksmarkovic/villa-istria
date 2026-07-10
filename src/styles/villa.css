@@ -59,6 +59,8 @@
   --fg-3:     #7a95a5;
   --accent:   oklch(50%   0.095 45);
   --accent-l: oklch(74%   0.065 45);
+  --cal-range:  oklch(90%   0.045 45);
+  --cal-booked: oklch(91%   0.006 70);
   --border:   #d5c9b3;
   --font-display: 'Cinzel Decorative', serif;
   --font-serif:   'Cinzel', serif;
