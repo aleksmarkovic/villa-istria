@@ -297,5 +297,12 @@
         }
       ]
     }
+  },
+  "cookie": {
+    "title": "Cookie e privacy",
+    "message": "Utilizziamo cookie analitici per capire come i visitatori usano il nostro sito. Vengono impostati solo se accetti — puoi modificare la tua scelta in qualsiasi momento.",
+    "accept": "Accetta",
+    "reject": "Rifiuta",
+    "settings": "Impostazioni cookie"
   }
 }

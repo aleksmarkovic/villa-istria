@@ -297,5 +297,12 @@
         }
       ]
     }
+  },
+  "cookie": {
+    "title": "Cookies en privacy",
+    "message": "We gebruiken analytische cookies om te begrijpen hoe bezoekers onze site gebruiken. Ze worden alleen geplaatst als u accepteert — u kunt uw keuze op elk moment wijzigen.",
+    "accept": "Accepteren",
+    "reject": "Weigeren",
+    "settings": "Cookie-instellingen"
   }
 }

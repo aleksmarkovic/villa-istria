@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Link from "next/link";
 
 import { LangContext } from "../../../context/LangContext";
+import { OPEN_CONSENT_EVENT } from "../../Common/CookieBanner";
 
 type FooterLink = { key: string; href: string; labelKey: keyof typeof labelMap };
 
@@ -198,6 +199,22 @@ const Footer = () => {
             >
               {f.privacy}
             </Link>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new Event(OPEN_CONSENT_EVENT))}
+              className="vi-footer-policy"
+              style={{
+                fontSize: "0.68rem",
+                color: "rgba(255,255,255,0.28)",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontFamily: "var(--font-sans)",
+                transition: "color 0.2s",
+              }}
+            >
+              {t.cookie.settings}
+            </button>
           </div>
         </div>
       </div>
