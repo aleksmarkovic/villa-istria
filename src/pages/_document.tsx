@@ -7,6 +7,17 @@ export default class MyDocument extends Document {
       <Html lang={locale}>
         <Head>
           <meta charSet="utf-8" />
+          {/* Google Consent Mode v2 — default everything to denied BEFORE GA loads.
+              The cookie banner upgrades analytics_storage to "granted" on Accept. */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}" +
+                "gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied'," +
+                "ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});" +
+                "gtag('set','url_passthrough',true);",
+            }}
+          />
           <link rel="icon" href="/favicon/favicon.ico" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />

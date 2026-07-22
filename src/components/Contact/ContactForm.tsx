@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { LangContext } from "../../context/LangContext";
 import { sendEmail } from "../../utils/sendEmail";
+import { trackEvent } from "../../utils/analytics";
 
 const ContactForm = () => {
   const { t } = useContext(LangContext);
@@ -22,6 +23,7 @@ const ContactForm = () => {
         message: form.msg,
       });
       setSent(true);
+      trackEvent("contact_form_submit", { form: "contact" });
     } catch {
       setError(true);
     } finally {

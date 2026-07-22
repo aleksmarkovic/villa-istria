@@ -100,6 +100,7 @@ export type Translation = {
     copyright: string;
   };
   legal: { terms: LegalDoc; privacy: LegalDoc };
+  cookie: { title: string; message: string; accept: string; reject: string; settings: string };
 };
 
 import en from "./locales/en.json";

@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { LangContext } from "../../context/LangContext";
+import { trackEvent } from "../../utils/analytics";
 
 const BookingChannels = () => {
   const { t } = useContext(LangContext);
@@ -43,6 +44,7 @@ const BookingChannels = () => {
           href="https://www.booking.com/hotel/hr/villa-istria-vabriga1"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackEvent("booking_channel_click", { channel: "booking.com" })}
           style={{
             display: "inline-flex",
             alignItems: "center",

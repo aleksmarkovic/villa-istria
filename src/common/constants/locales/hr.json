@@ -297,5 +297,12 @@
         }
       ]
     }
+  },
+  "cookie": {
+    "title": "Kolačići i privatnost",
+    "message": "Koristimo analitičke kolačiće kako bismo razumjeli kako posjetitelji koriste našu stranicu. Postavljaju se samo ako ih prihvatite — svoj izbor možete promijeniti u bilo kojem trenutku.",
+    "accept": "Prihvati",
+    "reject": "Odbij",
+    "settings": "Postavke kolačića"
   }
 }

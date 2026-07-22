@@ -297,5 +297,12 @@
         }
       ]
     }
+  },
+  "cookie": {
+    "title": "Cookies & privacy",
+    "message": "We use analytics cookies to understand how visitors use our site. They are only set if you accept — you can change your choice at any time.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "settings": "Cookie settings"
   }
 }

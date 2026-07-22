@@ -297,5 +297,12 @@
         }
       ]
     }
+  },
+  "cookie": {
+    "title": "Piškotki in zasebnost",
+    "message": "Uporabljamo analitične piškotke, da bi razumeli, kako obiskovalci uporabljajo našo spletno stran. Nastavijo se le, če jih sprejmete — svojo izbiro lahko kadar koli spremenite.",
+    "accept": "Sprejmi",
+    "reject": "Zavrni",
+    "settings": "Nastavitve piškotkov"
   }
 }
